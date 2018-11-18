@@ -17,7 +17,7 @@ weight = 5
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in computer  science"
+  course = "PhD in computer science"
   institution = "MIT EECS"
 
 [[education.courses]]
@@ -27,12 +27,12 @@ weight = 5
 
 [[education.courses]]
   course = "MA in quantitative finance and insurance"
-  institution = "Universita di Torino"
+  institution = "Università di Torino"
   year = 2016
 
 [[education.courses]]
   course = "BA in economics"
-  institution = "Universita di Torino"
+  institution = "Università di Torino"
   year = 2014
  
 +++
