@@ -42,7 +42,7 @@ weight = 5
 
 I'm a PhD student at [MIT](http://www.mit.edu/), in the department of [Electrical Engineering and Computer Science](https://www.eecs.mit.edu/), working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/) in the [machine learning group](http://machinelearning.mit.edu/).
 
-Before joining MIT, I was a student at the Collegio Carlo Alberto and at the University of Torino, where I completed my master's thesis under the supervision of Igor Pruenster and Pierpaolo de Blasi.
+Before joining MIT, I was a student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/), where I completed my master's thesis under the supervision of [Igor Pruenster](http://mypage.unibocconi.eu/igorpruenster/) and [Pierpaolo de Blasi](https://sites.google.com/a/carloalberto.org/pdeblasi/home).
 
 I am currently working on theoretical properties and applications of hierarchical nonparametric Bayesian 
 
