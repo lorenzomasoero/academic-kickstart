@@ -41,3 +41,6 @@ weight = 5
 # Biography
 
 I'm a PhD student at MIT, in the department of Electrical Engineering and Computer Science, working in CSAIL under the supervision of Tamara Broderick in the machine learning group.
+
+Before joining MIT, I was a student at the Collegio Carlo Alberto and at the University of Torino, where I completed my master's thesis under the supervision of Igor Pruenster and Pierpaolo de Blasi.
+
