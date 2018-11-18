@@ -19,7 +19,7 @@ weight = 5
 [[education.courses]]
   course = "PhD in Computer  Science"
   institution = "MIT EECS"
-  year = current
+  year = 2017 
 
 [[education.courses]]
   course = "MA in statistics and applied mathematics"
@@ -39,3 +39,5 @@ weight = 5
 +++
 
 # Biography
+
+hhh
