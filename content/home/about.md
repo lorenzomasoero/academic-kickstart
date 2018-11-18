@@ -46,4 +46,4 @@ Before joining MIT, I was a student at the [Collegio Carlo Alberto](https://www.
 
 I am currently working on theoretical properties and applications of hierarchical nonparametric Bayesian 
 
-You can contact me via email at lom at mit dot edu.
+You can contact me via email at **lom** at **mit** dot **edu**.
