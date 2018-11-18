@@ -43,6 +43,6 @@ I'm a PhD student at [MIT](http://www.mit.edu/), in the department of [Electrica
 
 Before joining MIT, I was a student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/), where I completed my master's thesis under the supervision of [Igor Pruenster](http://mypage.unibocconi.eu/igorpruenster/) and [Pierpaolo de Blasi](https://sites.google.com/a/carloalberto.org/pdeblasi/home).
 
-I am currently working on theoretical properties and applications of hierarchical nonparametric Bayesian methods.
+I am currently working on the theory and applications of hierarchical nonparametric Bayesian trait models.
 
 You can contact me via email at **lom** at **mit** dot **edu**.
