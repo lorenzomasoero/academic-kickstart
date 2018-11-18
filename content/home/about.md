@@ -27,12 +27,12 @@ weight = 5
 
 [[education.courses]]
   course = "MA in quantitative finance and insurance"
-  institution = "Universit&agrave di Torino"
+  institution = "Universit'{a} di Torino"
   year = 2016
 
 [[education.courses]]
   course = "BA in economics"
-  institution = "Universit&agrave di Torino"
+  institution = "Universit'{a} di Torino"
   year = 2014
  
 +++
