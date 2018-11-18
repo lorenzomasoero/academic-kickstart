@@ -1,7 +1,7 @@
 +++
 # Experience widget.
 widget = "experience"  # Do not modify this line!
-active = true  # Activate this widget? true/false
+active = false # Activate this widget? true/false
 
 title = "Experience"
 subtitle = ""
@@ -42,4 +42,4 @@ date_format = "January 2006"
 #  date_end = "2016-12-31"
 #  description = """Taught electronic engineering and researched semiconductor physics."""
 
-# +++
++++
