@@ -40,4 +40,4 @@ weight = 5
 
 # Biography
 
-hhh
+I'm a PhD student at MIT, in the department of Electrical Engineering and Computer Science, working in CSAIL under the supervision of Tamara Broderick in the machine learning group.
