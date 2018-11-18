@@ -281,34 +281,34 @@ enableGitInfo = false
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
 #     desired widget in your `content/home/` folder.
 #   The weight parameter defines the order that the links will appear in.
-[params.menus]
-  # Align the main menu to the right of the page? (true/false)
-  align_right = true
+#[params.menus]
+#  # Align the main menu to the right of the page? (true/false)
+#  align_right = true
 
-[[menu.main]]
-  name = "Home"
-  url = "#about"
-  weight = 1
+#[[menu.main]]
+#  name = "Home"
+#  url = "#about"
+#  weight = 1
 
-[[menu.main]]
-  name = "Publications"
-  url = "#publications_selected"
-  weight = 2
+#[[menu.main]]
+#  name = "Publications"
+#  url = "#publications_selected"
+#  weight = 2
 
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
+#[[menu.main]]
+#  name = "Posts"
+#  url = "#posts"
+#  weight = 3
 
-[[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 4
+#[[menu.main]]
+#  name = "Projects"
+#  url = "#projects"
+#  weight = 4
 
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 6
+#[[menu.main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 6
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
