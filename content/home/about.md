@@ -22,7 +22,7 @@ weight = 5
 
 [[education.courses]]
   course = "MA in statistics and applied mathematics"
-  institution = "Collegio  Carlo Albert"
+  institution = "Collegio  Carlo Alberto"
   year = 2016
 
 [[education.courses]]
