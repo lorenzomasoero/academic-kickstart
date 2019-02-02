@@ -21,18 +21,14 @@ weight = 5
   institution = "MIT EECS"
 
 [[education.courses]]
+  course = "MSc in computer science"
+  institution = "Collegio  Carlo Alberto"
+  year = 2019 
+
+[[education.courses]]
   course = "MA in statistics and applied mathematics"
   institution = "Collegio  Carlo Alberto"
   year = 2016
-
-[[education.courses]]
-  course = "MA in quantitative finance and insurance"
-  institution = "University of Torino"
-  year = 2016
-[[education.courses]]
-  course = "BA in economics"
-  institution = "University of Torino"
-  year = 2014
 
  
 +++
