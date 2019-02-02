@@ -22,7 +22,7 @@ weight = 5
 
 [[education.courses]]
   course = "MSc in computer science"
-  institution = "Collegio  Carlo Alberto"
+  institution = "MIT EECS"
   year = 2019 
 
 [[education.courses]]
