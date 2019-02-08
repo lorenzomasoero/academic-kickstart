@@ -20,7 +20,7 @@ count = 10
 #   2 = APA
 #   3 = MLA
 #   4 = Stream
-list_format = 0
+list_format = 4
 
 # Filter by publication type.
 # -1: Any
@@ -35,3 +35,20 @@ publication_type = "-1"
 
 # Exclude publications that are shown in the Selected Publications widget?
 exclude_selected = false
+
+
++++
+authors = ["Lorenzo  Masoero", "Federico Camerlenghi", "Stefano Favaro", "Tamara Broderick"]
+date = "2013-07-01"
+image = ""
+image_preview = ""
+math = false
+publication = "BNP@NeurIPS 2018"
+title = "Posterior representations of hierarchical completely random measures in trait allocation models"
+url_code = ""
+url_dataset = ""
+url_pdf = ""
+url_project = ""
+url_slides = ""
+url_video = ""
++++
