@@ -16,23 +16,16 @@ weight = 5
   ]
 
 # List your qualifications (such as academic degrees).
+
 [[education.courses]]
-  course = "PhD in computer science"
+  course = "MSc in computer science"
   institution = "MIT EECS"
+  year = 2019 
 
 [[education.courses]]
   course = "MA in statistics and applied mathematics"
   institution = "Collegio  Carlo Alberto"
   year = 2016
-
-[[education.courses]]
-  course = "MA in quantitative finance and insurance"
-  institution = "University of Torino"
-  year = 2016
-[[education.courses]]
-  course = "BA in economics"
-  institution = "University of Torino"
-  year = 2014
 
  
 +++
