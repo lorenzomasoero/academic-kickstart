@@ -10,21 +10,20 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
+    "Experimental Design",
     "Bayesian nonparametrics",
-    "Machine learning",
-    "Optimization"
   ]
 
 # List your qualifications (such as academic degrees).
 
 [[education.courses]]
-  course = "MSc in computer science"
+  course = "PhD in Computer Science"
   institution = "MIT EECS"
-  year = 2019 
+  year = 2021
 
 [[education.courses]]
-  course = "MA in statistics and applied mathematics"
-  institution = "Collegio  Carlo Alberto"
+  course = "MA in Statistics and Applied Mathematics"
+  institution = "Collegio Carlo Alberto"
   year = 2016
 
  
