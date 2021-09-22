@@ -32,9 +32,11 @@ weight = 5
 
 # Biography
 
-I'm a fifth year PhD student at [MIT](http://www.mit.edu/), in the department of [Electrical Engineering and Computer Science](https://www.eecs.mit.edu/), working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/) in the [machine learning group](http://machinelearning.mit.edu/).
+I am an Applied Research Scientist at Amazon. I recently obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/), working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara #Broderick](http://www.tamarabroderick.com/). My PhD thesis developed novel Bayesian nonparametric methods for prediction and experimental design in the context of genomics studies. Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/), where I completed my master's thesis under the supervision of [Igor Pruenster](http://mypage.unibocconi.eu/igorpruenster/) and [Pierpaolo de Blasi](https://sites.google.com/a/carloalberto.org/pdeblasi/home).
 
-Before joining MIT, I was a student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/), where I completed my master's thesis under the supervision of [Igor Pruenster](http://mypage.unibocconi.eu/igorpruenster/) and [Pierpaolo de Blasi](https://sites.google.com/a/carloalberto.org/pdeblasi/home).
+#I'm a fifth year PhD student at [MIT](http://www.mit.edu/), in the department of [Electrical Engineering and Computer #Science](https://www.eecs.mit.edu/), working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara #Broderick](http://www.tamarabroderick.com/) in the [machine learning group](http://machinelearning.mit.edu/).
+
+#Before joining MIT, I was a student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of #Torino](https://www.unito.it/), where I completed my master's thesis under the supervision of [Igor Pruenster](http://#mypage.unibocconi.eu/igorpruenster/) and [Pierpaolo de Blasi](https://sites.google.com/a/carloalberto.org/pdeblasi/#home).
 
 
 You can contact me via email at **lom** at **mit** dot **edu**.
