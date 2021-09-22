@@ -11,7 +11,7 @@ weight = 5
 [interests]
   interests = [
     "Experimental Design",
-    "Bayesian nonparametrics",
+    "Bayesian Nonparametrics",
   ]
 
 # List your qualifications (such as academic degrees).
