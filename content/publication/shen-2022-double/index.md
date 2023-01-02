@@ -2,7 +2,7 @@
 title: 'Double trouble: Predicting new variant counts across two heterogeneous populations'
 date: -01-01
 draft: false
-publishDate: '2023-01-02T20:45:41.094469Z'
+publishDate: '2022-12-02T20:45:41.094469Z'
 authors:
 - Yunyi Shen
 - Lorenzo Masoero
