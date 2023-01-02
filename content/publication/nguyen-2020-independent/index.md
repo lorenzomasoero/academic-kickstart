@@ -1,7 +1,7 @@
 ---
 title: Independent finite approximations for Bayesian nonparametric inference
 date: '2020-01-01'
-draft: true
+draft: false
 publishDate: '2023-01-02T20:45:41.009211Z'
 authors:
 - Tin D Nguyen
@@ -12,7 +12,7 @@ authors:
 publication_types:
 - '2'
 abstract: ''
-featured: false
+featured: true
 publication: '*arXiv preprint arXiv:2009.10780*'
 ---
 

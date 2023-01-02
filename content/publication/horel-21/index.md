@@ -1,7 +1,7 @@
 ---
 title: The Chicago Police Department dataset
 date: '2021-01-01'
-draft: true
+draft: false
 publishDate: '2023-01-02T20:45:40.922988Z'
 authors:
 - Thibaut Horel
@@ -12,7 +12,7 @@ authors:
 publication_types:
 - '1'
 abstract: ''
-featured: false
+featured: true
 publication: '*Neural Information Processing Systems Track on Datasets and Benchmarks*'
 ---
 

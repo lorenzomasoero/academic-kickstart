@@ -2,7 +2,7 @@
 title: 'More for less: predicting and maximizing genomic variant discovery via Bayesian
   nonparametrics'
 date: '2022-01-01'
-draft: true
+draft: false
 publishDate: '2023-01-02T20:45:40.420433Z'
 authors:
 - Lorenzo Masoero
@@ -12,7 +12,7 @@ authors:
 publication_types:
 - '2'
 abstract: ''
-featured: false
+featured: true
 publication: '*Biometrika*'
 ---
 
