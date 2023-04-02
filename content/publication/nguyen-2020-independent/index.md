@@ -14,5 +14,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*arXiv preprint arXiv:2009.10780*'
+url_pdf: "https://arxiv.org/abs/2009.10780"
 ---
 

@@ -13,5 +13,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*arXiv preprint arXiv:2112.02032*'
+url_pdf: "https://arxiv.org/abs/2112.02032"
 ---
 

@@ -16,5 +16,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*arXiv preprint arXiv:2112.13495*'
+url_pdf: "https://arxiv.org/abs/2112.13495"
 ---
 

@@ -13,5 +13,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*NeurIPS 2022 Workshop on Learning Meaningful Representations of Life*'
+url_pdf: "https://openreview.net/pdf?id=euBgC9yLeyl"
 ---
 

@@ -1,6 +1,5 @@
 ---
-title: Scaled process priors for Bayesian nonparametric estimation of the unseen genetic
-  variation
+title: Scaled process priors for Bayesian nonparametric estimation of the unseen genetic variation
 date: '2022-01-01'
 draft: false
 publishDate: '2023-01-02T20:45:40.748045Z'
@@ -14,5 +13,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*Journal of the American Statistical Association*'
+url_pdf: "https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918"
 ---
 
