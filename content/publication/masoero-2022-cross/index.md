@@ -14,5 +14,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*Statistical Science*'
+url_pdf: "https://projecteuclid.org/journals/statistical-science/advance-publication/Cross-Study-Replicability-in-Cluster-Analysis/10.1214/22-STS871.short"
 ---
 
