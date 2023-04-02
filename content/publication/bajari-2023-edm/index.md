@@ -1,5 +1,5 @@
 ---
-title: 'Experimental Designs in Marketplaces'
+title: 'Experimental Design in Marketplaces'
 date: '2023-10-01'
 draft: false
 publishDate: '2023-01-02T20:45:40.420433Z'
