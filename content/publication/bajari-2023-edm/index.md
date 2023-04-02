@@ -16,5 +16,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*Statistical Science*'
+url_pdf: "https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short"
 ---
 
