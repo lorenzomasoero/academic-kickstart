@@ -13,8 +13,6 @@ publication_types:
 abstract: ''
 featured: true
 publication: '*Journal of the American Statistical Association*'
-url_source: "https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918"
-url_pdf: "https://arxiv.org/pdf/2106.15480.pdf"
-url_code: "https://github.com/lorenzomasoero/ScaledProcesses"
+url_pdf: "https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918"
 ---
 
