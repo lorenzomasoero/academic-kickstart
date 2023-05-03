@@ -1,6 +1,6 @@
 ---
 title: 'Double trouble: Predicting new variant counts across two heterogeneous populations'
-date: -01-01
+date: 2022-12-01
 draft: false
 publishDate: '2022-12-02T20:45:41.094469Z'
 authors:
@@ -9,7 +9,7 @@ authors:
 - Joshua Schraiber
 - Tamara Broderick
 publication_types:
-- '1'
+- '3'
 abstract: ''
 featured: true
 publication: '*NeurIPS 2022 Workshop on Learning Meaningful Representations of Life*'

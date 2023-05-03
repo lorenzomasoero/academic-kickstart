@@ -8,7 +8,7 @@ authors:
 - Doug Hains
 - James McQueen
 publication_types:
-- '1'
+- '3'
 abstract: ''
 featured: true
 publication: '*arXiv preprint*'
