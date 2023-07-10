@@ -11,7 +11,7 @@ publication_types:
 - '3'
 abstract: ''
 featured: true
-publication: '*arXiv preprint*'
+publication: '*2023 ACM SIGKDD Workshop on Causal Discovery, Prediction and Decision*'
 url_pdf: "https://arxiv.org/abs/2305.01109"
 ---
 
