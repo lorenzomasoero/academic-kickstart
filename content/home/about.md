@@ -31,9 +31,9 @@ weight = 5
 
 Ciao! I work as an Applied Scientist at Amazon. I spend most of my time thinking about how we can make causal inference more efficient in online settings. 
 In particular, I study settings when data is noisy: 
-1. [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)	
+* [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)	
 or interference is at play, like marketplaces:
-1. [Experimental Design in Marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short) (see also "[Multiple Randomization Designs](https://arxiv.org/abs/2112.13495)",  Bajari et al. (2021) and  "[Multiple Randomization Designs: Estimation and inference with interference](https://arxiv.org/abs/2401.01264)").
+* [Experimental Design in Marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short) (see also "[Multiple Randomization Designs](https://arxiv.org/abs/2112.13495)",  Bajari et al. (2021) and  "[Multiple Randomization Designs: Estimation and inference with interference](https://arxiv.org/abs/2401.01264)").
 
 I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/). My thesis developed novel [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies (see also "[Bayesian nonparametric strategies for power maximization in rare variants association studies
 ](https://arxiv.org/abs/2112.02032)"). Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/). 
