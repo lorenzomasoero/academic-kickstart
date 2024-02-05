@@ -33,6 +33,7 @@ Ciao! I work as an Applied Scientist at Amazon. I spend most of my time thinking
 In particular, I study settings when data is noisy: 
 
 * [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)	
+* [A Nonparametric Bayes Approach to Online Activity Prediction, arXiv preprint](https://arxiv.org/abs/2401.14722)
 
 or interference is at play, like marketplaces:
 
