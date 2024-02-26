@@ -30,13 +30,13 @@ weight = 5
 +++
 
 Ciao! I work as an Applied Scientist at Amazon. I spend most of my time thinking about how we can make causal inference more efficient in online settings. 
-In particular, I study settings when data is noisy: 
+In particular, I am interested in settings where data is noisy: 
 
 * [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)	
 * [A Nonparametric Bayes Approach to Online Activity Prediction, arXiv preprint](https://arxiv.org/abs/2401.14722)
 * [Improved prediction of future user activity in online A/B testing, arXiv preprint](https://arxiv.org/abs/2402.03231)
 
-or interference is at play, like marketplaces:
+and where interference is at play, like in online marketplaces:
 
 * [Experimental Design in Marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short) (see also "[Multiple Randomization Designs](https://arxiv.org/abs/2112.13495)",  Bajari et al. (2021) and  "[Multiple Randomization Designs: Estimation and inference with interference](https://arxiv.org/abs/2401.01264)").
 
