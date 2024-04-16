@@ -1,4 +1,4 @@
-+++
+---
 title: Bayesian nonparametric strategies for power maximization in rare variants association studies
 date: '2021-12-01'
 draft: false
@@ -13,4 +13,5 @@ abstract: ''
 featured: true
 publication: 'NeurIPS 2021 Workshop on Learning Meaningful Representations of Life.'
 url_pdf: "https://arxiv.org/abs/2112.02032"
-+++
+---
+
