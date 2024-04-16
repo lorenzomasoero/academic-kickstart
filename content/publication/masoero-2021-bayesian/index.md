@@ -1,6 +1,5 @@
 +++
-title: Bayesian nonparametric strategies for power maximization in rare variants association
-  studies
+title: Bayesian nonparametric strategies for power maximization in rare variants association studies
 date: '2021-12-01'
 draft: false
 publishDate: '2023-01-02T20:45:41.186162Z'
