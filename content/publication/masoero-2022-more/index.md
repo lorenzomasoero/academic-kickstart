@@ -12,7 +12,6 @@ authors:
 publication_types:
 - '2'
 abstract: ''
-selected: true
 featured: true
 publication: '*Biometrika*'
 url_pdf: "https://academic.oup.com/biomet/article-abstract/109/1/17/6146908"
