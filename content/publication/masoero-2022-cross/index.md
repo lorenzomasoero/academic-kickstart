@@ -23,7 +23,7 @@ publication_short = "Statistical Science"
 # Is this a selected publication? (true/false)
 selected = true
 # Links (optional).
-url_pdf = "https://projecteuclid.org/journals/statistical-science/advance-publication/Cross-Study-Replicability-in-Cluster-Analysis/10.1214/22-STS871.short"
+url_pdf = "https://projecteuclid.org/journals/statistical-science/volume-38/issue-2/Cross-Study-Replicability-in-Cluster-Analysis/10.1214/22-STS871.short"
 url_preprint = "https://arxiv.org/abs/2202.01910"
-url_code = " https://github.com/lorenzomasoero/clustering_replicability"
+url_code = "https://github.com/lorenzomasoero/clustering_replicability"
 +++
