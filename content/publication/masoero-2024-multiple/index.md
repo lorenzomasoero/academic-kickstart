@@ -1,5 +1,5 @@
 +++
-title = "Multiple Randomization Designs: Estimation and Inference with Interference'"
+title = "Multiple Randomization Designs: Estimation and Inference with Interference"
 date = 2024-01-02T00:00:00
 draft = false
 
