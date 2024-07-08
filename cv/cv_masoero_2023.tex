@@ -1,0 +1,234 @@
+
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{enumitem}
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.5in}
+\setlength\parindent{0in}
+\clearpage
+\thispagestyle{empty}
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Lorenzo Masoero - vita},
+	pdfauthor={Lorenzo Masoero},
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor= blue,      
+    urlcolor=black,
+}
+ 
+\urlstyle{same}
+% DOCUMENT
+\begin{document}
+\newcommand{\mm}{\textbf{M}.}
+
+{\LARGE Lorenzo Masoero}\\[.2cm]
+ %Applied Research Scientist, Amazon
+% \\
+ 
+%\noindent\hspace*{\tabcolsep}
+%\begin{minipage}{0.4\linewidth}
+%1763 NW 59th St., \\
+%Seattle, \\
+%WA 98107, USA
+%
+%
+%\end{minipage}
+\begin{minipage}{0.6\linewidth}
+%Born July 20, 1992---Turin, Italy\\
+\textsc{email}: \href{mailto:lo.masoero@gmail.com}{lo [dot] masoero [at] gmail [dot] com} \\
+ \textsc{web}: \href{http://lorenzomasoero.com}{\textcolor{blue}{http://lorenzomasoero.com}}
+\end{minipage}
+%\vspace{.3in}
+%\par I completed my PhD at MIT in EECS in August 2021 under the supervision of Professor Tamara Broderick. My PhD work developed efficient and theoretically grounded approaches for experimental design in genomic studies using Bayesian nonparametric approches.
+%I joined Amazon (Weblab) as an Applied Scientist in September 2021, coming back after a summer internship (2020) where I worked under the supervision of Professor Guido Imbens, Professor Thomas Richardson and Dr. James McQueen. At Amazon I have been working on:
+%\begin{itemize}
+%	\item \textbf{Online experimentation with interference}: I lead the effort to develop novel experimental designs for large scale testing of interference in online experiments. These designs have been implemented at scale in production - I co-lead the implementation and design of the first large real-world ``multi-randomized'' experiments at Amazon.
+%	\small
+%	\begin{itemize}
+%		\item ``\href{https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short}{\emph{Experimental Design in Marketplaces}}'' (Statistical Science)
+%		\item ``\href{https://arxiv.org/abs/2401.01264}{\emph{Multiple Randomization Designs: Estimation and Inference with Interference}}'' (In submission)
+%		\item``\href{https://www.amazon.science/publications/efficient-switchback-experiments-via-multiple-randomization-designs}{\emph{Efficient switchback experiments via multiple randomization designs}}'' (Code@MIT 2023)
+%		\item ``\href{https://arxiv.org/abs/2405.18621}{Multi-Armed Bandits with Network Interference}'' (In submission)
+%	\end{itemize}
+%	\normalsize
+%		\item \textbf{Levaraging covariates for improved estimates of causal effects}: I partnered with Weblab's engineering team to improve and extend our analytic engine, moving towards a flexible, distributed interface. My work consisted of both designing the analytic engine, as well as hands-on implementation of PySpark routines to support production code for causal estimates of thousands of experiments daily. This implementation was informed by  my research on the value of using covariates to form estimates of causal effects in online experiments. See \href{https://proceedings.mlr.press/v218/masoero23a.html}{``\emph{Leveraging covariate adjustments at scale in online A/B testing}''} (KDD CDPD, 2023).
+%\end{itemize}
+ 
+
+%
+\section*{Employment}
+\noindent
+\years{2024-}\ Applied Scientist III, Weblab, Amazon.\\
+\years{2022-}\ Applied Scientist II, Weblab, Amazon.\\
+\years{2021}\ Applied Scientist, Weblab, Amazon. \\
+\years{2020}\ Applied Science Intern, CoreAI, Amazon. \\
+
+
+\section*{Education}
+\noindent
+\years{2016-2021}\textsc{PhD}, \href{https://www.eecs.mit.edu/}{Electrical Engineering and Computer Science}, \href{http://lorenzomasoero.com/}{Massachusetts Institute of Technology} \\
+%\years{2017 - 2019}\textsc{MSc} in \href{https://www.eecs.mit.edu/}{Electrical Engineering and Computer Science}, \href{http://lorenzomasoero.com/}{Massachusetts Institute of Technology} \\
+%\footnote{\textbf{Completed coursework}:  \href{https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-231-dynamic-programming-and-stochastic-control-fall-2015/}{Dynamic Programming and Stochastic Control (6.231)} \href{http://www.mit.edu/~lom/files/6.231_project.pdf}{\texttt{[final project]}}, \href{https://ocw.mit.edu/courses/electricalengineering-and-computer-science/6-436j-fundamentals-of-probability-fall-2008/}{Fundamentals of Probability (6.436)}, \href{http://web.mit.edu/6.437/www/info16.pdf}{Inference and Information (6.437)},  \href{https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-438-algorithms-for-inference-fall-2014/}{Algorithms for Inference (6.438)},  \href{http://people.csail.mit.edu/moitra/408.html}{Algorithmic aspects of Machine Learning (18.408)} \href{http://www.mit.edu/~lom/files/18.408_project.pdf}{\texttt{[final project]}},  \href{http://www.tamarabroderick.com/course_6_882.html}{Bayesian modeling and inference (6.882)}, \href{http://textbooksearch.mit.edu/class/6.265J}{Advanced stochastic processes (6.265)}, Mathematical Statistics: A Non-Asymptotic Approach (9.S914), \href{https://www.eecs.mit.edu/academics-admissions/academic-information/subject-updates-spring-2019/6890}{Learning-Augmented Algorithms (6.890)}
+%
+%}  \\
+\years{2015 - 2016}\textsc{MA} in Statistics and Applied Mathematics, with distinction, \href{http://www.carloalberto.org/}{Collegio Carlo Alberto} \\% (\href{http://www.carloalberto.org/education/allievi/}{Senior Allievi Honors Program}) \\
+\years{2015 - 2016}\textsc{MA} in \href{http://www.masters-finins.unito.it/do/home.pl}{Quantitative Finance}, 110/110 magna cum laude, \href{http://en.unito.it/}{Universit\`{a} degli Studi di Torino}  \\
+%\years{2012 - 2014}\textsc{Diploma} in Economics, with distinction, \href{http://www.carloalberto.org/}{Collegio Carlo Alberto} (\href{http://www.carloalberto.org/education/allievi/}{Junior Allievi Honors Program})  \\
+\years{2012 - 2014}\textsc{BA} in Economics, 110/110 cum laude, \href{http://en.unito.it/}{Universit\`{a} degli Studi di Torino}  
+
+%\hrule
+\section*{Scholarships and Awards}
+\years{2020} \href{https://community.amstat.org/sbss/awards/sbssstudentpapercompetitionwinners}{SBSS Best Student Paper Award (ASA)} \\ %for \emph{More for Less: Predicting and maximizing genetic variant discovery via Bayesian nonparametrics}\\
+\years{2020} Bayes Comp Travel Award \\
+\years{2018} BNP@NeurIPS Award\\
+\years{2017} Andrew (1956) and Erma Viterbi Fellowship \\
+\years{2016} Best Graduate Student of the Year (ATLEC) \\
+\years{2015 - 2016} Graduate Allievi Honors Program Scholarship, Collegio Carlo Alberto, Moncalieri \\
+\years{2012 - 2014} Undergraduate Allievi Honors Program Scholarship, Collegio Carlo Alberto, Moncalieri
+
+
+\section*{Research}
+%\years{2020} 
+\begin{itemize}
+	\item ``\textbf{Multi-Armed Bandits with Network Interference}''; \href{https://arxiv.org/abs/2405.18621}{arXiv preprint, 2405.18621}. (Agarwal, Agarwal, \mm, Whitehouse)
+	\item ``\textbf{Double trouble: Predicting new variant counts across two heterogeneous populations}''; \href{https://arxiv.org/pdf/2403.02154.pdf}{arXiv preprint, 2403.02154}. (Shen, \mm, Schraiber, Broderick)
+	\item ``\textbf{Improved prediction of future user activity in online A/B testing}''; \href{https://arxiv.org/abs/2402.03231}{arXiv preprint, 2402.03231}. (\mm, Beraha, Richardson, Favaro)
+	\item ``\textbf{A Nonparametric Bayes Approach to Online Activity Prediction}''; \href{https://arxiv.org/abs/2401.14722}{arXiv preprint, 2401.14722}. (Beraha, \mm, Richardson, Favaro)
+	\item ``\textbf{Multiple Randomization Designs: Estimation and Inference with Interference.}'' \href{https://arxiv.org/abs/2401.01264}{arXiv preprint, 2401.01264.} (\mm, Vijaykumar, Richardson, McQueen, Rosen, Burdick, Bajari, Imbens) 
+	\item ``\textbf{Leveraging covariate adjustments at scale in online A/B testing}''; \href{https://proceedings.mlr.press/v218/masoero23a.html}{2023 KDD Workshop on Causal Discovery, Prediction and Decision, PMLR 218:25-48, 2023.} (\mm, McQueen, Hains)
+	\item ``\textbf{Experimental Design in Marketplaces}''; \href{https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short}{Statistical Science, 38(3): 458-476 (August 2023)}. (Bajari, Burdick, Imbens, \mm, McQueen, Richardson, Rosen). Manuscript available at \href{https://www.amazon.science/publications/experimental-design-in-marketplaces}{Amazon Science}.
+	\item ``\textbf{Independent Finite Approximations for Bayesian Nonparametric Inference}''; Bayesian Analysis, Advance Publication 1-38 (2023). Manuscript available on arXiv [\url{https://arxiv.org/pdf/2009.10780.pdf}] (Nguyen, Huggins, \mm, Mackey, Broderick)
+	\item ``\textbf{Double trouble: Predicting new variant counts across two heterogeneous populations}''; \href{https://www.lmrl.org/}{Learning Meaningful Representations of Life},  Neural Information Processing Systems Workshop, 2022. (Shen, \mm, Schraiber, Broderick). [Preprint available on \href{https://openreview.net/pdf?id=euBgC9yLeyl}{OpenReview}]
+	\item``\textbf{Cross-Study Replicability in Cluster Analysis}''. Statistcal Science, 38(2): 303-316 (May 2023).  (\mm, Thomas, Parmigiani, Tyekucheva, Trippa). Manuscript available on arXiv [\url{https://arxiv.org/pdf/2202.01910.pdf}] 
+	\item ``\textbf{Multiple Randomization Designs}''; Manuscript available on arXiv [\url{https://arxiv.org/pdf/2112.13495.pdf}] (Bajari, Burdick, Imbens, \mm, McQueen, Richardson, Rosen)
+	\item ``\textbf{Bayesian nonparametric strategies for power maximization in rare variants association studies}''; \textcolor{red}{\textbf{Spotlight}} at \href{https://www.lmrl.org/}{Learning Meaningful Representations of Life},  Neural Information Processing Systems, 2021 [\href{https://lorenzomasoero.com/files/LRML_21_poster.pdf}{\textcolor{blue}{poster}]}. Manuscript available on arXiv [\url{https://arxiv.org/pdf/2112.02032.pdf}] (\mm, Schraiber, Broderick)
+	\item ``\textbf{The Chicago Police Department dataset}''; Neural Information Processing Systems Track on Datasets and Benchmarks, 2021, \href{https://github.com/chicago-police-violence/data}{\textcolor{blue}{Dataset repository}}, \href{https://github.com/chicago-police-violence/data/releases/tag/v0.1}{\textcolor{blue}{current release (v0.1)}} and \href{https://github.com/chicago-police-violence/data/releases/download/v0.1/documentation.pdf}{\textcolor{blue}{documentation}} (Horel, \mm, Agrawal, Roithmayr, Campbell)
+	\item ``\textbf{Scaled process priors: Improved predictions and uncertainties for new-feature counts via random scaling in Bayesian nonparametrics}''; Accepted for publication in the \href{https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918}{Journal of the American Statistical Association}. Manuscript available on arXiv [\href{https://lorenzomasoero.com/files/spp_poster.pdf}{\textcolor{blue}{poster}}; \url{https://arxiv.org/pdf/2106.15480.pdf}]. Featured in \href{https://whova.com/portal/webapp/isbaw_202106/}{ISBA 2021}; (Camerlenghi, Favaro, \mm and T. Broderick)
+	\item ``\textbf{More for Less: Predicting and maximizing genetic variant discovery via Bayesian nonparametrics}''; to appear in \href{https://academic.oup.com/biomet/advance-article-abstract/doi/10.1093/biomet/asab012/6146908?redirectedFrom=PDF}{Biometrika}.  \href{https://community.amstat.org/sbss/home}{\textbf{\textcolor{red}{Best Student Paper Award}}, awarded by the American Statistical Association, Section in Bayesian Statistical Science}. Featured in \href{https://liphlab.github.io/SMEEB2021/files/SMEEB2021_abstract_booklet.pdf}{SMEEB 2021}, \href{https://www.ashg.org/meetings/2020meeting}{ASHG 2020},  \href{https://openreview.net/pdf?id=B1l8tyhEYr}{AABI 2019} \href{https://lorenzomasoero.com/files/more_poster.pdf}{\texttt{[\textcolor{blue}{poster}; \href{https://www.youtube.com/watch?v=OQzyWf-OXK4&ab_channel=TamaraBroderick}{\textcolor{blue}{presentation (YouTube)}}]}}; Manuscript available on arXiv [\url{https://arxiv.org/pdf/1912.05516.pdf}] (\mm, Camerlenghi, Favaro, Broderick)
+	\item``\textbf{Posterior representations of hierarchical completely random measures in trait allocation models}'', \href{https://sites.google.com/view/nipsbnp2018/accepted-papers}{\textcolor{red}{\textbf{Spotlight}}, \emph{BNP@NeurIPS2018}} \href{https://lorenzomasoero.com/files/bnp_neurips_2018_poster.pdf}{\texttt{[\textcolor{blue}{poster}]}}  (\mm, Camerlenghi, Favaro and Broderick)
+ 	\item ``\textbf{Sensitivity of Bayesian inference to data perturbations}'', \href{http://approximateinference.org/accepted/}{\emph{AABI 2018}} \href{https://lorenzomasoero.com/files/aabi_2018_poster.pdf}{\texttt{[\textcolor{blue}{poster}]}} (\mm, Stephenson, Broderick)
+\item \href{http://www.approximateinference.org/2017/accepted/HugginsEtAl2017.pdf}{``\textbf{Generic finite approximations
+for practical Bayesian nonparametrics}'', \textcolor{red}{\textbf{Spotlight}}, \emph{NIPS 2017 Workshop on Advances in Approximate Bayesian Inference}} \href{https://lorenzomasoero.com/files/aabi_2017_poster.pdf}{\texttt{[\textcolor{blue}{poster}]}}.  (Huggins, \mm, Mackey, Broderick)
+\end{itemize}
+\section*{Theses}
+\begin{itemize}
+\item ``\textbf{Improved prediction and optimal sequencing strategies for genomic variant discovery via Bayesian nonparametrics}'' --- PhD thesis. Supervisor: Professor Tamara Broderick
+\item \href{http://www.mit.edu/~lom/files/MasterThesisShort.pdf}{``\textbf{An asymptotic analysis of Gibbs-type priors}''} --- Master's thesis. Supervisors: Professors Pierpaolo de Blasi and Igor Pr\"{u}nster 
+%\years{2014} 
+\item \textbf{``Econometrics of the Big Data''} --- Undergraduate thesis. Supervisor: Professor Alessandro Sembenelli
+\end{itemize}
+\newpage 
+\section*{Skills}
+\begin{itemize}
+	\item Proficient in Python (numpy, scipy, pandas, matplotlib, scikit-learn), \LaTeX
+	\item Past experience in C++, Matlab, R, RStudio
+\end{itemize}
+\section*{Talks, Poster sessions and Conference Presentations}
+%\section*{Presentations}
+\years{2023}
+\begin{itemize}
+	\item KDD Workshop on Causal Discovery, Prediction and Decision, Long Beach (CA).
+	\item Conference on Online Digital Experimentation, MIT, selected talk.
+\end{itemize}
+\years{2022}
+\begin{itemize}
+	\item Conference on Online Digital Experimentation, MIT, selected talk.
+\end{itemize}
+\years{2021}
+\begin{itemize}
+	\item \href{https://www.carloalberto.org/event/lorenzo-masoero-amazon/}{Collegio Carlo Alberto Statistics Seminar Series}, ``{Improved prediction and optimal sequencing strategies for genomic variant discovery via Bayesian nonparametrics}''  
+	\item \href{http://www.cmstatistics.org/CMStatistics2021/speakers.php}{CMS Statistics 2021}, ``{Scaled process priors for Bayesian nonparametric
+estimation of the unseen genetic variation}'' [Invited session] 
+	\item \href{https://events.stat.uconn.edu/ISBA2021/}{ISBA: 2021 World Meeting of the International Society for Bayesian Analysis}, ``{Scaled process priors for Bayesian nonparametric
+estimation of the unseen genetic variation}'' [Contributed session] 
+	\item \href{https://liphlab.github.io/SMEEB2021/}{SMEEB: Stochastic Models and Experiments in Ecology and Biology}, ``{More for less: predicting and maximizing genomic diversity via Bayesian nonparametrics}'' [Contributed session] 
+\end{itemize}
+\years{2020}
+\begin{itemize}
+ 	\item \href{https://www.ashg.org/meetings/2020meeting}{American Society of Human Genetics meeting}, ``{More for less: predicting and maximizing genomic diversity via Bayesian nonparametrics}'' [Poster session] 
+	\item \href{http://mifods.mit.edu/complex.php}{Learning under complex structure, MIFODS workshop, \emph{Cambridge (MA)}}, ``{More for less: predicting and maximizing genomic diversity via Bayesian nonparametrics}'' [Poster session] 
+	\item \href{http://mifods.mit.edu/complex.php}{Learning under complex structure, MIFODS workshop, \emph{Cambridge (MA)}}, ``{More for less: predicting and maximizing genomic diversity via Bayesian nonparametrics}'' [Poster session] 
+	\item \href{http://users.stat.ufl.edu/~jhobert/BayesComp2020/Conf_Website/}{Bayes Comp 2020, \emph{Gainesville (FL)}}, ``{More for less: predicting and maximizing genomic diversity via Bayesian nonparametrics}'' [Poster session] 
+\end{itemize}
+\years{2019} 
+\begin{itemize} 
+	\item \href{https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=304376}{Advances in Bayesian Nonparametric Methods and Its Applications, \emph{Denver (CO), JSM 2019}}, ``{Genomic variety prediction via Bayesian nonparametrics}'' [Topic-contributed session] 
+	\item \href{https://ww2.amstat.org/meetings/jsm/2019/onlineprogram/AbstractDetails.cfm?abstractid=304376}{Advances in Approximate  Bayesian Inference, \emph{Vancouver, Canada}}, ``{More for less: Predicting and maximizing genetic variant discovery via Bayesian nonparametrics}'' 
+	\item \href{https://sdsc2019.mit.edu/agenda/}{Statistics and Data Science Conference 2019, \emph{Cambridge (MA)}}. ``{Genomic variety prediction via Bayesian nonparametrics}'' 
+	\item \href{https://mlxmit.mit.edu/ml-tea-talks}{MLxMIT, \emph{Cambridge (MA)}}, ``{Genomic variety prediction via Bayesian nonparametrics}''  
+	\item \href{https://lids.mit.edu/news-and-events/events/lids-stats-tea-talk-tbd-0}{LIDS \& Stats seminar, \emph{Cambridge (MA)}}, ``{Genomic variety prediction via Bayesian nonparametrics}'' 
+	\item \href{http://gradientscience.org/trac_workshop/}{CSAIL-MSR Trustworthy and Robust AI (TRAC) Workshop, \emph{Cambridge (MA)}}, ``{Getting the most bang for your buck: Predicting and maximizing the number of new genetic variants in a future experiment}'' 
+\end{itemize}
+\years{2018} 
+\begin{itemize}
+\item \href{https://sites.google.com/view/nipsbnp2018/accepted-papers}{BNP@NeurIPS 2018, Montreal (Canada) ``{Posterior representations of hierarchical completely random measures in trait allocation models}''  [\textcolor{red}{\textbf{Spotlight}}}]
+\end{itemize}
+
+\section*{Professional Service}
+	\years{2024} Reviewer for KDD, AISTATS, AABI\\
+	\years{2023} Reviewer for JMLR, AISTATS, DGM4H@NeurIPS2023\\
+	\years{2022} Reviewer for Statistical Science, JMLR, AISTATS\\
+	\years{2021} Reviewer for Statistical Science, AISTATS, ICBINB \\
+	\years{2020} Reviewer for AAAI 2020, AISTATS 2020 \\
+	\years{2019} Reviewer for AISTATS 2019, NeurIPS 2019, AABI 2019 \\
+	\years{2018}  Reviewer for BNP@NeurIPS2018 \\
+\end{document}
