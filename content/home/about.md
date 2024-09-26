@@ -40,7 +40,7 @@ In particular, I am interested in settings where data is noisy:
 and where interference is at play, like in online marketplaces:
 
 * [Experimental Design in Marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short) (see also "[Multiple Randomization Designs](https://arxiv.org/abs/2112.13495)",  Bajari et al. (2021) and  "[Multiple Randomization Designs: Estimation and inference with interference](https://arxiv.org/abs/2401.01264)")
-* [Multi-Armed Bandits with Network Interference](https://arxiv.org/abs/2405.18621), with A. Agarwal<sup>2</sup> and J. Whitehouse.
+* [Multi-Armed Bandits with Network Interference](https://arxiv.org/abs/2405.18621), NeurIPS 2024 (upcoming), with A. Agarwal<sup>2</sup> and J. Whitehouse.
 * [How do Advertisers React to Changes in Ad Auction Pricing? Evidence from a Clustered Multiple Randomization Experiment](https://www.amazon.science/publications/how-do-advertisers-react-to-changes-in-ad-auction-pricing), TSMO at KDD 2024, Hut et al. 2024. 
 
 I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/). My thesis developed novel [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies (see also "[Bayesian nonparametric strategies for power maximization in rare variants association studies
