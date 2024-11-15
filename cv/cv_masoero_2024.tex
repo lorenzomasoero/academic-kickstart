@@ -119,32 +119,43 @@ bookmarks, colorlinks, breaklinks,
 %\end{itemize}
 
 \section*{Senior Applied Scientist | Amazon, Weblab}
-\textbf{September 2021 - Present}
+\textbf{September 2021 - Present} 
+%[09/21-09/22: Applied Scientist I; 09/22-05/24: Applied Scientist II; 05/24--current: Applied Scientist III]
 
-I am a Senior Applied Scientist at Weblab, Amazon’s largest A/B testing platform, where I work on advancing online experimentation at scale. My work spans across open-ended research, academic paper writing, and the hands-on implementation of large-scale algorithms in production, directly impacting hundreds of millions of customers daily. At Weblab, I collaborate with leading experts in causal inference and drive innovation in:
+I am a Senior Applied Scientist at Weblab, Amazon’s largest A/B testing platform, where I work on advancing online experimentation at scale. My work spans across open-ended research, academic paper writing, and the hands-on implementation of large-scale algorithms in production, directly impacting hundreds of millions of customers daily. 
+
+\par At Weblab, I collaborate with leading experts in causal inference and drive innovation in:
 
 \begin{itemize}
     \item \textbf{Online Experimentation with Interference:} 
-    I have pioneered experimental designs for large-scale testing of interference in online experiments, co-leading the implementation of the first large ``multi-randomized'' experiments at Amazon. These experiments, unlike classical A/B tests, jointly randomize across multiple units in the experiment (e.g., customers and advertisers). Via these designs, we can capture ``spillover effects'' that would otherwise be overlooked. For example, these have been implemented to precisely capture the indirect behavioral response of advertisers induced by a change in pricing schemes of ad-auctions.
-    \begin{itemize}
-        \item Key papers include: 
+    I have pioneered experimental designs for large-scale testing of interference in online experiments, co-leading the implementation of the first large ``multi-randomized'' experiments at Amazon. These experiments, unlike classical A/B tests, jointly randomize across multiple units in the experiment (e.g., customers and advertisers). Via these designs, we can capture ``spillover effects'' that would otherwise be overlooked. For example, these have been implemented to precisely capture the indirect behavioral response of advertisers induced by a change in pricing schemes of ad-auctions. Key papers include: 
+    \small{
         \begin{itemize}
-            \item {\href{https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short}{\color{blue}{Experimental Design in Marketplaces}}} (Statistical Science)
-            \item \href{https://arxiv.org/abs/2401.01264}{\color{blue}{Multiple Randomization Designs}} (In submission)
-            \item \href{https://www.amazon.science/publications/efficient-switchback-experiments-via-multiple-randomization-designs}{\color{blue}{Efficient Switchback Experiments via Multiple Randomization Designs}} (Code@MIT 2023)
-            \item \href{https://arxiv.org/abs/2405.18621}{\color{blue}{Multi-Armed Bandits with Network Interference}} (NeurIPS 2024)
+	    \item \href{https://arxiv.org/abs/2401.01264}{\color{blue}{Multiple Randomization Designs}} (In submission)
+            \item {\href{https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short}{\color{blue}{Experimental Design in Marketplaces}}} (Statistical Science, 2023)
+            \item \href{https://www.amazon.science/publications/efficient-switchback-experiments-via-multiple-randomization-designs}{\color{blue}{Efficient Switchback Experiments via Multiple Randomization Designs}} (CODE@MIT 2023)
+            \item \href{https://arxiv.org/abs/2405.18621}{\color{blue}{Multi-Armed Bandits with Network Interference}} (NeurIPS 2024, and CODE@MIT 2024)
+            \item \href{}{\color{blue}{Regression Adjustments for Experimental Designs in Two-Side Marketplaces}} (CODE@MIT 2024)
+            \item \href{}{\color{blue}{Measuring direct and Indirect Impacts in a Multi-Sided Marketplace: Evidence from a Clustered Multiple Randomization Experiment}} (TSMO@KDD 2024, CODE@MIT 2024)
         \end{itemize}
-    \end{itemize}
-    
-    \item \textbf{Leveraging Covariates for Enhanced Causal Estimates:}
-    I partnered with engineering teams to design and implement a distributed analytic engine using PySpark, enabling more accurate causal estimates in thousands of daily experiments. This innovation was backed by research on the value of covariates in online A/B testing, contributing to improvements in experiment analytics.
+	}
+	\normalsize{    
+    \item \textbf{Enhancing Causal Estimates via Covariate Adjustments and Traffic Prediction:}
+    A/B tests are notoriously noisy. To better estimate the impact of interventions, we can leverage side information (covariates) and embed it within regression models. 
+    Over the last year, I partnered with engineering teams to design and implement a distributed analytic engine using PySpark, enabling more accurate causal estimates in thousands of daily experiments. 
+     This innovation was backed by research on the value of covariates in online A/B testing, contributing to improvements in experiment analytics.
+     As part of this work stream, I also developed methods to better predict future traffic in online experiments. Featured papers:}
+     \small{
     \begin{itemize}
-        \item Featured paper: \href{https://proceedings.mlr.press/v218/masoero23a.html}{\color{blue}{Leveraging Covariate Adjustments at Scale in Online A/B Testing}} (KDD CDPD, 2023).
+        \item  \href{https://proceedings.mlr.press/v218/masoero23a.html}{\color{blue}{Leveraging Covariate Adjustments at Scale in Online A/B Testing}} (KDD CDPD, 2023).
+        \item \href{https://arxiv.org/pdf/2402.03231}{\color{blue}{Improved prediction of future online activity in online A/B testing}} (in submission)
+        \item \href{https://arxiv.org/abs/2401.14722}{\color{blue}{A Nonparametric Bayes Approach to Online Activity Prediction}} (in submission)
     \end{itemize}
+    }
 \end{itemize}
 
 Previously, I completed my PhD at MIT in EECS in August 2021 under the supervision of Professor Tamara Broderick. 
-During my PhD, I worked on Bayesian inference, with an emphasis on the development of efficient and theoretically grounded approaches for optimal design of experiments in genomic studies. In particular, my PhD thesis consisted of a sequence of papers developing a methodology to devise optimal sampling strategies to maximize learnings stemming from rare-variants discoveries under fixed experimental budgets  using a Bayesian nonparametric approach (``{More for Less: Predicting and maximizing genetic variant discovery via Bayesian nonparametrics}'', in \href{https://academic.oup.com/biomet/advance-article-abstract/doi/10.1093/biomet/asab012/6146908?redirectedFrom=PDF}{Biometrika}, ``{Scaled process priors: Improved predictions and uncertainties for new-feature counts via random scaling in Bayesian nonparametrics}'', in the \href{https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918}{Journal of the American Statistical Association},  ``{Bayesian nonparametric strategies for power maximization in rare variants association studies}'', spotilight at \href{https://www.lmrl.org/}{Learning Meaningful Representations of Life},  Neural Information Processing Systems, 2021).
+During my PhD, I worked on Bayesian inference, with an emphasis on the development of efficient and theoretically grounded approaches for optimal design of experiments in genomic studies. In particular, my PhD thesis consisted of a sequence of papers developing a methodology to devise optimal sampling strategies to maximize learnings stemming from rare-variants discoveries under fixed experimental budgets  using a Bayesian nonparametric approach (``\href{https://academic.oup.com/biomet/article-abstract/109/1/17/6146908?redirectedFrom=fulltext}{\color{blue}{More for Less: Predicting and maximizing genetic variant discovery via Bayesian nonparametrics}}'', in \href{https://academic.oup.com/biomet/advance-article-abstract/doi/10.1093/biomet/asab012/6146908?redirectedFrom=PDF}{Biometrika}, ``\href{https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918}{\color{blue}{Scaled process priors: Improved predictions and uncertainties for new-feature counts via random scaling in Bayesian nonparametrics}}'', in the \href{https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918}{Journal of the American Statistical Association},  ``\href{https://arxiv.org/abs/2112.02032}{\color{blue}{Bayesian nonparametric strategies for power maximization in rare variants association studies}}'', spotilight at \href{https://www.lmrl.org/}{Learning Meaningful Representations of Life},  Neural Information Processing Systems, 2021).
 %
 \section*{Employment}
 \noindent
@@ -218,6 +229,7 @@ for practical Bayesian nonparametrics}'', \textcolor{red}{\textbf{Spotlight}}, \
 %\section*{Presentations}
 \years{2024}
 \begin{itemize}
+	\item Conference on Online Digital Experimentation, MIT, two selected talks, one poster.
 	\item KDD 2024 Workshop on Two Sided Marketplace Optimization, selected talk.
 	\item Conference on Online Digital Experimentation, MIT, two selected talks, one poster session.
 \end{itemize}
