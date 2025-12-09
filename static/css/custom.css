@@ -1,0 +1,22 @@
+/* Custom font size adjustments for website */
+
+/* Slightly reduce all body text */
+body, p, li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Keep headings proportional */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+
+/* Adjust link text size */
+a {
+  font-size: inherit;
+}
+
+/* Maintain readability in lists */
+ul li, ol li {
+  margin-bottom: 0.5rem;
+}
