@@ -28,7 +28,8 @@ weight = 5
 
  
 +++
-
+Ciao! I work as a Senior Applied Scientist (III) at Amazon. 
+I spend most of my time thinking about how we can make causal inference more efficient in online settings. 
 In particular, I am interested in settings where data is noisy: 
 
 * [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)
