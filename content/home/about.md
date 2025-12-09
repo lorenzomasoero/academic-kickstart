@@ -29,19 +29,21 @@ weight = 5
  
 +++
 
-Ciao! I work as an Applied Scientist (III) at Amazon. 
-I spend most of my time thinking about how we can make causal inference more efficient in online settings. 
 In particular, I am interested in settings where data is noisy: 
 
-* [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)	
-* [A Nonparametric Bayes Approach to Online Activity Prediction, arXiv preprint](https://arxiv.org/abs/2401.14722)
-* [Improved prediction of future user activity in online A/B testing, arXiv preprint](https://arxiv.org/abs/2402.03231)
+* [Leveraging additional covariate information in online A/B testing (KDD, 2023)](https://proceedings.mlr.press/v218/masoero23a.html)
+* [Online activity prediction via generalized Indian buffet process models](https://arxiv.org/pdf/2505.19643)
+* [Statistical Power Calculations Revisited: Incorporating Beliefs About Effect Sizes (CODE@MIT 2025)](https://www.amazon.science/publications/statistical-power-calculations-revisited-incorporating-beliefs-about-effect-sizes)
+* [Optimizing duration of online experiments via Bayesian early termination (CODE@MIT 2025)](https://www.amazon.science/publications/optimizing-duration-of-online-experiments-via-bayesian-early-termination)
 
 and where interference is at play, like in online marketplaces:
 
-* [Experimental Design in Marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short) (see also "[Multiple Randomization Designs](https://arxiv.org/abs/2112.13495)",  Bajari et al. (2021) and  "[Multiple Randomization Designs: Estimation and inference with interference](https://arxiv.org/abs/2401.01264)")
-* [Multi-Armed Bandits with Network Interference](https://arxiv.org/abs/2405.18621), NeurIPS 2024 (upcoming), with A. Agarwal<sup>2</sup> and J. Whitehouse.
-* [Measuring direct and Indirect Impacts in a Multi-Sided Marketplace: Evidence from a Clustered Multiple Randomization Experiment](https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing), TSMO at KDD 2024, Hut et al. 2024. 
+* [Experimental Design in Marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short)
+* [Multiple Randomization Designs: Estimation and inference with interference (JRSS-B, 2026+)](https://arxiv.org/abs/2112.13495)
+* [Multi-Armed Bandits with Network Interference (NeurIPS 2024)](https://arxiv.org/abs/2405.18621)
+* [Robust and efficient multiple-unit switchback experimentation](https://arxiv.org/pdf/2506.12654)
+* [Measuring direct and Indirect Impacts in a Multi-Sided Marketplace: Evidence from a Clustered Multiple Randomization Experiment (TSMO at KDD 2024, CODE@MIT 2024)](https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing), 
+
 
 I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/). My thesis developed novel [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies (see also "[Bayesian nonparametric strategies for power maximization in rare variants association studies
 ](https://arxiv.org/abs/2112.02032)"). Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/). 

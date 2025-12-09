@@ -7,10 +7,10 @@ authors:
 - Patrick Bajari
 - Brian Burdick
 - Guido Imbens 
-- Lorenzo, Masoero
+- Lorenzo Masoero
 - James McQueen
 - Thomas Richardson
-- Ido, Rosen
+- Ido Rosen
 publication_types:
 - '2'
 abstract: ''
@@ -18,4 +18,3 @@ featured: true
 publication: '*Statistical Science*'
 url_pdf: "https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short"
 ---
-
