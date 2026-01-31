@@ -74,19 +74,6 @@ ul li, ol li {
   color: #333;
 }
 
-/* Remove bullets from social media icons */
-.social-icons ul, .network-icon ul, ul.social-icons, ul.network-icon,
-#contact ul, .contact-links ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-}
-
-.social-icons li, .network-icon li, ul.social-icons li, ul.network-icon li,
-#contact li, .contact-links li {
-  margin-bottom: 0 !important;
-  padding-left: 0 !important;
-}
-
 /* Better styling for the background section paragraph */
 #about > p:nth-of-type(3), .about-content > p:nth-of-type(3) {
   margin-top: 2.5rem;
