@@ -21,16 +21,16 @@ ul li, ol li {
   margin-bottom: 0.5rem;
 }
 
-/* Enhanced styling for about section */
+/* Enhanced styling for about section - using multiple selectors for compatibility */
 
 /* Better spacing for bio sections */
-.about-content > p {
+#about p, .about-content > p, .biography-text p {
   margin-bottom: 1.5rem;
 }
 
 /* First paragraph gets slightly larger for emphasis */
-.about-content > p:first-of-type {
-  font-size: 0.95rem;
+#about p:first-of-type, .about-content > p:first-of-type, .biography-text > p:first-of-type {
+  font-size: 0.95rem !important;
   font-weight: 400;
   color: #2c3e50;
   margin-bottom: 2.5rem;
@@ -38,7 +38,7 @@ ul li, ol li {
 }
 
 /* Second paragraph - "My research addresses" - make it a section header */
-.about-content > p:nth-of-type(2) {
+#about p:nth-of-type(2), .about-content > p:nth-of-type(2) {
   font-size: 0.92rem;
   font-weight: 500;
   color: #1a1a1a;
@@ -49,102 +49,97 @@ ul li, ol li {
 }
 
 /* Section headings in bio - make research categories stand out */
-.about-content strong {
-  color: #1a1a1a;
-  font-size: 1.12em;
-  font-weight: 600;
+#about strong, .about-content strong, .biography-text strong {
+  color: #1a1a1a !important;
+  font-size: 1.12em !important;
+  font-weight: 600 !important;
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
   letter-spacing: 0.3px;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #4a90e2;
+  border-bottom: 2px solid #4a90e2 !important;
 }
 
 /* Enhanced link styling for publications */
-.about-content a {
-  color: #007bff;
+#about a, .about-content a, .biography-text a {
+  color: #007bff !important;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease;
 }
 
-.about-content a:hover {
-  border-bottom: 1px solid #007bff;
-  color: #0056b3;
+#about a:hover, .about-content a:hover, .biography-text a:hover {
+  border-bottom: 1px solid #007bff !important;
+  color: #0056b3 !important;
 }
 
 /* Publication list improvements */
-.about-content ul {
-  list-style: none;
-  padding-left: 0;
+#about ul, .about-content ul, .biography-text ul {
+  list-style: none !important;
+  padding-left: 0 !important;
   margin-bottom: 2rem;
 }
 
-.about-content ul li {
-  padding-left: 1.5em;
+#about ul li, .about-content ul li, .biography-text ul li {
+  padding-left: 1.5em !important;
   margin-bottom: 0.85rem;
   position: relative;
   line-height: 1.75;
   color: #333;
 }
 
-.about-content ul li:before {
-  content: "→";
+#about ul li:before, .about-content ul li:before, .biography-text ul li:before {
+  content: "→" !important;
   position: absolute;
   left: 0;
-  color: #007bff;
+  color: #007bff !important;
   font-weight: bold;
   font-size: 1.1em;
 }
 
 /* Add subtle hover effect for publication list items */
-.about-content ul li:hover {
-  padding-left: 1.8em;
+#about ul li:hover, .about-content ul li:hover, .biography-text ul li:hover {
+  padding-left: 1.8em !important;
   transition: padding-left 0.2s ease;
 }
 
-.about-content ul li:hover:before {
-  color: #0056b3;
-}
-
-/* Improve spacing around research sections */
-.about-content p + p strong:first-child {
-  margin-top: 2rem;
+#about ul li:hover:before, .about-content ul li:hover:before, .biography-text ul li:hover:before {
+  color: #0056b3 !important;
 }
 
 /* Card-based research sections */
-.about-content p:has(strong) {
-  background: #f8f9fb;
-  border-left: 4px solid #4a90e2;
+#about p:has(strong), .about-content p:has(strong), .biography-text p:has(strong) {
+  background: #f8f9fb !important;
+  border-left: 4px solid #4a90e2 !important;
   border-radius: 6px;
-  padding: 1.75rem;
+  padding: 1.75rem !important;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
   transition: all 0.3s ease;
 }
 
-.about-content p:has(strong):hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+#about p:has(strong):hover, .about-content p:has(strong):hover, .biography-text p:has(strong):hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
   transform: translateY(-2px);
 }
 
 /* Adjust publication list inside cards */
-.about-content p:has(strong) + ul {
-  margin-top: -1.5rem;
+#about p:has(strong) + ul, .about-content p:has(strong) + ul, .biography-text p:has(strong) + ul {
+  margin-top: -1.5rem !important;
   margin-bottom: 0;
-  padding: 0 1.75rem 1.5rem 1.75rem;
-  background: #f8f9fb;
-  border-left: 4px solid #4a90e2;
+  padding: 0 1.75rem 1.5rem 1.75rem !important;
+  background: #f8f9fb !important;
+  border-left: 4px solid #4a90e2 !important;
   border-radius: 0 0 6px 6px;
   margin-left: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
   transition: all 0.3s ease;
 }
 
 /* Better styling for the background section paragraph */
-.about-content > p:nth-of-type(3) {
+#about > p:nth-of-type(3), .about-content > p:nth-of-type(3) {
   margin-top: 3rem;
   padding-top: 2rem;
   border-top: 2px solid #e1e4e8;
@@ -153,17 +148,12 @@ ul li, ol li {
 }
 
 /* Enhance the CV and contact line */
-.about-content > p:last-of-type {
-  margin-top: 2.5rem;
-  padding: 1.25rem 1.5rem;
-  background: #f8f9fb;
-  border-left: 4px solid #4a90e2;
+#about > p:last-of-type, .about-content > p:last-of-type {
+  margin-top: 2.5rem !important;
+  padding: 1.25rem 1.5rem !important;
+  background: #f8f9fb !important;
+  border-left: 4px solid #4a90e2 !important;
   border-radius: 6px;
   font-size: 0.9rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-}
-
-/* Overall page max-width and centering for better readability */
-.about-content {
-  max-width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
 }
