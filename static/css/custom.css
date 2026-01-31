@@ -33,18 +33,32 @@ ul li, ol li {
   font-size: 0.95rem;
   font-weight: 400;
   color: #2c3e50;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+/* Second paragraph - "My research addresses" - make it a section header */
+.about-content > p:nth-of-type(2) {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1a1a1a;
   margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e1e4e8;
 }
 
 /* Section headings in bio - make research categories stand out */
 .about-content strong {
   color: #1a1a1a;
-  font-size: 1.08em;
+  font-size: 1.12em;
   font-weight: 600;
   display: block;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
   letter-spacing: 0.3px;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #4a90e2;
 }
 
 /* Enhanced link styling for publications */
@@ -99,22 +113,57 @@ ul li, ol li {
   margin-top: 2rem;
 }
 
-/* Add subtle visual separation for research categories */
+/* Card-based research sections */
 .about-content p:has(strong) {
+  background: #f8f9fb;
+  border-left: 4px solid #4a90e2;
+  border-radius: 6px;
+  padding: 1.75rem;
   margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.about-content p:has(strong):hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Adjust publication list inside cards */
+.about-content p:has(strong) + ul {
+  margin-top: -1.5rem;
+  margin-bottom: 0;
+  padding: 0 1.75rem 1.5rem 1.75rem;
+  background: #f8f9fb;
+  border-left: 4px solid #4a90e2;
+  border-radius: 0 0 6px 6px;
+  margin-left: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
 }
 
 /* Better styling for the background section paragraph */
 .about-content > p:nth-of-type(3) {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #e9ecef;
+  border-top: 2px solid #e1e4e8;
+  font-size: 0.89rem;
+  line-height: 1.7;
 }
 
 /* Enhance the CV and contact line */
 .about-content > p:last-of-type {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid #e9ecef;
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: #f8f9fb;
+  border-left: 4px solid #4a90e2;
+  border-radius: 6px;
   font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Overall page max-width and centering for better readability */
+.about-content {
+  max-width: 100%;
 }
