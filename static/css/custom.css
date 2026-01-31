@@ -1,15 +1,15 @@
 /* Custom font size adjustments for website */
 
-/* Slightly reduce all body text */
+/* Smaller, cleaner body text */
 body, p, li {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.88rem;
+  line-height: 1.65;
 }
 
-/* Keep headings proportional */
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.2rem; }
+/* Keep headings proportional but refined */
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.15rem; }
 
 /* Adjust link text size */
 a {
@@ -28,13 +28,23 @@ ul li, ol li {
   margin-bottom: 1.5rem;
 }
 
+/* First paragraph gets slightly larger for emphasis */
+.about-content > p:first-of-type {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
 /* Section headings in bio - make research categories stand out */
 .about-content strong {
-  color: #2c3e50;
-  font-size: 1.05em;
+  color: #1a1a1a;
+  font-size: 1.08em;
+  font-weight: 600;
   display: block;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.3px;
 }
 
 /* Enhanced link styling for publications */
@@ -54,14 +64,15 @@ ul li, ol li {
 .about-content ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .about-content ul li {
   padding-left: 1.5em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
   position: relative;
-  line-height: 1.7;
+  line-height: 1.75;
+  color: #333;
 }
 
 .about-content ul li:before {
@@ -70,6 +81,7 @@ ul li, ol li {
   left: 0;
   color: #007bff;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 /* Add subtle hover effect for publication list items */
@@ -78,7 +90,31 @@ ul li, ol li {
   transition: padding-left 0.2s ease;
 }
 
+.about-content ul li:hover:before {
+  color: #0056b3;
+}
+
 /* Improve spacing around research sections */
 .about-content p + p strong:first-child {
   margin-top: 2rem;
+}
+
+/* Add subtle visual separation for research categories */
+.about-content p:has(strong) {
+  margin-top: 2.5rem;
+}
+
+/* Better styling for the background section paragraph */
+.about-content > p:nth-of-type(3) {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Enhance the CV and contact line */
+.about-content > p:last-of-type {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+  font-size: 0.9rem;
 }

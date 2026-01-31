@@ -42,9 +42,9 @@ My research addresses two key challenges in online experimentation:
 **Handling interference in two-sided marketplaces:**
 
 * [Experimental design in marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short)
-* [Multiple randomization designs (JRSS-B, 2025)](https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkaf073/8422435?login=false)
+* [Multiple randomization designs (JRSS-B, 2026)](https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkaf073/8422435?login=false)
 * [Multi-armed bandits with network interference (NeurIPS 2024)](https://arxiv.org/abs/2405.18621)
-* [Multiple-unit switchback experiments (2024)](https://arxiv.org/pdf/2506.12654)
+* [Multiple-unit switchback experiments (2025)](https://arxiv.org/pdf/2506.12654)
 * [Measuring spillover effects in marketplaces (KDD 2024)](https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing)
 
 I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/). My thesis developed novel [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies (see also "[Bayesian nonparametric strategies for power maximization in rare variants association studies](https://arxiv.org/abs/2112.02032)"). Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/).
