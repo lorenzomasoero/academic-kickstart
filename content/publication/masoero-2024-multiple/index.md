@@ -18,12 +18,11 @@ authors = ["Lorenzo Masoero", "Suhas Vijaykumar", "Thomas Richardson", "James Mc
 publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = "arXiv preprint"
-publication_short = "arXiv preprint"
+publication = "Journal of the Royal Statistical Society Series B: Statistical Methodology"
+publication_short = "JRSS-B"
 # Is this a selected publication? (true/false)
 selected = true
 # Links (optional).
-url_pdf = "https://arxiv.org/abs/2401.01264"
+url_pdf = "https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkaf073/8422435?login=false"
 url_preprint = "https://arxiv.org/abs/2401.01264"
-url_code = "https://arxiv.org/abs/2401.01264"
 +++
