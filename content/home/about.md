@@ -28,9 +28,9 @@ weight = 5
 
  
 +++
-I work as a Senior Applied Scientist at Amazon, focusing on causal inference and experimental design for large-scale online systems.
+I work as a Senior Applied Scientist at Amazon. I spend most of my time working on causal inference and experimental design for large-scale online systems. In particular, I am interested in settings where data is noisy and where interference is at play, like in online marketplaces.
 
-My research addresses two key challenges in online experimentation:
+My recent work includes:
 
 **Improving efficiency with noisy data:**
 

@@ -62,37 +62,16 @@ ul li, ol li {
 
 /* Publication list improvements */
 #about ul, .about-content ul, .biography-text ul {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin-bottom: 2rem;
-  margin-top: 0.75rem;
+  list-style: disc !important;
+  padding-left: 1.5em !important;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 #about ul li, .about-content ul li, .biography-text ul li {
-  padding-left: 1.5em !important;
-  margin-bottom: 0.7rem;
-  position: relative;
-  line-height: 1.7;
+  margin-bottom: 0.35rem !important;
+  line-height: 1.6;
   color: #333;
-}
-
-#about ul li:before, .about-content ul li:before, .biography-text ul li:before {
-  content: "→" !important;
-  position: absolute;
-  left: 0;
-  color: #007bff !important;
-  font-weight: bold;
-  font-size: 1em;
-}
-
-/* Add subtle hover effect for publication list items */
-#about ul li:hover, .about-content ul li:hover, .biography-text ul li:hover {
-  padding-left: 1.7em !important;
-  transition: padding-left 0.15s ease;
-}
-
-#about ul li:hover:before, .about-content ul li:hover:before, .biography-text ul li:hover:before {
-  color: #0056b3 !important;
 }
 
 /* Better styling for the background section paragraph */
