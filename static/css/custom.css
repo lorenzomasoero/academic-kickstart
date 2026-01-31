@@ -21,6 +21,16 @@ ul li, ol li {
   margin-bottom: 0.5rem;
 }
 
+/* Remove bullet points from social media icons */
+ul.social-icons, ul.network-icon {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+ul.social-icons li, ul.network-icon li {
+  list-style: none !important;
+}
+
 /* Enhanced styling for about section - clean and minimal */
 
 /* Better spacing for bio sections */
