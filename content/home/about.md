@@ -6,29 +6,15 @@ date = 2016-04-20T00:00:00
 
 # Order that this section will appear in.
 weight = 5
-
-# List your academic interests.
-[interests]
-  interests = [
-    "Experimental Design",
-    "Bayesian Nonparametrics",
-  ]
-
-# List your qualifications (such as academic degrees).
-
-[[education.courses]]
-  course = "PhD in Computer Science"
-  institution = "MIT EECS"
-  year = 2021
-
-[[education.courses]]
-  course = "MA in Statistics and Applied Mathematics"
-  institution = "Collegio Carlo Alberto"
-  year = 2016
-
  
 +++
 I work as a Senior Applied Scientist at Amazon. I spend most of my time working on causal inference and experimental design for large-scale online systems. In particular, I am interested in settings where data is noisy and where interference is at play, like in online marketplaces.
+
+Previously, I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/), working on [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies. Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/).
+
+[Here](http://lorenzomasoero.com/files/cv_masoero_2025.pdf) you can find a copy of my CV. You can contact me via email at lo [dot] masoero [at] gmail [dot] com.
+
+Some of my recent research includes:
 
 **Improving efficiency with noisy data:**
 
@@ -45,6 +31,4 @@ I work as a Senior Applied Scientist at Amazon. I spend most of my time working 
 * [Multiple-unit switchback experiments (2025)](https://arxiv.org/pdf/2506.12654)
 * [Measuring spillover effects in marketplaces (KDD 2024)](https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing)
 
-I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/). My thesis developed novel [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies (see also "[Bayesian nonparametric strategies for power maximization in rare variants association studies](https://arxiv.org/abs/2112.02032)"). Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/).
 
-[Here](http://lorenzomasoero.com/files/cv_masoero_2025.pdf) you can find a copy of my CV. You can contact me via email at lo [dot] masoero [at] gmail [dot] com.
