@@ -8,7 +8,7 @@ date = 2016-04-20T00:00:00
 weight = 5
  
 +++
-I work as a Senior Applied Scientist at Amazon. I spend most of my time working on causal inference and experimental design for large-scale online systems. In particular, I am interested in settings where data is noisy and where interference is at play, like in online marketplaces.
+I work as a Senior Applied Scientist at Amazon. I spend most of my time working on causal inference and experimental design for large-scale online systems. In particular, I am interested in settings where data is noisy and where interference is at play, like in online marketplaces. I am also exploring how agentic AI frameworks can integrate into online experimentation pipelines to accelerate and improve decision-making.
 
 Previously, I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/), working on [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies. Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/). [Here](http://lorenzomasoero.com/files/cv_masoero_2026.pdf) you can find a copy of my CV. You can contact me via email at lo [dot] masoero [at] gmail [dot] com.
 
