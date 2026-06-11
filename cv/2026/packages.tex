@@ -1,0 +1,62 @@
+\usepackage{fontspec} 
+\usepackage{enumitem}
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.5in}
+\setlength\parindent{0in}
+\clearpage
+\thispagestyle{empty}
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Lorenzo Masoero - vita},
+	pdfauthor={Lorenzo Masoero},
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor= blue,      
+    urlcolor=black,
+}
+ 
+\urlstyle{same}

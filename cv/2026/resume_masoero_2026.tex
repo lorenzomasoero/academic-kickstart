@@ -1,0 +1,84 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{a4paper, top=0.5in, bottom=0.5in, left=0.6in, right=0.6in}
+\setlength\parindent{0in}
+\pagestyle{empty}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+
+\usepackage[bookmarks, colorlinks, breaklinks,
+  pdftitle={Lorenzo Masoero - Resume},
+  pdfauthor={Lorenzo Masoero},
+]{hyperref}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+\begin{document}
+\newcommand{\mm}{\textbf{M}.}
+
+\begin{center}
+{\LARGE\bfseries Lorenzo Masoero}\\[2pt]
+\href{mailto:lo.masoero@gmail.com}{lo.masoero@gmail.com} \quad$\cdot$\quad \href{http://lorenzomasoero.com}{lorenzomasoero.com} \quad$\cdot$\quad \href{https://scholar.google.com/citations?user=qFFGfdYAAAAJ}{Google Scholar}
+\end{center}
+
+\section{Summary}
+
+Senior Applied Scientist at Amazon Weblab (Amazon's largest A/B testing platform). Research focus on causal inference, experimental design, and agentic AI for experimentation---with publications in JRSS-B, Statistical Science, NeurIPS, Biometrika, and JASA. PhD from MIT (EECS), supervised by Prof.\ Tamara Broderick.
+
+\section{Experience}
+
+\textbf{Senior Applied Scientist III} \hfill Amazon, Weblab \quad 2021--Present\\[2pt]
+\textbf{Online Experimentation with Interference.} Pioneered ``multiple randomization designs'' (joint work with Prof.\ Guido Imbens and Prof.\ Thomas Richardson, amongst others)---experiments that jointly randomize across multiple marketplace units to detect spillover effects. Published in \href{https://doi.org/10.1093/jrsssb/qkaf073}{\color{blue}{JRSS-B}} (2026) and \href{https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short}{\color{blue}{Statistical Science}} (2023).\\[3pt]
+\textbf{Advancing Experimentation Methodology.} Deployed a distributed PySpark engine for \href{https://proceedings.mlr.press/v218/masoero23a.html}{\color{blue}{covariate-adjusted causal estimation}} (KDD 2023) serving thousands of daily experiments. Developed \href{https://arxiv.org/abs/2603.06941}{\color{blue}{Demonstration Experiments}} (with Vijaykumar \& Imbens) and \href{https://arxiv.org/abs/2506.12654}{\color{blue}{robust switchback designs}} (with Missault) for time-randomized experiments.\\[3pt]
+\textbf{Agentic Workflows for Experimentation.} Built a multi-agent system for automated documentation maintenance (TriAgent, EMNLP 2026 submission) and autonomous LLM experimenters for A/B test analysis (AMLC 2026 Workshop).
+
+\section{Education}
+
+\textbf{PhD, Electrical Engineering and Computer Science} \hfill MIT, 2016--2021\\
+Advisor: Prof.\ Tamara Broderick. Thesis on Bayesian nonparametric methods for genomic variant discovery.\\[2pt]
+\textbf{MA, Statistics and Applied Mathematics} (with distinction) \hfill Collegio Carlo Alberto, 2015--2016\\[2pt]
+\textbf{MA, Quantitative Finance} (110/110 magna cum laude) \hfill Universit\`{a} di Torino, 2015--2016\\[2pt]
+\textbf{BA, Economics} (110/110 cum laude) \hfill Universit\`{a} di Torino, 2012--2014
+
+\section{Selected Publications}
+
+\begin{itemize}[leftmargin=*, nosep, itemsep=1pt]
+\item \href{https://doi.org/10.1093/jrsssb/qkaf073}{Multiple Randomization Designs: Estimation and Inference with Interference.} JRSS-B, 2026.
+\item \href{https://arxiv.org/abs/2405.18621}{Multi-Armed Bandits with Network Interference.} NeurIPS 2024.
+\item \href{https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short}{Experimental Design in Marketplaces.} Statistical Science, 2023.
+\item \href{https://academic.oup.com/biomet/advance-article-abstract/doi/10.1093/biomet/asab012/6146908}{More for Less: Predicting and maximizing genetic variant discovery via BNP.} Biometrika, 2022.
+\item \href{https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918}{Scaled process priors for new-feature counts via random scaling in BNP.} JASA, 2022.
+\item \href{https://arxiv.org/abs/2603.06941}{Demonstration Experiments.} Pre-print, 2025.
+\item From Offline Evidence to Online Action. ICML 2026 Workshop.
+\end{itemize}
+
+\section{Awards}
+
+\textbf{SBSS Best Student Paper Award}, American Statistical Association (2020) \quad$\cdot$\quad Andrew \& Erma Viterbi Fellowship (2017)
+
+\section{Service}
+
+Reviewer for JRSS-B, JASA, JMLR, NeurIPS, KDD, AISTATS, ProbML (2018--2026).
+
+\section{Skills}
+
+Python (NumPy, SciPy, Pandas, PySpark, scikit-learn) \quad$\cdot$\quad Bayesian inference \& causal inference \quad$\cdot$\quad \LaTeX
+
+\end{document}
