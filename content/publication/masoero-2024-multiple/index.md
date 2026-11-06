@@ -1,6 +1,6 @@
 +++
 title = "Multiple Randomization Designs: Estimation and Inference with Interference"
-date = 2024-01-02T00:00:00
+date = 2026-01-12T00:00:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
@@ -19,10 +19,10 @@ publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
 publication = "Journal of the Royal Statistical Society Series B: Statistical Methodology"
-publication_short = "JRSS-B"
+publication_short = "JRSS-B 2026"
 # Is this a selected publication? (true/false)
 selected = true
 # Links (optional).
-url_pdf = "https://academic.oup.com/jrsssb/advance-article-abstract/doi/10.1093/jrsssb/qkaf073/8422435?login=false"
+url_pdf = "https://doi.org/10.1093/jrsssb/qkaf073"
 url_preprint = "https://arxiv.org/abs/2401.01264"
 +++

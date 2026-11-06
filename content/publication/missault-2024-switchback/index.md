@@ -1,6 +1,6 @@
 +++
 title = "Robust and Efficient Multiple-Unit Switchback Experimentation"
-date = 2024-06-01T00:00:00
+date = 2025-06-14T00:00:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
