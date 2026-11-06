@@ -33,3 +33,4 @@ Some of my recent research includes:
 **Agentic AI for experimentation:**
 
 * [Multi-agent documentation maintenance (IAAI 2027)](/publication/masoero-2026-mind/)
+* [Can AI agents simulate A/B test outcomes? (WAB@COLM 2026)](https://arxiv.org/abs/2608.02345)
