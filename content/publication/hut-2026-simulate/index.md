@@ -18,8 +18,8 @@ authors = ["Stefan Hut", "Lorenzo Masoero"]
 publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "COLM 2026 Workshop on Agent Behavior (WAB@COLM)"
-publication_short = "WAB@COLM 2026"
+publication = "COLM 2026 Workshop on Agent Behavior (WAB@COLM), Conference on Digital Experimentation at MIT (CODE@MIT)"
+publication_short = "WAB@COLM 2026, CODE@MIT 2026"
 
 # Is this a selected publication? (true/false)
 selected = false
