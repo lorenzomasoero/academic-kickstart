@@ -1,5 +1,10 @@
 Some of my recent research includes:
 
+### Agentic AI for experimentation
+
+* [Multi-agent documentation maintenance (IAAI 2027)](/publication/masoero-2026-mind/)
+* [Can AI agents simulate A/B test outcomes? (WAB@COLM 2026, CODE@MIT 2026)](https://arxiv.org/abs/2608.02345)
+
 ### Improving efficiency with noisy data
 
 * [Demonstration Experiments (2026)](https://arxiv.org/abs/2603.06941)
@@ -16,8 +21,3 @@ Some of my recent research includes:
 * [Multiple-unit switchback experiments (2025)](https://arxiv.org/pdf/2506.12654)
 * [Measuring spillover effects in marketplaces (KDD 2024)](https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing)
 * [Covariate-adjusted estimators for multiple randomization designs (2026)](https://arxiv.org/abs/2603.19480)
-
-### Agentic AI for experimentation
-
-* [Multi-agent documentation maintenance (IAAI 2027)](/publication/masoero-2026-mind/)
-* [Can AI agents simulate A/B test outcomes? (WAB@COLM 2026, CODE@MIT 2026)](https://arxiv.org/abs/2608.02345)
