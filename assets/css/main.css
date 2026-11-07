@@ -136,6 +136,62 @@ main { padding: 2.5rem 0 1rem; }
 .paper h2 { margin-top: 2rem; }
 .paper .all { margin-top: 2.5rem; }
 
+/* Signature motif: a buyers × sellers multiple randomization design (layouts/_partials/mrd-grid.html). */
+
+.mrd { display: block; width: 100%; height: auto; }
+.mrd rect { fill: var(--accent); transition: fill-opacity 0.4s ease; }
+.mrd .tt { fill-opacity: 0.78; }
+.mrd .tb { fill-opacity: 0.36; }
+.mrd .ts { fill-opacity: 0.18; }
+.mrd .cc { fill: var(--rule); fill-opacity: 1; }
+.mrd circle.t { fill: var(--accent); }
+.mrd circle.c { fill: none; stroke: var(--muted); stroke-width: 1.2; }
+
+.hero-grid { margin: 0 0 2.25rem; }
+.hero-grid figcaption { margin-top: 0.6rem; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
+.hero-grid button { margin-left: 0.5rem; }
+.hero-grid button {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.05rem 0.45rem;
+  cursor: pointer;
+}
+.hero-grid button:hover { background: var(--accent-soft); border-color: var(--accent); }
+.hero-grid button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mrd rect { transition: none; }
+}
+
+/* Publication thumbnails: a figure from each paper, or the grid motif. */
+
+.pubs > li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; align-items: start; }
+.thumb {
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.2rem;
+}
+.thumb img { display: block; width: 100%; height: 100%; object-fit: cover; background: #fff; }
+.thumb .mrd { width: 100%; height: 100%; padding: 10%; }
+.thumb .mrd .tt { fill-opacity: 0.6; }
+.thumb .mrd .tb { fill-opacity: 0.28; }
+.thumb .mrd .ts { fill-opacity: 0.14; }
+@media (prefers-color-scheme: dark) {
+  .thumb img { filter: brightness(0.86); }
+  .mrd .tb { fill-opacity: 0.45; }
+  .mrd .ts { fill-opacity: 0.26; }
+}
+
+@media (max-width: 30rem) {
+  .pubs > li { grid-template-columns: 4.75rem 1fr; gap: 0.75rem; }
+  .hero-grid { margin-bottom: 1.75rem; }
+}
+
 @media (max-width: 30rem) {
   body { padding: 0 1.1rem; }
   h1 { font-size: 1.5rem; }

@@ -1,0 +1,17 @@
+{{- /* Inline SVG motif: a multiple randomization design. Rows are buyers, columns are sellers.
+     Each buyer and each seller is assigned to treatment or control (deterministic hash of seed);
+     a cell is "tt" when both are treated, "tb"/"ts" when only the buyer/seller is, "cc" otherwise.
+     Context: dict rows, cols, seed, id (optional), label (aria-label; empty = decorative). */ -}}
+{{- $rows := .rows | default 5 }}{{ $cols := .cols | default 36 }}{{ $seed := .seed | default "mrd" }}
+{{- $cell := 12 }}{{ $u := 18 }}
+{{- $B := slice }}{{ range $i := seq 0 (sub $rows 1) }}{{ $B = $B | append (eq (mod (hash.FNV32a (printf "%s-b%d" $seed $i)) 2) 1) }}{{ end }}
+{{- $S := slice }}{{ range $j := seq 0 (sub $cols 1) }}{{ $S = $S | append (eq (mod (hash.FNV32a (printf "%s-s%d" $seed $j)) 2) 1) }}{{ end }}
+{{- $w := sub (mul (add $cols 1) $u) 4 }}{{ $h := sub (mul (add $rows 1) $u) 4 }}
+<svg class="mrd"{{ with .id }} id="{{ . }}"{{ end }} viewBox="0 0 {{ $w }} {{ $h }}" {{ with .label }}role="img" aria-label="{{ . }}"{{ else }}aria-hidden="true" focusable="false"{{ end }}>
+<g class="mrd-b">{{ range $i, $t := $B }}<circle class="{{ if $t }}t{{ else }}c{{ end }}" cx="5" cy="{{ add (mul (add $i 1) $u) 7 }}" r="3.2"/>{{ end }}</g>
+<g class="mrd-s">{{ range $j, $t := $S }}<circle class="{{ if $t }}t{{ else }}c{{ end }}" cx="{{ add (mul (add $j 1) $u) 7 }}" cy="5" r="3.2"/>{{ end }}</g>
+{{- range $j, $s := $S }}
+<g class="mrd-col">{{ range $i, $b := $B }}<rect class="{{ if and $b $s }}tt{{ else if $b }}tb{{ else if $s }}ts{{ else }}cc{{ end }}" x="{{ add (mul (add $j 1) $u) 1 }}" y="{{ add (mul (add $i 1) $u) 1 }}" width="{{ $cell }}" height="{{ $cell }}" rx="2"/>{{ end }}</g>
+{{- end }}
+</svg>
+{{- /**/ -}}

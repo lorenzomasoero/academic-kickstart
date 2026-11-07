@@ -6,8 +6,18 @@
   <ol class="pubs">
     {{- range .Pages }}
     <li>
-      <p class="title"><a href="{{ .Params.url_pdf | default .RelPermalink }}">{{ .Title }}</a></p>
-      {{ partial "pub-meta.html" (dict "page" .) }}
+      {{- $slug := .File.ContentBaseName }}
+      <div class="thumb">
+        {{- with index hugo.Data.thumbs $slug }}
+        <img src="/img/pubs/{{ $slug }}.webp" width="120" height="80" loading="lazy" decoding="async" alt="{{ .alt }}">
+        {{- else }}
+        {{ partial "mrd-grid.html" (dict "rows" 5 "cols" 8 "seed" $slug) }}
+        {{- end }}
+      </div>
+      <div class="pub-text">
+        <p class="title"><a href="{{ .Params.url_pdf | default .RelPermalink }}">{{ .Title }}</a></p>
+        {{ partial "pub-meta.html" (dict "page" .) }}
+      </div>
     </li>
     {{- end }}
   </ol>
