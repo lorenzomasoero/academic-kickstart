@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{- $home := site.GetPage "/home" }}
+<section class="intro" aria-labelledby="name">
+  {{- with resources.Get site.Params.portrait }}
+  {{- $img := .Fill "192x192 Center q85" }}
+  <img class="portrait" src="{{ $img.RelPermalink }}" width="96" height="96" alt="Portrait of {{ site.Params.name }}">
+  {{- end }}
+  <div>
+    <h1 id="name">{{ site.Params.name }}</h1>
+    <p class="role">{{ site.Params.role }}</p>
+    <ul class="contact">
+      <li><a href="mailto:{{ site.Params.email }}">Email</a></li>
+      <li><a href="{{ site.Params.scholar }}">Google Scholar</a></li>
+      <li><a href="{{ site.Params.github }}">GitHub</a></li>
+      <li><a href="{{ site.Params.linkedin }}">LinkedIn</a></li>
+      <li><a href="{{ site.Params.cv }}">CV</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="bio" aria-label="Biography">
+  {{ ($home.Resources.Get "bio.md").Content }}
+</section>
+
+{{- with hugo.Data.news }}
+<section class="news" aria-labelledby="news">
+  <h2 id="news">News</h2>
+  <ul>
+    {{- range . }}
+    <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+<section class="research" aria-labelledby="research">
+  <h2 id="research">Research</h2>
+  {{ ($home.Resources.Get "research.md").Content }}
+  <p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
+</section>
+{{ end }}

@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{- range .Pages.GroupByDate "2006" }}
+<section class="year" aria-labelledby="y{{ .Key }}">
+  <h2 id="y{{ .Key }}">{{ .Key }}</h2>
+  <ol class="pubs">
+    {{- range .Pages }}
+    <li>
+      <p class="title"><a href="{{ .Params.url_pdf | default .RelPermalink }}">{{ .Title }}</a></p>
+      {{ partial "pub-meta.html" (dict "page" .) }}
+    </li>
+    {{- end }}
+  </ol>
+</section>
+{{- end }}
+{{ end }}

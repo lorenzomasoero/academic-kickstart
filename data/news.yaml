@@ -1,0 +1,15 @@
+# Homepage "News" list, shown newest first in the order written here.
+# Each item: `date` is free text shown as-is; `text` is Markdown (links allowed).
+# To add an item, copy one block to the top and edit it.
+
+- date: "Nov 2026"
+  text: "[Mind the Gap: A Deployed Multi-Agent System for Documentation Maintenance](/publication/masoero-2026-mind/) accepted at IAAI 2027."
+
+- date: "Oct/Nov 2026"
+  text: "[Can AI Agents Simulate A/B Test Outcomes?](/publication/hut-2026-simulate/) (with Stefan Hut) presented at the COLM 2026 Workshop on Agent Behavior and CODE@MIT 2026."
+
+- date: "Sep 2026"
+  text: "[Online Activity Prediction via Generalized Indian Buffet Process Models](/publication/beraha-2026-online/) accepted at the Annals of Applied Statistics."
+
+- date: "Jan 2026"
+  text: "[Multiple Randomization Designs: Estimation and Inference with Interference](/publication/masoero-2024-multiple/) published in JRSS-B."

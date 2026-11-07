@@ -1,19 +1,6 @@
-+++
-# About/Biography widget.
-widget = "about"
-active = true
-date = 2016-04-20T00:00:00
-
-# Order that this section will appear in.
-weight = 5
- 
-+++
-I work as a Senior Applied Scientist at Amazon. I spend most of my time working on causal inference and experimental design for large-scale online systems. In particular, I am interested in settings where data is noisy and where interference is at play, like in online marketplaces. I am also exploring how agentic AI frameworks can integrate into online experimentation pipelines to accelerate and improve decision-making.
-
-Previously, I obtained my PhD in Electrical Engineering and Computer Science from [MIT](http://www.mit.edu/) in 2021, working in [CSAIL](https://www.csail.mit.edu/) under the supervision of [Tamara Broderick](http://www.tamarabroderick.com/), working on [Bayesian nonparametric methods for prediction](https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918) and [experimental design](https://academic.oup.com/biomet/article-abstract/109/1/17/6146908) in the context of genomics studies. Before joining MIT, I was an Allievo student at the [Collegio Carlo Alberto](https://www.carloalberto.org/) and at the [University of Torino](https://www.unito.it/). [Here](http://lorenzomasoero.com/files/cv_masoero_2026.pdf) you can find a copy of my CV. You can contact me via email at lo [dot] masoero [at] gmail [dot] com.
-
 Some of my recent research includes:
-**Improving efficiency with noisy data:**
+
+### Improving efficiency with noisy data
 
 * [Demonstration Experiments (2026)](https://arxiv.org/abs/2603.06941)
 * [Leveraging covariate information in A/B testing (KDD 2023)](https://proceedings.mlr.press/v218/masoero23a.html)
@@ -21,7 +8,7 @@ Some of my recent research includes:
 * [Bayesian early termination for experiments (CODE@MIT 2025)](https://www.amazon.science/publications/optimizing-duration-of-online-experiments-via-bayesian-early-termination)
 * [Online activity prediction via Indian buffet processes (Annals of Applied Statistics, to appear)](https://arxiv.org/abs/2505.19643)
 
-**Handling interference in two-sided marketplaces:**
+### Handling interference in two-sided marketplaces
 
 * [Experimental design in marketplaces (Statistical Science, 2023)](https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short)
 * [Multiple randomization designs (JRSS-B, 2026)](https://doi.org/10.1093/jrsssb/qkaf073)
@@ -30,7 +17,7 @@ Some of my recent research includes:
 * [Measuring spillover effects in marketplaces (KDD 2024)](https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing)
 * [Covariate-adjusted estimators for multiple randomization designs (2026)](https://arxiv.org/abs/2603.19480)
 
-**Agentic AI for experimentation:**
+### Agentic AI for experimentation
 
 * [Multi-agent documentation maintenance (IAAI 2027)](/publication/masoero-2026-mind/)
 * [Can AI agents simulate A/B test outcomes? (WAB@COLM 2026, CODE@MIT 2026)](https://arxiv.org/abs/2608.02345)

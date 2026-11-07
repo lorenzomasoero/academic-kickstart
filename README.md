@@ -1,52 +1,53 @@
-# Academic Kickstart
+# lorenzomasoero.com
 
-**Academic** is a framework to help you create a beautiful website quickly. Perfect for personal, student, or academic websites. [Check out the latest demo](https://themes.gohugo.io/theme/academic/) of what you'll get in less than 10 minutes or [view the documentation](https://sourcethemes.com/academic/docs/).
+Personal academic website, built with [Hugo](https://gohugo.io) and deployed by Netlify from `master`
+(`netlify.toml` pins the Hugo version). No theme, no JavaScript, no external fonts or CDNs.
 
-**Academic Kickstart** provides a minimal template to kickstart your new website by following the simple steps below.
+## Layout
 
-[![Screenshot](https://raw.githubusercontent.com/gcushen/hugo-academic/master/academic.png)](https://github.com/gcushen/hugo-academic/)
+| Path | What it is |
+|---|---|
+| `config.toml` | Site title, name, role line, contact links, header menu |
+| `content/home/bio.md` | Homepage biography (Markdown) |
+| `content/home/research.md` | Homepage research groups (`### Heading` + link list each) |
+| `data/news.yaml` | Homepage News list, newest first |
+| `content/publication/<slug>/index.md` | One folder per paper; optional `cite.bib` next to it |
+| `layouts/` | Page templates (`baseof.html`, `home.html`, `publication/`, `_partials/`) |
+| `assets/css/main.css` | The only stylesheet |
+| `static/files/`, `static/img/` | CV PDFs, posters, portrait, favicon (served as-is) |
 
-## Getting Started
+## Editing
 
-The following two methods describe how to install in the cloud using your web browser and how to install on your PC using the Command Prompt/Terminal app.
+**News.** Edit `data/news.yaml`. Put the newest item first; `date` is shown as written, `text` is Markdown:
 
-### Quick install using your web browser
+```yaml
+- date: "Dec 2026"
+  text: "[Paper title](/publication/some-slug/) accepted at Some Venue."
+```
 
-1. [Install Academic with Netlify](https://app.netlify.com/start/deploy?repository=https://github.com/sourcethemes/academic-kickstart)
-    * Netlify will provide you with a customizable URL to access your new site
-2. On GitHub, go to your newly created `academic-kickstart` repository and edit `config.toml` to personalize your site. Shortly after saving the file, your site will automatically update
-3. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content. For inspiration, refer to the [Markdown content](https://github.com/gcushen/hugo-academic/tree/master/exampleSite) which powers the [Demo](https://themes.gohugo.io/theme/academic/)
+**Add a paper.** Create `content/publication/<slug>/index.md`:
 
-### Install on your PC
+```toml
++++
+title = "Paper title"
+date = 2026-12-01            # the year groups the publications page
+authors = ["First Author", "Lorenzo Masoero"]
+publication = "Full venue name"
+publication_short = "Venue 2027"   # shown in the list
+url_pdf = "https://..."            # optional; the title links here if set
+url_preprint = "https://arxiv.org/abs/..."   # optional; labelled arXiv for arxiv.org links
+abstract = ""                      # optional
++++
+```
 
-Prerequisites:
+Drop a `cite.bib` in the same folder to get a BibTeX button.
 
-* [Download and install Git](https://git-scm.com/downloads)
-* [Download and install Hugo](https://gohugo.io/getting-started/installing/#quick-install)
+## Preview
 
-1. Clone (or [Fork](https://github.com/sourcethemes/academic-kickstart#fork-destination-box) or [download](https://github.com/sourcethemes/academic-kickstart/archive/master.zip)) the *Academic Kickstart* repository with Git: 
-
-       git clone https://github.com/sourcethemes/academic-kickstart.git My_Website
-    
-    *Note that if you forked Academic Kickstart, the above command should be edited to clone your fork.*
-
-2. Initialize the theme:
-
-       cd My_Website
-       git submodule update --init --recursive
-
-3. View your new website:
-      
-       hugo server
-
-    Now you can go to [localhost:1313](http://localhost:1313) and your new Academic powered website should appear.
-  
-4. Read the [Quick Start Guide](https://sourcethemes.com/academic/docs/) to learn how to add Markdown content, customize your site, and deploy it.
+```sh
+hugo server --bind 127.0.0.1
+```
 
 ## License
 
-Copyright 2017 [George Cushen](https://georgecushen.com).
-
-Released under the [MIT](https://github.com/sourcethemes/academic-kickstart/blob/master/LICENSE.md) license.
-
-[![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/academic-kickstart/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+Site content © Lorenzo Masoero. The repository started from Academic Kickstart (MIT, see `LICENSE.md`).

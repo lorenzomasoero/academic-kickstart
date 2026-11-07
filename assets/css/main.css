@@ -1,0 +1,148 @@
+/* lorenzomasoero.com: one column, system fonts, one accent colour. */
+
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --text: #1b1b1b;
+  --muted: #595959;
+  --rule: #e2e2e2;
+  --accent: #1d5ba8;
+  --accent-soft: #e9f0f9;
+  --measure: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171a;
+    --text: #e6e6e6;
+    --muted: #a6a6a6;
+    --rule: #33373d;
+    --accent: #8cb8f5;
+    --accent-soft: #1f2a38;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: calc(var(--measure) + 3rem);
+  padding: 0 1.5rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 { line-height: 1.25; font-weight: 600; }
+h1 { font-size: 1.75rem; margin: 0 0 0.25rem; }
+h2 { font-size: 1.2rem; margin: 2.75rem 0 0.75rem; }
+h3 { font-size: 1rem; margin: 1.75rem 0 0.5rem; }
+
+ul, ol { padding-left: 1.25rem; }
+li + li { margin-top: 0.3rem; }
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg);
+}
+.skip:focus { left: 0.5rem; }
+
+/* Header and footer */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  padding: 1.5rem 0 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-name { color: var(--text); font-weight: 600; text-decoration: none; }
+.site-header ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.site-header li + li { margin-top: 0; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover, .site-header nav a[aria-current] { color: var(--text); }
+
+main { padding: 2.5rem 0 1rem; }
+
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.25rem 0 2rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.site-footer p { margin: 0; }
+
+/* Homepage */
+
+.intro { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2rem; }
+.portrait { flex: none; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; }
+.role { margin: 0; color: var(--muted); }
+.contact { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; list-style: none; margin: 0.5rem 0 0; padding: 0; }
+.contact li + li { margin-top: 0; }
+
+.news ul { list-style: none; padding: 0; }
+.news li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; }
+.news li + li { margin-top: 0.6rem; }
+.news .date { color: var(--muted); font-variant-numeric: tabular-nums; }
+.news p { margin: 0; }
+
+.research > p:first-of-type { margin-top: 0; }
+.all { margin-top: 2rem; }
+
+/* Publications */
+
+.year h2 { margin-top: 2.25rem; padding-bottom: 0.25rem; border-bottom: 1px solid var(--rule); }
+.pubs { list-style: none; padding: 0; }
+.pubs > li + li { margin-top: 1.25rem; }
+.pubs p, .paper > p { margin: 0; }
+.pubs .title { font-weight: 600; }
+.authors, .venue { color: var(--muted); }
+.paper .authors { margin-top: 0.75rem; }
+.venue p { margin: 0; }
+
+.buttons { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.pubs .buttons, .paper .buttons { margin-top: 0.4rem; }
+.buttons a {
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  text-decoration: none;
+}
+.buttons a:hover { background: var(--accent-soft); border-color: var(--accent); }
+
+.paper h2 { margin-top: 2rem; }
+.paper .all { margin-top: 2.5rem; }
+
+@media (max-width: 30rem) {
+  body { padding: 0 1.1rem; }
+  h1 { font-size: 1.5rem; }
+  .portrait { width: 72px; height: 72px; }
+  .news li { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* Links that make up a whole list item need no underline until hovered. */
+.contact a, .research li a, .pubs .title a, .all a { text-decoration: none; }
+.contact a:hover, .research li a:hover, .pubs .title a:hover, .all a:hover { text-decoration: underline; }

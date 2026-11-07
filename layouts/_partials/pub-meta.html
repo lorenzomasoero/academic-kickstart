@@ -1,0 +1,22 @@
+{{- /* Authors, venue and link buttons for one publication.
+     Context: dict "page" (the paper) and "full" (true: long venue name, for paper pages). */ -}}
+{{- $full := .full }}
+{{- with .page }}
+{{- $me := site.Params.name -}}
+<p class="authors">
+  {{- range $i, $a := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $a $me }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end -}}
+</p>
+{{- $venue := or .Params.publication_short .Params.publication }}
+{{- if $full }}{{ $venue = or .Params.publication .Params.publication_short }}{{ end }}
+{{- with $venue }}
+<p class="venue">{{ . | markdownify }}</p>
+{{- end }}
+{{- $bib := .Resources.Get "cite.bib" }}
+{{- if or .Params.url_pdf .Params.url_preprint $bib }}
+<p class="buttons">
+  {{- with .Params.url_pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+  {{- with .Params.url_preprint }}<a href="{{ . }}">{{ if in . "arxiv.org" }}arXiv{{ else }}Preprint{{ end }}</a>{{ end }}
+  {{- with $bib }}<a href="{{ .RelPermalink }}">BibTeX</a>{{ end }}
+</p>
+{{- end }}
+{{- end }}
