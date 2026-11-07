@@ -19,7 +19,9 @@
 </section>
 
 <figure class="hero-grid">
+  <div class="mrd-wrap">
   {{ partial "mrd-grid.html" (dict "rows" 5 "cols" 36 "seed" "masoero" "id" "mrd" "label" "Grid of buyers (rows) by sellers (columns). Buyers and sellers are each randomized to treatment or control; a cell is darkest when both its buyer and its seller are treated, lighter when only one is.") }}
+  </div>
   <figcaption>A multiple randomization design: buyers (rows) × sellers (columns), each randomized to treatment or control. <a href="{{ (site.GetPage "/publication/masoero-2024-multiple").RelPermalink }}">Read the paper</a><button type="button" id="mrd-again" hidden>Re-randomize</button></figcaption>
 </figure>
 <script>

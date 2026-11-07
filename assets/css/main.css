@@ -190,6 +190,9 @@ main { padding: 2.5rem 0 1rem; }
 @media (max-width: 30rem) {
   .pubs > li { grid-template-columns: 4.75rem 1fr; gap: 0.75rem; }
   .hero-grid { margin-bottom: 1.75rem; }
+  /* Show fewer, larger sellers on phones; the rest fades out. */
+  .hero-grid .mrd-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(to right, #000 75%, transparent); mask-image: linear-gradient(to right, #000 75%, transparent); }
+  .hero-grid .mrd { width: 175%; max-width: none; }
 }
 
 @media (max-width: 30rem) {
