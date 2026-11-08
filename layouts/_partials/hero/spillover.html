@@ -1,5 +1,5 @@
 {{- /* Measuring direct and indirect impacts: seven clusters of units. Two clusters are treated (filled); a soft halo around each spreads to the neighbouring clusters, which feel an indirect effect (light); the cluster far from both is unaffected (hollow). Fixed layout, no data. */ -}}
-<svg class="hfig" viewBox="0 0 662 104" role="img" aria-label="Clusters of units. Treated clusters show a direct effect; a soft halo around them reaches neighbouring clusters, which show an indirect effect; a distant cluster is unaffected.">
+<svg class="hfig" viewBox="{{ .vb | default "0 0 662 104" }}"{{ with .vb }} preserveAspectRatio="xMidYMid meet"{{ end }} role="img" aria-label="Clusters of units. Treated clusters show a direct effect; a soft halo around them reaches neighbouring clusters, which show an indirect effect; a distant cluster is unaffected.">
 <defs><radialGradient id="hg-halo" class="c2"><stop class="g0" offset="0"/><stop class="g1" offset="1"/></radialGradient></defs>
 <ellipse fill="url(#hg-halo)" cx="145" cy="40" rx="118" ry="44"/>
 <ellipse fill="url(#hg-halo)" cx="525" cy="42" rx="118" ry="44"/>

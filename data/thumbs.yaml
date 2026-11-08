@@ -1,14 +1,26 @@
-# Publication thumbnails: static/img/pubs/<slug>.webp, cropped from a figure in the paper's arXiv PDF.
-# Presentation only. Papers not listed here get the buyers × sellers grid motif as a placeholder.
+# Publication thumbnails on /publication/, one per paper (presentation only).
+# Figure thumbnails: static/img/pubs/<slug>.webp (240×160), cropped from a figure in a public PDF of the paper
+#   (arxiv: arXiv id, or pdf: direct URL; page: PDF page; journal: true = the PDF is the journal version).
+# Snapshot thumbnails (no usable public figure): snapshot: <id> renders layouts/_partials/hero/<id>.html inline,
+#   cropped to the 3:2 viewBox vb (text labels hidden). Every paper needs an entry.
 agarwal-2024-bandits:        {arxiv: "2405.18621",   page: 2,  alt: "Figure from the paper: a network of units whose rewards depend on their neighbours' treatments"}
+bajari-2023-edm:             {pdf: "https://cdn.amazon.science/d3/c0/57e3c4f748958278aa6fb05e5700/experimental-design-in-marketplaces.pdf", page: 16, journal: true, alt: "Figure from the paper: viewer and content-creator treatments linked to the potential outcomes they affect"}
 beraha-2026-online:          {arxiv: "2505.19643",   page: 5,  alt: "Figure from the paper: cumulative new users over time in three experiments"}
+camerlenghi-2022-scaled:     {arxiv: "2106.15480v2", page: 16, alt: "Figure from the paper: box plots of estimation accuracy for new rare variants in three cancer types"}
+gualavisy-2025-power:        {pdf: "https://cdn.amazon.science/dd/9d/c57c3b78497d95893ec0c3010cdf/rethinkingpower-fv.pdf", page: 3, alt: "Figure from the paper: true effects against the minimum detectable effect, and prior-informed average power, for two metrics"}
+horel-21:                    {snapshot: cpd-data, vb: "446 -2 160 106.67"}
 hut-2026-simulate:           {arxiv: "2608.02345",   page: 6,  alt: "Figure from the paper: when principled subsampling pays off, and the budget frontier"}
 imbens-2026-demonstration:   {arxiv: "2603.06941",   page: 25, alt: "Figure from the paper: power curves of adaptive rules with ten arms"}
+masoero-2018-posterior:      {snapshot: trait-alloc, vb: "2 0 156 104"}
 masoero-2021-bayesian:       {arxiv: "2112.02032",   page: 4,  alt: "Figure from the paper: number of singletons and power as functions of sequencing depth"}
 masoero-2022-cross:          {arxiv: "2202.01910",   page: 17, alt: "Figure from the paper: local replicability of k-means clusters across studies"}
 masoero-2022-more:           {arxiv: "1912.05516",   page: 12, alt: "Figure from the paper: predicted number of new genomic variants for two cancer types"}
 masoero-2023-leveraging:     {arxiv: "2305.01109",   page: 9,  alt: "Figure from the paper: difference-in-means and regression-adjusted estimates against covariate imbalance"}
+masoero-2024-marketplace:    {snapshot: spillover, vb: "18 -14 165 110"}
 masoero-2024-multiple:       {arxiv: "2112.13495",   page: 20, alt: "Figure from the paper: histograms of two estimators over repeated randomizations"}
+masoero-2025-bayesian:       {pdf: "https://cdn.amazon.science/fb/0b/8d22ba08491f9a3cb098485f7c0c/scipub-approval152129-40945780-optimizing-duration-of-online-experiments-via-bayesian-early-termination.pdf", page: 3, alt: "Figure from the paper: weekly early launch and termination decisions under two threshold rules"}
+masoero-2026-mind:           {snapshot: triagent, vb: "190 3 150 100"}
 missault-2024-switchback:    {arxiv: "2506.12654",   page: 3,  alt: "Figure from the paper: standard error of the treatment effect under three experimental designs"}
 nguyen-2020-independent:     {arxiv: "2009.10780",   page: 23, alt: "Figure from the paper: image denoising quality across approximation levels and Gibbs sweeps"}
+shen-2022-double:            {arxiv: "2403.02154v1", page: 9, alt: "Figure from the paper: log density of the two-population rate measure for two hyperparameter settings"}
 sudijono-2026-regression:    {arxiv: "2603.19480",   page: 5,  alt: "Figure from the paper: sampling distributions of three direct-effect estimators"}

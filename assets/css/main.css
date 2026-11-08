@@ -228,10 +228,9 @@ main { padding: 2.5rem 0 1rem; }
   margin-top: 0.2rem;
 }
 .thumb img { display: block; width: 100%; height: 100%; object-fit: cover; background: #fff; }
-.thumb .mrd { width: 100%; height: 100%; padding: 10%; }
-.thumb .mrd .tt { fill-opacity: 0.6; }
-.thumb .mrd .tb { fill-opacity: 0.28; }
-.thumb .mrd .ts { fill-opacity: 0.14; }
+/* Snapshot thumbnails: a homepage figure, cropped by its viewBox (data/thumbs.yaml), without labels or motion. */
+.thumb .hfig { width: 100%; height: 100%; }
+.thumb .hfig text, .thumb .hfig .pk { display: none; }
 @media (prefers-color-scheme: dark) {
   .thumb img { filter: brightness(0.86); }
   .mrd .tb { fill-opacity: 0.45; }

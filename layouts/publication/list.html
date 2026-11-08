@@ -9,9 +9,13 @@
       {{- $slug := .File.ContentBaseName }}
       <div class="thumb">
         {{- with index hugo.Data.thumbs $slug }}
-        <img src="/img/pubs/{{ $slug }}.webp" width="120" height="80" loading="lazy" decoding="async" alt="{{ .alt }}">
+        {{- if .snapshot }}
+        {{ partial (printf "hero/%s.html" .snapshot) (dict "vb" .vb) }}
         {{- else }}
-        {{ partial "mrd-grid.html" (dict "rows" 5 "cols" 8 "seed" $slug) }}
+        <img src="/img/pubs/{{ $slug }}.webp" width="120" height="80" loading="lazy" decoding="async" alt="{{ .alt }}">
+        {{- end }}
+        {{- else }}
+        {{- warnf "publication %q has no entry in data/thumbs.yaml" $slug }}
         {{- end }}
       </div>
       <div class="pub-text">

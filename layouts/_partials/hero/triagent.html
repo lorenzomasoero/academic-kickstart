@@ -2,7 +2,7 @@
      are updated, and the loop returns to the agent. A packet moves around the loop with a CSS motion path
      (hidden where unsupported, still under prefers-reduced-motion). */ -}}
 {{- $loop := "M250 36H412A17 17 0 0 1 412 70H250A17 17 0 0 1 250 36Z" -}}
-<svg class="hfig" viewBox="0 0 662 104" role="img" aria-label="Loop diagram: support tickets go to a triage agent, which answers; a gap in the documentation is flagged, the docs are updated, and the next answer improves.">
+<svg class="hfig" viewBox="{{ .vb | default "0 0 662 104" }}"{{ with .vb }} preserveAspectRatio="xMidYMid meet"{{ end }} role="img" aria-label="Loop diagram: support tickets go to a triage agent, which answers; a gap in the documentation is flagged, the docs are updated, and the next answer improves.">
 <path class="track" d="{{ $loop }}"/>
 <path class="chev" d="M327 31l6 5-6 5M335 65l-6 5 6 5"/>
 <path class="ln" d="M160 36H234"/><path class="ah" d="M240 36l-8-4.5v9z"/>

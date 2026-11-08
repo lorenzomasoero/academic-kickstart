@@ -285,3 +285,50 @@ Added at your request in commit `ace6c6b` on branch `alt-signature` (nothing pus
 - **Open point:** in light mode the grey "awards" cells use `--rule`, the same grey as the MRD grid's control cells, so they are the faintest of the four. Say if you want them stronger.
 
 Lorenzo Masoero (masoerl), last updated 2026-11-08. Prepared with Claude.
+
+## Thumbnails for every paper
+
+Branch `nav-tweaks` (nothing pushed). Each of the 21 papers on `/publication/` now has its own thumbnail. The buyers × sellers grid placeholder is gone from the list. `mrd-grid.html` remains, because the homepage MRD figure still uses it.
+
+**How it works.** `data/thumbs.yaml` now has one entry per paper (21). An entry is one of two kinds:
+- **Figure:** `static/img/pubs/<slug>.webp`, cropped from a figure in a public PDF. Same recipe as the first 12: rendered with `pdftoppm` at 300 dpi, white margins trimmed, padded with white to 3:2, 240 × 160 WebP. The 5 new ones are 2.7–6.1 KB each.
+- **Snapshot:** `snapshot: <id>` renders `layouts/_partials/hero/<id>.html` inline, cropped by a 3:2 `vb` viewBox. The four partials used take an optional `vb` parameter; the homepage doesn't pass it and is unchanged. In `.thumb`, text labels and the moving packet are hidden (`assets/css/main.css`).
+
+If a paper has no entry, the build prints a warning and the box stays empty; no placeholder is drawn.
+
+### Sources for the 9 new thumbnails
+
+PDFs were downloaded into `/var/tmp/website/alt-dl/thumbs2/`. I only rendered and cropped them; nothing from the downloads was run. arXiv was searched through its API by title and by author (`au:Masoero AND au:Lorenzo`, 17 hits). Only 2 of the 9 are on arXiv, and both match on title and authors.
+
+| Slug | Source | Page | Figure |
+|---|---|---|---|
+| `bajari-2023-edm` | https://cdn.amazon.science/d3/c0/57e3c4f748958278aa6fb05e5700/experimental-design-in-marketplaces.pdf (linked from the Amazon Science page) — **journal version** | 16 | Fig. 3, bipartite graph of viewer and creator treatments → potential outcomes |
+| `camerlenghi-2022-scaled` | arXiv 2106.15480v2 (https://arxiv.org/pdf/2106.15480v2); title and authors match | 16 | Fig. 4, first 3 of 5 accuracy box-plot panels (Breast, Colon, Ovarian) |
+| `gualavisy-2025-power` | https://cdn.amazon.science/dd/9d/c57c3b78497d95893ec0c3010cdf/rethinkingpower-fv.pdf (Amazon Science page) | 3 | Fig. 1, panels a)–b) |
+| `horel-21` | fallback: snapshot `cpd-data` (crop: the highlighted linked person and its records) | — | — |
+| `masoero-2018-posterior` | fallback: snapshot `trait-alloc` (crop: left quarter, i.e. trait pool, three groups, shared columns) | — | — |
+| `masoero-2024-marketplace` | fallback: snapshot `spillover` (crop: one indirect cluster and one treated cluster with its halo) | — | — |
+| `masoero-2025-bayesian` | https://cdn.amazon.science/fb/0b/8d22ba08491f9a3cb098485f7c0c/scipub-approval152129-40945780-optimizing-duration-of-online-experiments-via-bayesian-early-termination.pdf (Amazon Science page) | 3 | Fig. 1, panels 2–3 (week-specific, differential evolution) |
+| `masoero-2026-mind` | fallback: snapshot `triagent` (crop: tickets arrow into the agent and the left half of the loop). Not public yet; the local camera-ready was not used | — | — |
+| `shen-2022-double` | arXiv 2403.02154v1 (https://arxiv.org/pdf/2403.02154v1); title and authors match | 9 | Fig. 1, first 2 of 3 rate-measure heat maps |
+
+Why the four fallbacks:
+- **CPD** (`horel-21`): `datasets-benchmarks-proceedings.neurips.cc` and `proceedings.neurips.cc` timed out from this host. The OpenReview copy (forum `MAWgLrYvMs0`, same authors) returns a bot challenge (HTTP 403), which I did not try to get around. It is not on arXiv.
+- **Hierarchical CRMs** (`masoero-2018-posterior`): the Google Drive PDF downloaded fine (12 pages, title and authors match), but it has no figures.
+- **Marketplace** (`masoero-2024-marketplace`): the Google Drive PDF downloaded fine (5 pages), but it has only a table, no figure.
+- **Mind the Gap** (`masoero-2026-mind`): not public, as the brief says.
+
+### Worth your decision
+
+1. **The EDM thumbnail comes from the journal version.** The Amazon Science PDF is the Statistical Science galley proof (`sts883_final.pdf`, IMS proof headers and line numbers; the crop leaves those out). It is publicly hosted by Amazon Science, but it is the journal's typeset version, not a preprint. If you don't want that, use the `edm` snapshot instead: in `data/thumbs.yaml`, set `bajari-2023-edm: {snapshot: edm, vb: "…"}`, then delete `static/img/pubs/bajari-2023-edm.webp`.
+2. **Author list mismatch, marketplace paper.** The Google Drive PDF lists *Stefan Hut, Guido Imbens, Lorenzo Masoero, Suhas Vijaykumar*. `content/publication/masoero-2024-marketplace/index.md` lists Masoero, Hut, Vijaykumar, without Imbens. I didn't change any content.
+3. **Spelling of a co-author, CODE@MIT 2025.** Both Amazon Science PDFs spell the name *Gualavisi*. The site uses *Gualavisy* in `gualavisy-2025-power` (authors and slug) and *Gualavisi* in `masoero-2025-bayesian`. I didn't change any content.
+4. **The snapshot thumbnails follow the page theme** (dark in dark mode, and the colour or B&W palette), while the figure thumbnails stay white (dimmed in dark mode). I think the mix reads as intentional, but say so if you'd prefer the snapshots on a white card.
+5. **To change a snapshot crop,** edit its `vb` in `data/thumbs.yaml`. It is a viewBox in the 662 × 104 coordinates of the homepage figure, and it should stay 3:2.
+
+### Verification
+
+- **Build:** `hugo --gc --minify` reports 0 errors and 0 warnings. The preview is rebuilt with `hugo --quiet -d /var/tmp/website/preview/colour`, and its `/publication/` page has 21 thumbnails (17 images, 4 inline snapshots) and no grid.
+- **Internal links:** a script (`/var/tmp/website/tools/thumbs2/links.py`) checked every internal `href`/`src` and CSS `url()` in `public/`. **258 references, 0 broken.**
+- **Screenshots,** in `/var/tmp/website/alt-shots/thumbs2/`: `pubs_desktop.png` (1440, full page, light), `pubs_phone.png` (390), `pubs_desktop_dark.png`, `pubs_desktop_mono.png` (`?palette=mono`). They were served from `public/` on 127.0.0.1:8815, and the server was stopped afterwards. I looked at each one; three crops were adjusted after the first look. No two thumbnails look alike.
+- **Files changed:** `data/thumbs.yaml`, `layouts/publication/list.html`, `layouts/_partials/hero/{cpd-data,trait-alloc,spillover,triagent}.html` (`vb` parameter only), `assets/css/main.css`, and 5 new `static/img/pubs/*.webp`. No content files changed.
