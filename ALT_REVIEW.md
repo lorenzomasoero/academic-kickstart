@@ -185,7 +185,7 @@ The live preview was rebuilt with `hugo --quiet -d /var/tmp/website/preview/sign
 
 ## More snapshots
 
-Added on branch `alt-signature` in commits `b8fb845`, `bd2d38c`, `3398fb5`, `de82186` and `e7e199a` (nothing pushed). The homepage now picks from 20 snapshots instead of 8, so every paper has one except the two skipped below. Each new figure is one partial in `layouts/_partials/hero/<id>.html` and one entry in `data/hero.yaml`, in the same 662 × 104 viewBox, palette, stroke weights and 12 px labels as the first eight. The script is unchanged, and the MRD grid is still the figure shown without JS.
+Added on branch `alt-signature` in commits `b8fb845`, `bd2d38c`, `3398fb5`, `de82186` and `e7e199a` (nothing pushed). The homepage now picks from 21 snapshots instead of 8 (20 from this round, plus `cpd-data`, added afterwards; see the last section), so every paper has one except `bajari-2021-multiple`. Each new figure is one partial in `layouts/_partials/hero/<id>.html` and one entry in `data/hero.yaml`, in the same 662 × 104 viewBox, palette, stroke weights and 12 px labels as the first eight. The script is unchanged, and the MRD grid is still the figure shown without JS.
 
 ### Figures added
 
@@ -213,9 +213,7 @@ Each figure has its own visual idea: a bipartite graph, halos, a scatter with er
 - **Nothing dropped.** All twelve read at 1440 and at 390 wide. The weakest at phone size are:
   - `replicability`: the clusters become small dot groups, and the faded one is faint by design.
   - `scaled-priors`: two panels in one strip are small; the narrow band in the "standard prior" panel is thin.
-- **Skipped, as the brief asked:**
-  - `bajari-2021-multiple`: the same work as the existing `mrd` snapshot.
-  - `horel-21` (the Chicago Police Department dataset): see the decision below.
+- **Skipped, as the brief asked:** `bajari-2021-multiple`, the same work as the existing `mrd` snapshot.
 - **Venues and titles:**
   - The short titles are my wording, e.g. "Statistical power calculations revisited" for gualavisy-2025 (the brief called it "Power with effect-size priors"), "Covariate adjustment at scale" and "Double trouble".
   - Both 2026 preprints show "arXiv 2026", as the brief gives for `demo`. Their pages say arXiv 2603.19480 and 2603.06941. The older `switchback` entry still shows "preprint"; make them match if you prefer one style.
@@ -261,12 +259,29 @@ I also checked every new figure at 390 wide and six in dark mode while working. 
 
 The live preview was rebuilt with `hugo --quiet -d /var/tmp/website/preview/signature`, and http://127.0.0.1:1313 is serving it.
 
-### Decision for you: the Chicago Police Department paper
+### Chicago Police Department dataset (`cpd-data`)
 
-`horel-21` (the paper on the Chicago Police Department dataset) has no snapshot. Its subject is sensitive, and a playful random illustration on the homepage could read as trivializing it. Options:
-- leave it out of the rotation (the current state). It stays listed under Publications as before;
-- add a deliberately neutral figure, for example an abstract data-table motif with no people, places or events.
+Added at your request in commit `ace6c6b` on branch `alt-signature` (nothing pushed). This replaces the earlier note on skipping `horel-21`.
 
-My recommendation is to leave it out.
+- **Header:** The Chicago Police Department dataset (NeurIPS 2021, Datasets & Benchmarks) → `/publication/horel-21/`.
+- **Caption:** "Illustration: separately released public records linked into one documented dataset, in which each person's records from every source are joined".
+- **Figure:** the paper's contribution is data engineering, so the figure shows only that. On the left are four small tables, "complaints", "use of force", "rosters" and "awards", each released on its own. Each table's cells have their own style: filled, light, hollow and grey. Grey lines lead into a "record linkage" node (two linked rings). An arrow goes to "one linked dataset" on the right: a small relational graph where each person is a dot, joined to record squares in the matching source styles. One person is highlighted in accent with a soft halo. That person's records come from all four sources, and one record is shared with a neighbouring person.
+- **Neutral by design:** no violence, no police imagery or badges, no faces, and no real names, places or numbers. People are plain dots, and the coordinates are a fixed hand-made layout.
+- **Phones:** the figure is drawn whole, like the other diagrams. Four enlarged labels do not fit stacked at 390 px, so on phones the left side reads "public records" and the four table glyphs stay. This uses two new CSS classes in the "Rotating hero figures" block of `assets/css/main.css`: `.lg` is shown on desktop only, and `.sm` on phones only (not for cropped figures). The "record linkage" label sits under the node so that it clears the incoming lines at both sizes.
+- **Verification:**
+  - Hugo 0.169.0 (`--gc --minify`): 0 errors, 0 warnings.
+  - Link script: 243 internal references, 0 broken.
+  - `?fig=cpd-data`: headless Chromium's `--dump-dom` shows that figure visible and the other 20 `hidden`.
+- **Page weight (homepage):** HTML + CSS + inline JS is 76.4 KiB raw and 18.4 KiB gzipped, or 27.7 KiB with the portrait and favicon. Before this figure it was 72.4 / 17.7 / 27.0 at `e7e199a`. The HTML alone is 68.2 KiB, still well under the ~120 KB point for lazy loading.
+- **Screenshots** in `/var/tmp/website/alt-shots/signature-rotating-2/`:
+  - `cpd-data_desktop.png`: 1440 wide, light mode
+  - `cpd-data_mobile.png`: 390 wide
+  - `cpd-data_desktop_dark.png`: 1440 wide, dark mode
+
+  The first shots showed two problems, both now fixed:
+  - the four labels overlapped on phones;
+  - edges showed through the hollow record squares.
+- **Preview:** rebuilt into `/var/tmp/website/preview/signature`. The server on http://127.0.0.1:1313 was left untouched.
+- **Open point:** in light mode the grey "awards" cells use `--rule`, the same grey as the MRD grid's control cells, so they are the faintest of the four. Say if you want them stronger.
 
 Lorenzo Masoero (masoerl), last updated 2026-11-08. Prepared with Claude.
