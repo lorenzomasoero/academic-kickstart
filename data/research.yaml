@@ -1,0 +1,26 @@
+# Homepage "Research" section. Labels and links as written before (content/home/research.md);
+# `fig` is the research snapshot each item opens with "I want to know more!" (data/hero.yaml).
+intro: "Some of my recent research includes:"
+groups:
+  - name: "Agentic AI for experimentation"
+    topic: agentic
+    items:
+      - {label: "Multi-agent documentation maintenance (IAAI 2027)", href: "/publication/masoero-2026-mind/", fig: triagent}
+      - {label: "Can AI agents simulate A/B test outcomes? (WAB@COLM 2026, CODE@MIT 2026)", href: "https://arxiv.org/abs/2608.02345", fig: agents-ab}
+  - name: "Improving efficiency with noisy data"
+    topic: noisy
+    items:
+      - {label: "Demonstration Experiments (2026)", href: "https://arxiv.org/abs/2603.06941", fig: demo}
+      - {label: "Leveraging covariate information in A/B testing (KDD 2023)", href: "https://proceedings.mlr.press/v218/masoero23a.html", fig: cuped}
+      - {label: "Statistical power calculations with effect size priors (CODE@MIT 2025)", href: "https://www.amazon.science/publications/statistical-power-calculations-revisited-incorporating-beliefs-about-effect-sizes", fig: power}
+      - {label: "Bayesian early termination for experiments (CODE@MIT 2025)", href: "https://www.amazon.science/publications/optimizing-duration-of-online-experiments-via-bayesian-early-termination", fig: early-stop}
+      - {label: "Online activity prediction via Indian buffet processes (Annals of Applied Statistics, to appear)", href: "https://arxiv.org/abs/2505.19643", fig: ibp}
+  - name: "Handling interference in two-sided marketplaces"
+    topic: interference
+    items:
+      - {label: "Experimental design in marketplaces (Statistical Science, 2023)", href: "https://projecteuclid.org/journals/statistical-science/advance-publication/Experimental-Design-in-Marketplaces/10.1214/23-STS883.short", fig: edm}
+      - {label: "Multiple randomization designs (JRSS-B, 2026)", href: "https://doi.org/10.1093/jrsssb/qkaf073", fig: mrd}
+      - {label: "Multi-armed bandits with network interference (NeurIPS 2024)", href: "https://arxiv.org/abs/2405.18621", fig: bandits}
+      - {label: "Multiple-unit switchback experiments (2025)", href: "https://arxiv.org/pdf/2506.12654", fig: switchback}
+      - {label: "Measuring spillover effects in marketplaces (KDD 2024)", href: "https://drive.google.com/file/d/1auP6JpB0DxIQRCIDazum5uFlm9BtTkiS/view?usp=sharing", fig: spillover}
+      - {label: "Covariate-adjusted estimators for multiple randomization designs (2026)", href: "https://arxiv.org/abs/2603.19480", fig: double-rand-reg}

@@ -3,111 +3,132 @@
 # clip: true = on phones, show a larger slice that fades out on the right (for grids and textures);
 # otherwise the whole figure is scaled down with larger labels.
 - id: mrd
+  topic: interference
   page: /publication/masoero-2024-multiple
   title: Multiple randomization designs
   venue: JRSS-B
   clip: true
   caption: "Illustration: buyers (rows) × sellers (columns), each randomized to treatment or control"
 - id: switchback
+  topic: interference
   page: /publication/missault-2024-switchback
   title: Multiple-unit switchback experiments
   venue: preprint
   clip: true
   caption: "Illustration: units (rows) switch between treatment and control in blocks over time, each on its own randomized schedule"
 - id: more-for-less
+  topic: phd
   page: /publication/masoero-2022-more
   title: More for less
   venue: Biometrika
   caption: "Illustration: new genomic variants found as the sample grows, extrapolated past the samples at hand with widening uncertainty"
 - id: ibp
+  topic: noisy
   page: /publication/beraha-2026-online
   title: Online activity prediction
   venue: Annals of Applied Statistics
   clip: true
   caption: "Illustration: users (rows) by days (columns); each row starts on a user's first active day, which traces a staircase; later marks are repeat visits"
 - id: triagent
+  topic: agentic
   page: /publication/masoero-2026-mind
   title: Mind the Gap
   venue: IAAI 2027
   caption: "Illustration: an agent answers support tickets, flags gaps in the docs, and the updated docs improve the next answer"
 - id: agents-ab
+  topic: agentic
   page: /publication/hut-2026-simulate
   title: Can AI agents simulate A/B test outcomes?
   venue: WAB@COLM, CODE@MIT 2026
   caption: "Illustration: agents split into control and treatment, and the simulated effect checked against the real one"
 - id: bandits
+  topic: interference
   page: /publication/agarwal-2024-bandits
   title: Multi-armed bandits with network interference
   venue: NeurIPS 2024
   clip: true
   caption: "Illustration: units on a network, each shaded by the arm chosen for it; one unit is highlighted with the links through which its neighbours' arms affect it"
 - id: early-stop
+  topic: noisy
   page: /publication/masoero-2025-bayesian
   title: Bayesian early termination
   venue: CODE@MIT 2025
   caption: "Illustration: the probability that treatment is better, tracked over time; the test stops once it crosses the threshold"
 - id: edm
+  topic: interference
   page: /publication/bajari-2023-edm
   title: Experimental design in marketplaces
   venue: Statistical Science
   caption: "Illustration: buyers and sellers, each treated or control, joined by transactions; transactions between treated buyers and control sellers carry interference"
 - id: spillover
+  topic: interference
   page: /publication/masoero-2024-marketplace
   title: Measuring direct and indirect impacts
   venue: TSMO@KDD, CODE@MIT 2024
   caption: "Illustration: treated clusters of units feel a direct effect, and the effect spills over to neighbouring clusters as an indirect one"
 - id: double-rand-reg
+  topic: interference
   page: /publication/sudijono-2026-regression
   title: Regression adjustments for double randomization
   venue: arXiv 2026
   caption: "Illustration: outcomes against a covariate for treated and control units; adjusting for the covariate narrows the interval for the effect"
 - id: cuped
+  topic: noisy
   page: /publication/masoero-2023-leveraging
   title: Covariate adjustment at scale
   venue: KDD 2023 workshop
   caption: "Illustration: the spread of an effect estimate with and without covariate adjustment; both are centred on the same effect"
 - id: power
+  topic: noisy
   page: /publication/gualavisy-2025-power
   title: Statistical power calculations revisited
   venue: CODE@MIT 2025
   caption: "Illustration: power rises with the effect size; weighting it by a prior belief about effect sizes gives the expected power"
 - id: demo
+  topic: noisy
   page: /publication/imbens-2026-demonstration
   title: Demonstration experiments
   venue: arXiv 2026
   caption: "Illustration: the share of units given to each of three arms over time, shifting towards the arm that works until it is demonstrated"
 - id: scaled-priors
+  topic: phd
   page: /publication/camerlenghi-2022-scaled
   title: Scaled process priors
   venue: JASA
   caption: "Illustration: predicting new genetic variants; a standard prior is too confident and misses, a scaled prior's band covers what comes next"
 - id: power-rare
+  topic: phd
   page: /publication/masoero-2021-bayesian
   title: Power maximization for rare variants
   venue: LMRL@NeurIPS 2021
   caption: "Illustration: a fixed sequencing budget spent on many samples at low depth or few samples at high depth; power peaks in between"
 - id: two-pops
+  topic: phd
   page: /publication/shen-2022-double
   title: Double trouble
   venue: LMRL@NeurIPS 2022
   caption: "Illustration: new variants found as samples grow in two populations, and the part of them the two populations share"
 - id: replicability
+  topic: phd
   page: /publication/masoero-2022-cross
   title: Cross-study replicability in cluster analysis
   venue: Statistical Science
   caption: "Illustration: clusters found in two studies; matching clusters are linked, and one that does not replicate is faded"
 - id: finite-approx
+  topic: phd
   page: /publication/nguyen-2020-independent
   title: Independent finite approximations
   venue: Bayesian Analysis
   caption: "Illustration: the weights of infinitely many atoms (top), and a finite approximation that keeps a fixed number of them (bottom)"
 - id: trait-alloc
+  topic: phd
   page: /publication/masoero-2018-posterior
   title: Hierarchical CRMs in trait allocation
   venue: BNP@NeurIPS 2018
   clip: true
   caption: "Illustration: three groups of samples (row pairs) draw traits (columns) from a shared pool on top; shaded columns are traits all groups share"
 - id: cpd-data
+  topic: phd
   page: /publication/horel-21
   title: The Chicago Police Department dataset
   venue: NeurIPS 2021, Datasets & Benchmarks

@@ -360,8 +360,6 @@ main { padding: 2.5rem 0 1rem; }
 [data-palette="colour"] h2 { color: var(--head); }
 [data-palette="colour"] .news .date { color: var(--date); }
 [data-palette="colour"] .thumb { border-color: var(--c1s); }
-[data-palette="colour"] .pubs > li:nth-child(3n+2) .thumb { border-color: var(--c3s); }
-[data-palette="colour"] .pubs > li:nth-child(3n) .thumb { border-color: var(--c2s); }
 
 /* "Curious? See more": a native <details> under each snapshot's caption (text in data/more.yaml). */
 
@@ -451,3 +449,25 @@ details.sec:not([open]) { margin-bottom: 1rem; }
 .news details.older > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .news details.older ul { margin-top: 0.75rem; }
 @media (prefers-reduced-motion: reduce) { .news details.older > summary::before { transition: none; } }
+
+/* Topic colour-coding (data/topics.yaml). Black and white: every topic uses the plain accent. */
+.t-agentic, .t-noisy, .t-interference, .t-phd { --t: var(--accent); --ts: var(--rule); }
+[data-palette="colour"] .t-agentic { --t: var(--c4); --ts: var(--c4s); }
+[data-palette="colour"] .t-noisy { --t: var(--c3); --ts: var(--c3s); }
+[data-palette="colour"] .t-interference { --t: var(--c2); --ts: var(--c2s); }
+[data-palette="colour"] .t-phd { --t: var(--c1); --ts: var(--c1s); }
+.hf-head .topic { display: inline-block; margin-right: 0.35rem; padding: 0 0.45rem; border-radius: 999px; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.03em; line-height: 1.5; color: var(--t); border: 1px solid var(--ts); vertical-align: 1px; }
+.rgroup { margin: 0 0 1.25rem; padding-left: 0.85rem; border-left: 3px solid var(--ts); }
+.rgroup h3 { color: var(--t); margin: 0 0 0.5rem; }
+.rgroup ul { margin: 0; padding-left: 1.1rem; }
+.rgroup li::marker { color: var(--t); }
+.ri { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.6rem; }
+.ri + .ri { margin-top: 0.35rem; }
+.ri .km { font-size: 0.75rem; padding: 0.1rem 0.55rem 0.1rem 0.45rem; border-color: var(--ts); }
+.ri .km[aria-expanded="true"] { border-color: var(--t); }
+.ri .km[hidden] { display: none; }
+.rk { flex-basis: 100%; margin: 0.6rem 0 0.9rem; padding: 0.75rem 0.85rem; border: 1px solid var(--ts); border-radius: 6px; }
+.rk .hf-art { margin: 0; }
+.rk figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
+.pubs > li[class^="t-"] .thumb { border-color: var(--ts); }
+.ri .km { margin-left: auto; }

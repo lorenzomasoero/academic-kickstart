@@ -27,7 +27,7 @@
 {{- $more := index hugo.Data.more .id }}{{ if not $more }}{{ errorf "data/more.yaml: no entry for snapshot %q" .id }}{{ end }}
 {{- $next := index $all (mod (add $i 1) $n) }}
 <figure class="hero-grid hf{{ if .clip }} clip{{ end }}" id="s-{{ .id }}" data-fig="{{ .id }}"{{ if $i }} hidden{{ end }}>
-  <div class="hf-head"><span class="hf-label">Random research snapshot</span><span class="hf-paper"><a href="{{ $p.RelPermalink }}">{{ .title }}</a> ({{ .venue }})</span></div>
+  {{- $tp := index hugo.Data.topics .topic }}<div class="hf-head t-{{ .topic }}"><span class="hf-label">Random research snapshot</span><span class="hf-paper"><span class="topic">{{ $tp.name }}</span> <a href="{{ $p.RelPermalink }}">{{ .title }}</a> ({{ .venue }})</span></div>
   <div class="hf-art">{{ partial (printf "hero/%s.html" .id) . }}</div>
   <figcaption>{{ .caption }}
     {{- /* "Curious? See more": a native <details>, so it works without JS. Text lives in data/more.yaml;
@@ -96,7 +96,22 @@
 
 <details class="sec research">
   <summary><h2 id="research">Research</h2></summary>
-  {{ ($home.Resources.Get "research.md").Content }}
+  {{- with hugo.Data.research }}
+  <p>{{ .intro }}</p>
+  {{- range .groups }}
+  <div class="rgroup t-{{ .topic }}">
+    <h3>{{ .name }}</h3>
+    <ul>
+      {{- range .items }}
+      <li class="ri"><a href="{{ .href }}">{{ .label }}</a><button type="button" class="tg km" aria-expanded="false" aria-controls="rk-{{ .fig }}" data-fig="{{ .fig }}" hidden>I want to know more!</button><div class="rk" id="rk-{{ .fig }}" hidden></div></li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  {{- end }}
+  {{- /* "I want to know more!" copies that paper's snapshot from the hero (figure, caption and "See more") into
+       place on first open; nothing is duplicated in the HTML. Without JS the buttons stay hidden. */}}
+  <script>(function(){var K=document.querySelectorAll(".km"),i;for(i=0;i<K.length;i++){K[i].hidden=false;K[i].onclick=function(){var b=this,d=document.getElementById(b.getAttribute("aria-controls")),o=b.getAttribute("aria-expanded")!="true";if(o&&!d.firstChild){var f=document.getElementById("s-"+b.getAttribute("data-fig"));if(!f)return;["hf-art","figcaption"].forEach(function(s){var n=f.querySelector(s=="figcaption"?s:"."+s);if(n){n=n.cloneNode(true);var I=n.querySelectorAll("[id]"),j;for(j=0;j<I.length;j++)I[j].removeAttribute("id");var x=n.querySelector(".more-next");if(x)x.parentNode.removeChild(x);d.appendChild(n)}})}b.setAttribute("aria-expanded",o);d.hidden=!o}}})();</script>
 </details>
 <p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
 {{ end }}

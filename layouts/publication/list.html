@@ -5,8 +5,9 @@
   <h2 id="y{{ .Key }}">{{ .Key }}</h2>
   <ol class="pubs">
     {{- range .Pages }}
-    <li>
-      {{- $slug := .File.ContentBaseName }}
+    {{- $slug := .File.ContentBaseName }}{{ $tp := "" }}
+    {{- range hugo.Data.hero }}{{ if eq .page (printf "/publication/%s" $slug) }}{{ $tp = .topic }}{{ end }}{{ end }}
+    <li{{ with $tp }} class="t-{{ . }}"{{ end }}>
       <div class="thumb">
         {{- with index hugo.Data.thumbs $slug }}
         {{- if .snapshot }}

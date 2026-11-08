@@ -1,0 +1,6 @@
+# Research topics: colour-coding on the homepage and publications page. `hue` picks the Colour-mode
+# palette variable (--c1 … --c4); in black and white every topic uses the plain accent.
+agentic:      {name: "Agentic AI",   hue: 4}
+noisy:        {name: "Noisy data",   hue: 3}
+interference: {name: "Interference", hue: 2}
+phd:          {name: "PhD work",     hue: 1}
