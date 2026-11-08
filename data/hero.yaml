@@ -107,3 +107,8 @@
   venue: BNP@NeurIPS 2018
   clip: true
   caption: "Illustration: three groups of samples (row pairs) draw traits (columns) from a shared pool on top; shaded columns are traits all groups share"
+- id: cpd-data
+  page: /publication/horel-21
+  title: The Chicago Police Department dataset
+  venue: NeurIPS 2021, Datasets & Benchmarks
+  caption: "Illustration: separately released public records linked into one documented dataset, in which each person's records from every source are joined"

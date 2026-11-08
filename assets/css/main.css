@@ -204,6 +204,8 @@ main { padding: 2.5rem 0 1rem; }
 .hfig .g0 { stop-color: var(--accent); stop-opacity: 0.3; }
 .hfig .g1 { stop-color: var(--accent); stop-opacity: 0; }
 .hfig text.ta { fill: var(--accent); }
+/* Alternative labels: .lg on desktop, .sm (fewer, shorter) on phones, where diagram labels are enlarged. */
+.hfig .sm { display: none; }
 .hfig .pk { display: none; fill: var(--accent); }
 @supports (offset-path: path("M0 0")) {
   .hfig .pk { display: inline; offset-rotate: 0deg; animation: hpk 6s linear infinite; }
@@ -251,6 +253,8 @@ main { padding: 2.5rem 0 1rem; }
   /* Some paper titles wrap on phones: reserve two lines so the figure never moves. */
   .hf-paper { min-height: 2.8em; }
   .hfig text { font-size: 21px; }
+  .hf:not(.clip) .hfig .lg { display: none; }
+  .hf:not(.clip) .hfig .sm { display: inline; }
   .hfig .ln { stroke-width: 3.5; }
   .hfig .ax, .hfig .thr { stroke-width: 2.5; }
   /* Cropped figures are drawn 1.75× larger, so their few labels need no enlarging. */
