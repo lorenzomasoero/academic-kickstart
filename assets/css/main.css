@@ -340,9 +340,12 @@ main { padding: 2.5rem 0 1rem; }
 [data-palette="colour"] .hfig .c2 { --accent: var(--c2); --rule: var(--c2s); }
 [data-palette="colour"] .hfig .c3 { --accent: var(--c3); --rule: var(--c3s); }
 [data-palette="colour"] .hfig .c4 { --accent: var(--c4); --rule: var(--c4s); }
+/* .oc: drawn only in Colour, over a Mono shape it recolours (keeps Mono pixel-identical). */
+.hfig .oc { display: none; }
+[data-palette="colour"] .hfig .oc { display: inline; }
 /* .solid: a light tint in Mono, the full hue in Colour. */
 [data-palette="colour"] .hfig .solid { fill-opacity: 0.85; opacity: 1; }
-[data-palette="colour"] .hfig .solid.dt, [data-palette="colour"] .hfig .solid .dt { stroke-opacity: 0.85; }
+[data-palette="colour"] .hfig .solid.dt, [data-palette="colour"] .hfig .solid .dt, [data-palette="colour"] .hfig .solid.ln2 { stroke-opacity: 0.85; }
 [data-palette="colour"] .hfig text.c1, [data-palette="colour"] .hfig text.c2,
 [data-palette="colour"] .hfig text.c3, [data-palette="colour"] .hfig text.c4 { fill: var(--accent); }
 
