@@ -76,3 +76,18 @@
   title: Demonstration experiments
   venue: arXiv 2026
   caption: "Illustration: the share of units given to each of three arms over time, shifting towards the arm that works until it is demonstrated"
+- id: scaled-priors
+  page: /publication/camerlenghi-2022-scaled
+  title: Scaled process priors
+  venue: JASA
+  caption: "Illustration: predicting new genetic variants; a standard prior is too confident and misses, a scaled prior's band covers what comes next"
+- id: power-rare
+  page: /publication/masoero-2021-bayesian
+  title: Power maximization for rare variants
+  venue: LMRL@NeurIPS 2021
+  caption: "Illustration: a fixed sequencing budget spent on many samples at low depth or few samples at high depth; power peaks in between"
+- id: two-pops
+  page: /publication/shen-2022-double
+  title: Double trouble
+  venue: LMRL@NeurIPS 2022
+  caption: "Illustration: new variants found as samples grow in two populations, and the part of them the two populations share"
