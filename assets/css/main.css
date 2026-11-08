@@ -442,3 +442,13 @@ details.sec:not([open]) { margin-bottom: 1rem; }
 .about #about-earlier p:first-child { margin-top: 0; }
 @media (prefers-reduced-motion: reduce) { .tg::before { transition: none; } }
 .about { margin: 0 0 2rem; }
+
+/* "older news" toggle under the first three news items */
+.news details.older { margin-top: 0.25rem; }
+.news details.older > summary { cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; color: var(--accent); font-size: 0.875rem; list-style: none; }
+.news details.older > summary::-webkit-details-marker { display: none; }
+.news details.older > summary::before { content: ""; width: 0.38em; height: 0.38em; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform 0.2s ease; }
+.news details.older[open] > summary::before { transform: translateY(-0.12em) rotate(45deg); }
+.news details.older > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.news details.older ul { margin-top: 0.75rem; }
+@media (prefers-reduced-motion: reduce) { .news details.older > summary::before { transition: none; } }

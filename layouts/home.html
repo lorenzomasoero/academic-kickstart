@@ -77,16 +77,26 @@
 <details class="sec news" open>
   <summary><h2 id="news">News</h2></summary>
   <ul>
-    {{- range . }}
+    {{- range first 3 . }}
     <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
     {{- end }}
   </ul>
+  {{- with after 3 . }}
+  <details class="older">
+    <summary>older news</summary>
+    <ul>
+      {{- range . }}
+      <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
+      {{- end }}
+    </ul>
+  </details>
+  {{- end }}
 </details>
 {{- end }}
 
 <details class="sec research">
   <summary><h2 id="research">Research</h2></summary>
   {{ ($home.Resources.Get "research.md").Content }}
-  <p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
 </details>
+<p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
 {{ end }}
