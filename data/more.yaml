@@ -1,0 +1,229 @@
+# Drafted from the papers' abstracts; review before publishing.
+#
+# Text for the "Curious? See more" panel under each homepage snapshot, keyed by the snapshot id in
+# data/hero.yaml. Every snapshot needs an entry (the build stops with an error otherwise).
+#   idea: 2-3 plain sentences: what the figure shows and the question the paper answers.
+#   why:  1-2 sentences: why it matters.
+# The links (paper page, PDF, arXiv) come from the paper's front matter, so they are not repeated here.
+# "source" says what each entry was drafted from. It is not shown on the site.
+# Entries marked "no abstract available" were drafted from the paper's title and the snapshot caption
+# only. They need the closest look.
+
+mrd:
+  source: arXiv 2112.13495 abstract
+  idea: >-
+    In a marketplace, buyers and sellers affect each other, so a change given to some of them can spill
+    over to the rest. This design randomizes buyers and sellers separately, which puts every buyer–seller
+    pair in one of four groups, as in the grid. The paper shows how to estimate direct effects and
+    spillovers from these groups, and how much to trust the estimates.
+  why: >-
+    Classic experiments split a single population into two groups. They answer few of the questions that
+    matter in a marketplace, where the two sides interact.
+
+switchback:
+  source: arXiv 2506.12654 abstract
+  idea: >-
+    Sometimes an experiment cannot show different versions of a service to different users. One
+    alternative is to randomize items instead, switching each item between treatment and control over
+    time. The paper introduces a family of such schedules, balanced across items and over time, and
+    states when its estimates hold up even if an effect lingers after a switch.
+  why: >-
+    Item-based experiments have a poor track record for accuracy. In realistic simulations and on real
+    e-commerce data, these designs give much more accurate estimates than standard item-based designs,
+    with no added bias.
+
+more-for-less:
+  source: arXiv 1912.05516 abstract
+  idea: >-
+    Scientists often sequence a few genomes in a pilot study and then plan a larger follow-up. This paper
+    predicts how many new genetic variants the follow-up will find, based on the pilot. In the figure,
+    the solid part is what the pilot saw and the dashed part is the prediction, with its uncertainty.
+  why: >-
+    With a fixed budget, scientists must choose between sequencing more genomes and sequencing each one
+    more accurately. The method allows the set-up to change between pilot and follow-up, so it can help
+    split the budget between the two.
+
+ibp:
+  source: arXiv 2505.19643 abstract
+  idea: >-
+    Before an online A/B test, teams need to know how many users it will reach, and how fast. This paper
+    predicts the number of new users and the total number of visits from a short pilot. Each row in the
+    figure is a user: the first mark is their first visit, the later marks are return visits.
+  why: >-
+    How many users a test includes, and for how long, strongly affects what it can detect. On public data
+    and on past A/B tests, the forecasts are often more accurate than other methods, especially when only
+    a few pilot days are available.
+
+triagent:
+  source: no abstract available (title and caption only)
+  idea: >-
+    Support teams answer questions with the help of written documentation, and documentation goes out of
+    date. This paper describes a system of AI agents that answers support tickets and flags the gaps it
+    finds in the docs. Once the docs are updated, the next answer improves, which closes the loop in the
+    figure.
+  why: >-
+    Each answered ticket becomes a chance to improve the docs for the next reader.
+
+agents-ab:
+  source: arXiv 2608.02345 abstract
+  idea: >-
+    An A/B test shows two versions of something to real users and compares the results. This paper asks
+    whether AI agents, each given a profile of real behaviour, can stand in for the users and predict the
+    result before a real test. It splits the gap between simulated and real results into two sources of
+    error, so that each can be reduced.
+  why: >-
+    Every real test uses traffic, effort and weeks of time. On past marketing tests, a basic simulation
+    often got the direction of the effect right but overstated its size, and calibrating it on earlier
+    data reduced that error.
+
+bandits:
+  source: arXiv 2405.18621 abstract
+  idea: >-
+    A bandit algorithm learns by trying: it keeps choosing among options, such as discounts, and moves
+    towards the ones that pay off. Here the units are linked, so each unit's result also depends on the
+    options given to its neighbours, as in the highlighted links. The paper assumes each unit is affected
+    by only a few neighbours, and builds simple regression-based algorithms for that case.
+  why: >-
+    In an online store, a discount on one product changes the sales of competing products. The algorithms
+    provably learn well, both when the network of who affects whom is known and when it is not.
+
+early-stop:
+  source: no abstract available (title and caption only)
+  idea: >-
+    Online experiments usually run for a planned length of time. This paper tracks the probability that
+    the treatment is better as the data comes in, and stops the test once that probability crosses a
+    threshold. The shaded part of the figure is the time saved.
+  why: >-
+    A shorter experiment costs less and gives an answer sooner.
+
+edm:
+  source: no abstract available (title and caption only)
+  idea: >-
+    In a marketplace, buyers and sellers trade with each other. If only some buyers get a change, their
+    trades can also affect sellers who did not get it, as the highlighted trades show. The paper discusses
+    how to design experiments in marketplaces with this in mind.
+  why: >-
+    When trades cross between the groups, a simple comparison of treated and control groups can be
+    misleading.
+
+spillover:
+  source: no abstract available (title and caption only)
+  idea: >-
+    Units in a marketplace come in clusters that interact with each other. This paper reports on an
+    experiment that randomizes whole clusters, in a marketplace with several sides. It measures two
+    things: the direct effect on the clusters that got the change, and the indirect effect that spills
+    over to their neighbours.
+  why: >-
+    Measuring only the direct effect can miss part of the impact of a change.
+
+double-rand-reg:
+  source: arXiv 2603.19480 abstract
+  idea: >-
+    Multiple randomization designs randomize buyers and sellers at the same time, to handle spillovers in
+    marketplaces. This paper uses extra information measured on the units to make the effect estimates
+    more precise. In the figure, the interval around the effect is narrower after the adjustment.
+  why: >-
+    The best adjustments differ from those used in classic experiments, and they can be estimated from the
+    data. In simulations, they make the estimates considerably more precise than simpler approaches.
+
+cuped:
+  source: arXiv 2305.01109 abstract
+  idea: >-
+    An A/B test usually compares the average results of two groups. That simple comparison can miss small
+    effects, even with millions of users. This paper studies estimators that also use other data collected
+    about the users, and evaluates them at scale.
+  why: >-
+    On real experiments, the adjusted estimates can be more precise and can correct imbalances between the
+    groups. More precise estimates can shorten experiments and speed up decisions.
+
+power:
+  source: no abstract available (title and caption only)
+  idea: >-
+    Before a test, teams compute its power: the chance that it detects an effect of a given size. The true
+    size is unknown. This paper weights the power at each effect size by a prior belief about how likely
+    that size is, which gives one number, the expected power.
+  why: >-
+    It brings what a team already believes about likely effects into the planning of a test.
+
+demo:
+  source: arXiv 2603.06941 abstract
+  idea: >-
+    Sometimes the goal of an experiment is to show that at least one of several options works, for some
+    group and on some outcome. This paper gives statistical tests for that goal that stay valid when the
+    experiment shifts units towards the promising options as it runs. It also gives a rule for that shift,
+    as in the figure.
+  why: >-
+    Adaptive experiments are common in online services, health care, biotechnology and the social
+    sciences. The paper applies its methods to a simulated study of cash transfer programmes.
+
+scaled-priors:
+  source: arXiv 2106.15480 abstract (found by exact-title search)
+  idea: >-
+    Genomic studies want to predict how many new variants more samples would reveal. Popular Bayesian
+    models make this prediction depend only on the number of samples, which is too rigid. This paper
+    proposes a new model, the scaled process prior, whose prediction also uses how many distinct variants
+    have been seen so far.
+  why: >-
+    On simulated data and real cancer genomic data, it estimated the number of unseen variants more
+    accurately than popular alternatives. Its uncertainty bands also covered the truth more often.
+
+power-rare:
+  source: arXiv 2112.02032 abstract
+  idea: >-
+    Rare genetic variants may explain much of how traits and diseases run in families. Each one appears in
+    few people, which makes them hard to study. This paper models how design choices, such as how many
+    people to sequence and how deeply, affect a study's ability to find links with disease.
+  why: >-
+    With a fixed budget, the model helps choose a design that gets the most out of the study. The paper
+    gives a practical workflow, with examples on simulated data.
+
+two-pops:
+  source: arXiv 2403.02154 abstract (found by exact-title search)
+  idea: >-
+    Genomic data is often collected across several groups of people, such as patients with different
+    types of cancer. From a pilot study, this paper predicts how many new variants a follow-up would find
+    in two groups: in total, and shared by both.
+  why: >-
+    Methods built for a single group can predict poorly when the groups differ. The paper proves that a
+    natural extension of a leading single-group method fails, and gives the first predictor that handles
+    such differences.
+
+replicability:
+  source: arXiv 2202.01910 abstract
+  idea: >-
+    Clustering sorts similar samples into groups, for example to find new subtypes of cancer. A cluster
+    is more convincing if other studies find it too. This paper reviews ways to check this, and proposes a
+    framework that compares clusters across two or more studies, for the whole sample and cluster by
+    cluster.
+  why: >-
+    New cancer subtypes found by clustering can affect how patients are managed, so it matters whether
+    they hold up in other data. The checks work with any clustering method.
+
+finite-approx:
+  source: arXiv 2009.10780 abstract
+  idea: >-
+    Some Bayesian models allow for infinitely many features, which a computer cannot store. Two common
+    fixes keep a finite number of them: cut the list off, or build a finite version from independent
+    pieces. This paper gives a general recipe for the second kind, and bounds how far it is from the
+    infinite model.
+  why: >-
+    The independent version is easier to derive and to run in parallel. In experiments on real data, it
+    performed about as well as cutting the list off.
+
+trait-alloc:
+  source: no abstract available (title and caption only)
+  idea: >-
+    In trait allocation models, each sample has a set of traits drawn from a large pool. With several
+    groups of samples, a hierarchical model lets every group draw from one shared pool, so groups can
+    share traits. This paper derives what such hierarchical models imply once data has been observed.
+  why: >-
+    A shared pool lets each group learn from the traits seen in the other groups.
+
+cpd-data:
+  source: no abstract available (title and caption only)
+  idea: >-
+    Public records about the Chicago Police Department were released separately, by different sources.
+    This paper links them into one documented dataset, in which the records about the same person from
+    every source are joined.
+  why: >-
+    One linked and documented dataset is easier to study than many separate releases.

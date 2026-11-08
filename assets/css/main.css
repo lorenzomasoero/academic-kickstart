@@ -360,3 +360,52 @@ main { padding: 2.5rem 0 1rem; }
 [data-palette="colour"] .thumb { border-color: var(--c1s); }
 [data-palette="colour"] .pubs > li:nth-child(3n+2) .thumb { border-color: var(--c3s); }
 [data-palette="colour"] .pubs > li:nth-child(3n) .thumb { border-color: var(--c2s); }
+
+/* "Curious? See more": a native <details> under each snapshot's caption (text in data/more.yaml). */
+
+.more { margin-top: 0.35rem; }
+.more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+  border-radius: 2px;
+}
+.more summary::-webkit-details-marker { display: none; }
+.more summary::before {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-0.1em) rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+.more[open] summary::before { transform: translateY(-0.2em) rotate(45deg); }
+.more summary:hover { text-decoration: underline; text-underline-offset: 0.15em; }
+.more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.more-body {
+  margin-top: 0.6rem;
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  border-left: 2px solid var(--rule);
+  color: var(--text);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  max-width: 38rem;
+}
+.more-body dl { margin: 0; }
+.more-body dt { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.more-body dd { margin: 0.1rem 0 0.7rem; }
+.more-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+.more-next { margin: 0 0 0.2rem; }
+.more-next a { text-decoration: none; }
+.more-next a:hover { text-decoration: underline; }
+[data-palette="colour"] .more-body { border-left-color: var(--c1s); }
+[data-palette="colour"] .more-body dt { color: var(--head); }
+@media (prefers-reduced-motion: reduce) { .more summary::before { transition: none; } }
+
+/* Without JS, "Next snapshot" links to #s-<id>; show that figure in place of the default one. */
+:root:not(.js) .hero .hf:target { display: block; }
+:root:not(.js) .hero:has(.hf:target) .hf:not(:target) { display: none; }

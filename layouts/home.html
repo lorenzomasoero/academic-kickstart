@@ -19,12 +19,32 @@
 </section>
 
 <div class="hero" id="hero">
-{{- range $i, $f := hugo.Data.hero }}
+{{- $all := hugo.Data.hero }}{{ $n := len $all }}
+{{- range $i, $f := $all }}
 {{- $p := site.GetPage .page }}{{ if not $p }}{{ errorf "data/hero.yaml: no page %q" .page }}{{ end }}
-<figure class="hero-grid hf{{ if .clip }} clip{{ end }}" data-fig="{{ .id }}"{{ if $i }} hidden{{ end }}>
+{{- $more := index hugo.Data.more .id }}{{ if not $more }}{{ errorf "data/more.yaml: no entry for snapshot %q" .id }}{{ end }}
+{{- $next := index $all (mod (add $i 1) $n) }}
+<figure class="hero-grid hf{{ if .clip }} clip{{ end }}" id="s-{{ .id }}" data-fig="{{ .id }}"{{ if $i }} hidden{{ end }}>
   <div class="hf-head"><span class="hf-label">Random research snapshot</span><span class="hf-paper"><a href="{{ $p.RelPermalink }}">{{ .title }}</a> ({{ .venue }})</span></div>
   <div class="hf-art">{{ partial (printf "hero/%s.html" .id) . }}</div>
-  <figcaption>{{ .caption }}</figcaption>
+  <figcaption>{{ .caption }}
+    {{- /* "Curious? See more": a native <details>, so it works without JS. Text lives in data/more.yaml;
+         links come from the paper's front matter. A future "Ask more" box (answers grounded on this paper,
+         data-paper) would go at the end of .more-body; nothing is wired up yet. */}}
+    <details class="more" data-paper="{{ $p.RelPermalink }}">
+      <summary>Curious? See more</summary>
+      <div class="more-body">
+        <dl>
+          <dt>The idea</dt><dd>{{ $more.idea }}</dd>
+          <dt>Why it matters</dt><dd>{{ $more.why }}</dd>
+          <dt>Read</dt><dd class="more-links"><a href="{{ $p.RelPermalink }}">Paper page</a>
+            {{- with $p.Params.url_pdf }}<a href="{{ . }}">{{ if in . "arxiv.org/abs" }}arXiv{{ else }}PDF{{ end }}</a>{{ end }}
+            {{- with $p.Params.url_preprint }}{{ if ne . $p.Params.url_pdf }}<a href="{{ . }}">{{ if in . "arxiv.org" }}arXiv{{ else }}Preprint{{ end }}</a>{{ end }}{{ end }}</dd>
+        </dl>
+        <p class="more-next"><a class="hf-go" href="#s-{{ $next.id }}" data-to="{{ $next.id }}">Next snapshot: {{ $next.title }} →</a></p>
+      </div>
+    </details>
+  </figcaption>
 </figure>
 {{- end }}
 <button type="button" id="hero-next" hidden aria-label="Show a new research snapshot"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M12.4 1.6v2.9H9.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>New snapshot</button>
@@ -32,8 +52,9 @@
 <script>
 {{- /* Show one random figure per load (?fig=<id> forces one); "Show another" picks a different one. Showing the
      MRD grid draws a fresh complete randomization (half of buyers, half of sellers treated). Without JS the first
-     figure in data/hero.yaml (the build-time MRD grid) is shown. */ -}}
-(function(){var H=document.getElementById("hero");if(!H||!H.querySelectorAll)return;var F=H.querySelectorAll(".hf"),n=F.length,e=document.getElementById("hero-next"),cur=0,s=document.getElementById("mrd"),b=s.querySelectorAll(".mrd-b circle"),c=s.querySelectorAll(".mrd-s circle"),g=s.querySelectorAll(".mrd-col");function r(n){for(var a=[],i=0,j,t;i<n;i++)a.push(i<n/2);for(i=n-1;i>0;i--){j=Math.random()*(i+1)|0;t=a[i];a[i]=a[j];a[j]=t}return a}function mrd(){var B=r(b.length),S=r(c.length),i,j,k;for(i=0;i<b.length;i++)b[i].setAttribute("class",B[i]?"t":"c");for(j=0;j<c.length;j++){c[j].setAttribute("class",S[j]?"t":"c");k=g[j].children;for(i=0;i<k.length;i++)k[i].setAttribute("class",B[i]&&S[j]?"tt":B[i]?"tb":S[j]?"ts":"cc")}}function id(i){return F[i].getAttribute("data-fig")}function show(k){var f=document.activeElement==e,i;for(i=0;i<n;i++)F[i].hidden=i!=k;cur=k;F[k].querySelector(".hf-head").appendChild(e);if(f)e.focus();if(id(k)=="mrd")mrd()}var m=/[?&]fig=([\w-]+)/.exec(location.search),k=Math.random()*n|0,i;if(m)for(i=0;i<n;i++)if(id(i)==m[1])k=i;show(k);e.hidden=false;e.onclick=function(){var j=Math.random()*(n-1)|0;show(j<cur?j:j+1)}})();
+     figure in data/hero.yaml (the build-time MRD grid) is shown. ?more opens the "See more" panel; the panel's
+     "Next snapshot" link shows the next figure with its panel open (without JS it falls back to #s-<id> and :target). */ -}}
+(function(){var H=document.getElementById("hero");if(!H||!H.querySelectorAll)return;var F=H.querySelectorAll(".hf"),n=F.length,e=document.getElementById("hero-next"),cur=0,s=document.getElementById("mrd"),b=s.querySelectorAll(".mrd-b circle"),c=s.querySelectorAll(".mrd-s circle"),g=s.querySelectorAll(".mrd-col");function r(n){for(var a=[],i=0,j,t;i<n;i++)a.push(i<n/2);for(i=n-1;i>0;i--){j=Math.random()*(i+1)|0;t=a[i];a[i]=a[j];a[j]=t}return a}function mrd(){var B=r(b.length),S=r(c.length),i,j,k;for(i=0;i<b.length;i++)b[i].setAttribute("class",B[i]?"t":"c");for(j=0;j<c.length;j++){c[j].setAttribute("class",S[j]?"t":"c");k=g[j].children;for(i=0;i<k.length;i++)k[i].setAttribute("class",B[i]&&S[j]?"tt":B[i]?"tb":S[j]?"ts":"cc")}}function op(i,f){var d=F[i].querySelector("details");if(d){d.open=true;if(f)d.querySelector("summary").focus()}}function id(i){return F[i].getAttribute("data-fig")}function show(k){var f=document.activeElement==e,i;for(i=0;i<n;i++)F[i].hidden=i!=k;cur=k;F[k].querySelector(".hf-head").appendChild(e);if(f)e.focus();if(id(k)=="mrd")mrd()}var m=/[?&]fig=([\w-]+)/.exec(location.search),k=Math.random()*n|0,i;if(m)for(i=0;i<n;i++)if(id(i)==m[1])k=i;show(k);if(/[?&]more\b/.test(location.search))op(k,0);e.hidden=false;H.onclick=function(v){var a=v.target.closest&&v.target.closest(".hf-go"),i;if(!a)return;v.preventDefault();for(i=0;i<n;i++)if(id(i)==a.getAttribute("data-to")){show(i);op(i,1)}};e.onclick=function(){var j=Math.random()*(n-1)|0;show(j<cur?j:j+1)}})();
 </script>
 
 <section class="bio" aria-label="Biography">

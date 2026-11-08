@@ -14,5 +14,5 @@
 {{- if lt (mod (hash.FNV32a (printf "ibp-%d-%d" $i $d)) 100) $p }}{{ $rep = print $rep (printf "M%d %dh%dv%dh-%dz" (add (mul $d $u) $x0) $y $c $c $c) }}{{ end }}
 {{- end }}{{ end -}}
 <svg class="hfig" viewBox="0 0 662 104" role="img" aria-label="Matrix of users (rows) by days (columns). Each row begins on the user's first active day, forming a staircase as new users arrive more and more slowly; later marks are repeat visits.">
-<path class="off" d="{{ $strip }}"/><path class="rep" d="{{ $rep }}"/><path class="on" d="{{ $new }}"/><path class="hl thin" d="{{ $stair }}"/>
+<path class="off c1" d="{{ $strip }}"/><path class="rep c1" d="{{ $rep }}"/><path class="on c2" d="{{ $new }}"/><path class="hl thin c2" d="{{ $stair }}"/>
 </svg>
