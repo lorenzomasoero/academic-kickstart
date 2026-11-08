@@ -488,3 +488,36 @@ details.sec:not([open]) { margin-bottom: 1rem; }
   body.pubs-page .pubs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3rem; }
   body.pubs-page .pubs > li + li { margin-top: 0; }
 }
+
+/* Wide screens: fit the homepage in one laptop screen. The snapshot spans the content column;
+   About me and News sit side by side below it; Research and the publications link close the page. */
+@media (min-width: 72rem) {
+  body.home main { padding-top: 1.75rem; }
+  body.home .home-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 3rem; align-items: start; }
+  body.home .home-body > .sec-hero, body.home .home-body > .research, body.home .home-body > .all { grid-column: 1 / -1; }
+  body.home .home-body > .about:not(.news) { grid-column: 1; }
+  body.home .home-body > .news { grid-column: 2; }
+  body.home details.sec, body.home .about { margin-bottom: 1.5rem; }
+  body.home .sec-hero { margin-bottom: 1.75rem; }
+  body.home .about p, body.home .news ul { max-width: none; }
+  body.home .news li { grid-template-columns: 1fr; gap: 0.1rem; }
+  body.home .news li + li { margin-top: 0.85rem; }
+  body.home .news .date { font-size: 0.8125rem; }
+  body.home .about h2, body.home .news h2 { margin-top: 0; }
+  body.home .research { margin-bottom: 0.5rem; }
+  body.home .all { margin: 0; }
+  body.home .site-footer, body.home + .site-footer { margin-top: 1rem; }
+}
+@media (min-width: 72rem) {
+  /* tighter, to fit one screen */
+  body.home .hf figcaption { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 0.9rem; min-height: 0; }
+  body.home .hf figcaption details.more { flex: 0 0 auto; }
+  body.home .hf figcaption details.more[open] { flex-basis: 100%; }
+  body.home .sec-hero { margin-bottom: 1.25rem; }
+  body.home .news li { font-size: 0.9375rem; line-height: 1.5; }
+  body.home .news li + li { margin-top: 0.6rem; }
+  body.home .about p { font-size: 0.9375rem; line-height: 1.6; }
+  body.home .home-body > .all { display: none; } /* "Publications" is in the header */
+  body.home .research { margin-bottom: 0; }
+}
+@media (min-width: 72rem) { body.home .hf:not(.clip) .hf-art svg { max-height: 7rem; width: auto; max-width: 100%; margin: 0 auto; } }
