@@ -55,14 +55,15 @@ ibp:
     a few pilot days are available.
 
 triagent:
-  source: no abstract available (title and caption only)
+  source: drafted from the paper's abstract (IAAI 2027 camera-ready)
   idea: >-
-    Support teams answer questions with the help of written documentation, and documentation goes out of
-    date. This paper describes a system of AI agents that answers support tickets and flags the gaps it
-    finds in the docs. Once the docs are updated, the next answer improves, which closes the loop in the
-    figure.
+    Software changes fast, and the documentation that describes it falls behind. This paper describes a
+    deployed system of AI agents that drafts answers to support tickets and spots where the documentation
+    is missing or out of date. After human review, the fixes go into the documentation that users and
+    their own AI tools read.
   why: >-
-    Each answered ticket becomes a chance to improve the docs for the next reader.
+    Each support ticket becomes a chance to fix the docs for the next reader. In the paper's blinded
+    comparison, answers given after a fix were usually preferred over the earlier ones.
 
 agents-ab:
   source: arXiv 2608.02345 abstract
@@ -73,8 +74,8 @@ agents-ab:
     error, so that each can be reduced.
   why: >-
     Every real test uses traffic, effort and weeks of time. On past marketing tests, a basic simulation
-    often got the direction of the effect right but overstated its size, and calibrating it on earlier
-    data reduced that error.
+    picked up some signal about the direction of effects but overstated their size. Calibrating it on
+    earlier data reduced that error.
 
 bandits:
   source: arXiv 2405.18621 abstract
@@ -107,12 +108,12 @@ edm:
     misleading.
 
 spillover:
-  source: no abstract available (title and caption only)
+  source: drafted from title and caption; reviewed 2026-11-08
   idea: >-
-    Units in a marketplace come in clusters that interact with each other. This paper reports on an
-    experiment that randomizes whole clusters, in a marketplace with several sides. It measures two
-    things: the direct effect on the clusters that got the change, and the indirect effect that spills
-    over to their neighbours.
+    In a marketplace with several sides, a change made for one side can reach the others. This paper
+    reports on an experiment that randomizes groups of units on more than one side at once. It measures
+    two things: the direct effect on the units that got the change, and the indirect effect that spills
+    over to the units around them.
   why: >-
     Measuring only the direct effect can miss part of the impact of a change.
 

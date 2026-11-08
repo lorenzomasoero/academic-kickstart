@@ -284,7 +284,7 @@ main { padding: 2.5rem 0 1rem; }
 .hf-head #hero-next:hover svg { transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) { .hf-head #hero-next svg { transition: none; } }
 
-/* Palette toggle in the header ("Mono" is the default; "Colour" sets data-palette="colour" on <html>). */
+/* Palette toggle in the header. Colour is the default (data-palette="colour" on <html>); "Go B&W" removes it (Mono). */
 
 .site-header li.pal:not([hidden]) { display: flex; align-items: center; }
 #palette {
@@ -303,12 +303,12 @@ main { padding: 2.5rem 0 1rem; }
 }
 #palette:hover { color: var(--text); border-color: var(--muted); }
 #palette:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-#palette[aria-pressed="true"] { color: var(--text); border-color: var(--c1s); background: var(--accent-soft); }
+[data-palette="colour"] #palette { color: var(--text); border-color: var(--c1s); background: var(--accent-soft); }
 #palette circle { fill: currentColor; }
-#palette[aria-pressed="true"] .p1 { fill: var(--c1); }
-#palette[aria-pressed="true"] .p2 { fill: var(--c2); }
-#palette[aria-pressed="true"] .p3 { fill: var(--c3); }
-#palette[aria-pressed="true"] .p4 { fill: var(--c4); }
+[data-palette="colour"] #palette .p1 { fill: var(--c1); }
+[data-palette="colour"] #palette .p2 { fill: var(--c2); }
+[data-palette="colour"] #palette .p3 { fill: var(--c3); }
+[data-palette="colour"] #palette .p4 { fill: var(--c4); }
 
 /* Colour palette. Four hues, each with a soft tint (-s). c1-c3 pass the colour-blind checks for every pair;
    c4 (violet) is only used where shape or position also tells it apart from c1 (blue).
