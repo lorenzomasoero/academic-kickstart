@@ -61,3 +61,18 @@
   title: Regression adjustments for double randomization
   venue: arXiv 2026
   caption: "Illustration: outcomes against a covariate for treated and control units; adjusting for the covariate narrows the interval for the effect"
+- id: cuped
+  page: /publication/masoero-2023-leveraging
+  title: Covariate adjustment at scale
+  venue: KDD 2023 workshop
+  caption: "Illustration: the spread of an effect estimate with and without covariate adjustment; both are centred on the same effect"
+- id: power
+  page: /publication/gualavisy-2025-power
+  title: Statistical power calculations revisited
+  venue: CODE@MIT 2025
+  caption: "Illustration: power rises with the effect size; weighting it by a prior belief about effect sizes gives the expected power"
+- id: demo
+  page: /publication/imbens-2026-demonstration
+  title: Demonstration experiments
+  venue: arXiv 2026
+  caption: "Illustration: the share of units given to each of three arms over time, shifting towards the arm that works until it is demonstrated"
