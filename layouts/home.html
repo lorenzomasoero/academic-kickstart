@@ -97,21 +97,24 @@
 <details class="sec research">
   <summary><h2 id="research">Research</h2></summary>
   {{- with hugo.Data.research }}
+  {{- $label := index .prompts 0 }}
   <p>{{ .intro }}</p>
+  <div class="rlist" data-prompts="{{ jsonify .prompts }}">
   {{- range .groups }}
   <div class="rgroup t-{{ .topic }}">
     <h3>{{ .name }}</h3>
     <ul>
       {{- range .items }}
-      <li class="ri"><a href="{{ .href }}">{{ .label }}</a><button type="button" class="tg km" aria-expanded="false" aria-controls="rk-{{ .fig }}" data-fig="{{ .fig }}" hidden>I want to know more!</button><div class="rk" id="rk-{{ .fig }}" hidden></div></li>
+      <li class="ri"><a href="{{ .href }}">{{ .label }}</a><button type="button" class="tg km" aria-expanded="false" aria-controls="rk-{{ .fig }}" data-fig="{{ .fig }}" hidden>{{ $label }}</button><div class="rk" id="rk-{{ .fig }}" hidden></div></li>
       {{- end }}
     </ul>
   </div>
   {{- end }}
+  </div>
   {{- end }}
-  {{- /* "I want to know more!" copies that paper's snapshot from the hero (figure, caption and "See more") into
+  {{- /* The snapshot button (label shuffled from data/research.yaml `prompts`) copies that paper's snapshot from the hero (figure, caption and "See more") into
        place on first open; nothing is duplicated in the HTML. Without JS the buttons stay hidden. */}}
-  <script>(function(){var K=document.querySelectorAll(".km"),i;for(i=0;i<K.length;i++){K[i].hidden=false;K[i].onclick=function(){var b=this,d=document.getElementById(b.getAttribute("aria-controls")),o=b.getAttribute("aria-expanded")!="true";if(o&&!d.firstChild){var f=document.getElementById("s-"+b.getAttribute("data-fig"));if(!f)return;["hf-art","figcaption"].forEach(function(s){var n=f.querySelector(s=="figcaption"?s:"."+s);if(n){n=n.cloneNode(true);var I=n.querySelectorAll("[id]"),j;for(j=0;j<I.length;j++)I[j].removeAttribute("id");var x=n.querySelector(".more-next");if(x)x.parentNode.removeChild(x);d.appendChild(n)}})}b.setAttribute("aria-expanded",o);d.hidden=!o}}})();</script>
+  <script>(function(){var K=document.querySelectorAll(".km"),i,P=[],R=document.querySelector(".rlist");try{P=JSON.parse(R.getAttribute("data-prompts"))}catch(e){}for(i=P.length-1;i>0;i--){var j=Math.random()*(i+1)|0,x=P[i];P[i]=P[j];P[j]=x}for(i=0;i<K.length;i++){if(P.length)K[i].textContent=P[i%P.length];K[i].hidden=false;K[i].onclick=function(){var b=this,d=document.getElementById(b.getAttribute("aria-controls")),o=b.getAttribute("aria-expanded")!="true";if(o&&!d.firstChild){var f=document.getElementById("s-"+b.getAttribute("data-fig"));if(!f)return;["hf-art","figcaption"].forEach(function(s){var n=f.querySelector(s=="figcaption"?s:"."+s);if(n){n=n.cloneNode(true);var I=n.querySelectorAll("[id]"),j;for(j=0;j<I.length;j++)I[j].removeAttribute("id");var x=n.querySelector(".more-next");if(x)x.parentNode.removeChild(x);d.appendChild(n)}})}b.setAttribute("aria-expanded",o);d.hidden=!o}}})();</script>
 </details>
 <p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
 {{ end }}
