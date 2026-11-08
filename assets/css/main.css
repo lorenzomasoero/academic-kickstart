@@ -283,3 +283,80 @@ main { padding: 2.5rem 0 1rem; }
 .hf-head #hero-next svg { transition: transform 0.4s ease; }
 .hf-head #hero-next:hover svg { transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) { .hf-head #hero-next svg { transition: none; } }
+
+/* Palette toggle in the header ("Mono" is the default; "Colour" sets data-palette="colour" on <html>). */
+
+.site-header li.pal:not([hidden]) { display: flex; align-items: center; }
+#palette {
+  font: inherit;
+  font-size: 0.875rem;
+  color: var(--muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem 0.05rem 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  line-height: 1.5;
+}
+#palette:hover { color: var(--text); border-color: var(--muted); }
+#palette:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#palette[aria-pressed="true"] { color: var(--text); border-color: var(--c1s); background: var(--accent-soft); }
+#palette circle { fill: currentColor; }
+#palette[aria-pressed="true"] .p1 { fill: var(--c1); }
+#palette[aria-pressed="true"] .p2 { fill: var(--c2); }
+#palette[aria-pressed="true"] .p3 { fill: var(--c3); }
+#palette[aria-pressed="true"] .p4 { fill: var(--c4); }
+
+/* Colour palette. Four hues, each with a soft tint (-s). c1-c3 pass the colour-blind checks for every pair;
+   c4 (violet) is only used where shape or position also tells it apart from c1 (blue).
+   All four reach at least 4.5:1 against the page in both modes, so they are safe for text too.
+   Snapshot partials mark their parts with .c1-.c4: in Colour mode those set --accent (and --rule, to
+   the soft tint) for the element and its children. In Mono the classes do nothing. */
+
+:root[data-palette="colour"] {
+  --c1: #1d5ba8; --c1s: #bbcee5;
+  --c2: #c4471c; --c2s: #edc8bb;
+  --c3: #00806a; --c3s: #b2d9d2;
+  --c4: #7a4fc4; --c4s: #d7caed;
+  --head: #00806a;
+  --date: #c4471c;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-palette="colour"] {
+    --c1: #5294e6; --c1s: #2d496c;
+    --c2: #dc6a33; --c2s: #653824;
+    --c3: #1a9f80; --c3s: #174d43;
+    --c4: #9b7be8; --c4s: #4b3f6c;
+    --head: #3fbf9f;
+    --date: #e8834f;
+  }
+}
+
+[data-palette="colour"] .hfig { --accent: var(--c1); }
+[data-palette="colour"] .hfig .c1 { --accent: var(--c1); --rule: var(--c1s); }
+[data-palette="colour"] .hfig .c2 { --accent: var(--c2); --rule: var(--c2s); }
+[data-palette="colour"] .hfig .c3 { --accent: var(--c3); --rule: var(--c3s); }
+[data-palette="colour"] .hfig .c4 { --accent: var(--c4); --rule: var(--c4s); }
+/* .solid: a light tint in Mono, the full hue in Colour. */
+[data-palette="colour"] .hfig .solid { fill-opacity: 0.85; opacity: 1; }
+[data-palette="colour"] .hfig .solid.dt, [data-palette="colour"] .hfig .solid .dt { stroke-opacity: 0.85; }
+[data-palette="colour"] .hfig text.c1, [data-palette="colour"] .hfig text.c2,
+[data-palette="colour"] .hfig text.c3, [data-palette="colour"] .hfig text.c4 { fill: var(--accent); }
+
+/* The MRD grid: treated buyers' rows in vermilion, treated sellers' columns in teal, both treated in blue. */
+[data-palette="colour"] .mrd .tt { fill: var(--c1); fill-opacity: 0.9; }
+[data-palette="colour"] .mrd .tb { fill: var(--c2); fill-opacity: 0.6; }
+[data-palette="colour"] .mrd .ts { fill: var(--c3); fill-opacity: 0.5; }
+[data-palette="colour"] .mrd .mrd-b circle.t { fill: var(--c2); }
+[data-palette="colour"] .mrd .mrd-s circle.t { fill: var(--c3); }
+
+/* Light touches on the rest of the page. */
+[data-palette="colour"] a:hover { text-decoration-color: var(--c2); }
+[data-palette="colour"] h2 { color: var(--head); }
+[data-palette="colour"] .news .date { color: var(--date); }
+[data-palette="colour"] .thumb { border-color: var(--c1s); }
+[data-palette="colour"] .pubs > li:nth-child(3n+2) .thumb { border-color: var(--c3s); }
+[data-palette="colour"] .pubs > li:nth-child(3n) .thumb { border-color: var(--c2s); }
