@@ -2,7 +2,7 @@
 {{- $home := site.GetPage "/home" }}
 <section class="intro" aria-labelledby="name">
   {{- with resources.Get site.Params.portrait }}
-  {{- $img := .Fill "192x192 Center q85" }}
+  {{- $img := .Fill "320x320 Center q85" }}
   <img class="portrait" src="{{ $img.RelPermalink }}" width="96" height="96" alt="Portrait of {{ site.Params.name }}">
   {{- end }}
   <div>
@@ -17,6 +17,7 @@
     </ul>
   </div>
 </section>
+<div class="home-body">
 
 <details class="sec sec-hero" open>
 <summary><h2 id="snapshot">Random research snapshot</h2></summary>
@@ -117,4 +118,5 @@
   <script>(function(){var K=document.querySelectorAll(".km"),i,P=[],R=document.querySelector(".rlist");try{P=JSON.parse(R.getAttribute("data-prompts"))}catch(e){}for(i=P.length-1;i>0;i--){var j=Math.random()*(i+1)|0,x=P[i];P[i]=P[j];P[j]=x}for(i=0;i<K.length;i++){if(P.length)K[i].textContent=P[i%P.length];K[i].hidden=false;K[i].onclick=function(){var b=this,d=document.getElementById(b.getAttribute("aria-controls")),o=b.getAttribute("aria-expanded")!="true";if(o&&!d.firstChild){var f=document.getElementById("s-"+b.getAttribute("data-fig"));if(!f)return;["hf-art","figcaption"].forEach(function(s){var n=f.querySelector(s=="figcaption"?s:"."+s);if(n){n=n.cloneNode(true);var I=n.querySelectorAll("[id]"),j;for(j=0;j<I.length;j++)I[j].removeAttribute("id");var x=n.querySelector(".more-next");if(x)x.parentNode.removeChild(x);d.appendChild(n)}})}b.setAttribute("aria-expanded",o);d.hidden=!o}}})();</script>
 </details>
 <p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
+</div>
 {{ end }}

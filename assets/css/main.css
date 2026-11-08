@@ -471,3 +471,20 @@ details.sec:not([open]) { margin-bottom: 1rem; }
 .rk figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
 .pubs > li[class^="t-"] .thumb { border-color: var(--ts); }
 .ri .km { margin-left: auto; }
+
+/* Wide screens (laptops and up): use the horizontal space instead of one narrow column.
+   Homepage: a sticky profile column on the left, the content on the right (prose keeps a readable
+   measure; snapshots use the full width). Publications: papers in two columns. Phones and tablets keep
+   the single column. */
+@media (min-width: 72rem) {
+  body { max-width: 72rem; }
+  body.home main { display: grid; grid-template-columns: 14rem minmax(0, 1fr); column-gap: 4rem; align-items: start; }
+  body.home .home-body { grid-column: 2; min-width: 0; }
+  body.home .intro { grid-column: 1; position: sticky; top: 2rem; flex-direction: column; align-items: flex-start; gap: 1rem; margin: 0; }
+  body.home .portrait { width: 160px; height: 160px; }
+  body.home .intro h1 { font-size: 1.6rem; line-height: 1.2; }
+  body.home .contact { flex-direction: column; gap: 0.35rem; margin-top: 0.85rem; }
+  body.home .about p, body.home .news ul, body.home .research > p, body.home .rgroup { max-width: 46rem; }
+  body.pubs-page .pubs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3rem; }
+  body.pubs-page .pubs > li + li { margin-top: 0; }
+}
