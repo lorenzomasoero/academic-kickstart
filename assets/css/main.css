@@ -521,3 +521,13 @@ details.sec:not([open]) { margin-bottom: 1rem; }
   body.home .research { margin-bottom: 0; }
 }
 @media (min-width: 72rem) { body.home .hf:not(.clip) .hf-art svg { max-height: 7rem; width: auto; max-width: 100%; margin: 0 auto; } }
+@media (min-width: 72rem) {
+  /* About me full width, News below it in a compact list (dates in a narrow left column, smaller text). */
+  body.home .home-body { display: block; }
+  body.home .about p { font-size: 1rem; line-height: 1.65; max-width: 48rem; }
+  body.home .news ul { max-width: 48rem; }
+  body.home .news li { grid-template-columns: 6rem 1fr; gap: 0.75rem; font-size: 0.875rem; line-height: 1.5; }
+  body.home .news li + li { margin-top: 0.4rem; }
+  body.home .news .date { font-size: 0.8125rem; }
+  body.home .about, body.home details.sec { margin-bottom: 1.25rem; }
+}
