@@ -219,6 +219,8 @@ main { padding: 2.5rem 0 1rem; }
   .thumb img { filter: brightness(0.86); }
   .mrd .tb { fill-opacity: 0.45; }
   .mrd .ts { fill-opacity: 0.26; }
+  .hfig .rep, .hfig .a2 { fill-opacity: 0.5; }
+  .hfig .band { fill-opacity: 0.22; }
 }
 
 @media (max-width: 30rem) {
@@ -230,7 +232,7 @@ main { padding: 2.5rem 0 1rem; }
   /* Diagrams are shown whole, with larger labels and lines, in a box as tall as the grid slice. */
   .hf:not(.clip) .hf-art { aspect-ratio: 662 / 182; display: flex; align-items: center; }
   .hf figcaption { min-height: 6em; }
-  .hfig text { font-size: 18px; }
+  .hfig text { font-size: 21px; }
   .hfig .ln { stroke-width: 3.5; }
   .hfig .ax, .hfig .thr { stroke-width: 2.5; }
 }
