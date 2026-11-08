@@ -24,7 +24,7 @@
   title: Online activity prediction
   venue: Annals of Applied Statistics
   clip: true
-  caption: "Illustration: users (rows) by days (columns); each row starts on a user's first active day, later marks are repeat visits"
+  caption: "Illustration: users (rows) by days (columns); each row starts on a user's first active day, which traces a staircase; later marks are repeat visits"
 - id: triagent
   page: /publication/masoero-2026-mind
   title: Mind the Gap
@@ -40,7 +40,7 @@
   title: Multi-armed bandits with network interference
   venue: NeurIPS 2024
   clip: true
-  caption: "Illustration: units on a network, each shaded by the arm chosen for it; edges link units that affect each other"
+  caption: "Illustration: units on a network, each shaded by the arm chosen for it; one unit is highlighted with the links through which its neighbours' arms affect it"
 - id: early-stop
   page: /publication/masoero-2025-bayesian
   title: Bayesian early termination
