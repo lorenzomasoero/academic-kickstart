@@ -24,5 +24,5 @@ publication_short = "JRSS-B 2026"
 selected = true
 # Links (optional).
 url_pdf = "https://doi.org/10.1093/jrsssb/qkaf073"
-url_preprint = "https://arxiv.org/abs/2401.01264"
+url_preprint = "https://arxiv.org/abs/2112.13495"
 +++
