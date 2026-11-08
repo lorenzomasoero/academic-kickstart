@@ -62,14 +62,16 @@
 
 {{- /* The bio file stays as written; its first paragraph is "now-ish", the rest "earlier-ish". */}}
 {{- $bio := split (string ($home.Resources.Get "bio.md").Content) "</p>" }}
-<details class="sec bio" open>
-  <summary><h2 id="about-now">About me (now-ish)</h2></summary>
-  {{ printf "%s</p>" (index $bio 0) | safeHTML }}
-</details>
-<details class="sec bio">
-  <summary><h2 id="about-earlier">About me (earlier-ish)</h2></summary>
-  {{ delimit (after 1 $bio) "</p>" | safeHTML }}
-</details>
+{{- /* Two independent toggles in one heading: "now-ish" (open) and "earlier-ish" (closed). Without JS the
+     toggles stay hidden and both parts show. */}}
+<section class="sec bio about" aria-labelledby="about">
+  <h2 id="about" class="about-h">About me
+    <span class="about-tgs" hidden><button type="button" class="tg" aria-expanded="true" aria-controls="about-now">now-ish</button><button type="button" class="tg" aria-expanded="false" aria-controls="about-earlier">earlier-ish</button></span>
+  </h2>
+  <div id="about-now">{{ printf "%s</p>" (index $bio 0) | safeHTML }}</div>
+  <div id="about-earlier">{{ delimit (after 1 $bio) "</p>" | safeHTML }}</div>
+  <script>(function(){var w=document.querySelector(".about-tgs");if(!w)return;var B=w.querySelectorAll(".tg"),i;function set(b,o){b.setAttribute("aria-expanded",o);document.getElementById(b.getAttribute("aria-controls")).hidden=!o}for(i=0;i<B.length;i++){set(B[i],B[i].getAttribute("aria-expanded")=="true");B[i].onclick=function(){set(this,this.getAttribute("aria-expanded")!="true")}}w.hidden=false})();</script>
+</section>
 
 {{- with hugo.Data.news }}
 <details class="sec news" open>
