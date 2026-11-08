@@ -91,3 +91,19 @@
   title: Double trouble
   venue: LMRL@NeurIPS 2022
   caption: "Illustration: new variants found as samples grow in two populations, and the part of them the two populations share"
+- id: replicability
+  page: /publication/masoero-2022-cross
+  title: Cross-study replicability in cluster analysis
+  venue: Statistical Science
+  caption: "Illustration: clusters found in two studies; matching clusters are linked, and one that does not replicate is faded"
+- id: finite-approx
+  page: /publication/nguyen-2020-independent
+  title: Independent finite approximations
+  venue: Bayesian Analysis
+  caption: "Illustration: the weights of infinitely many atoms (top), and a finite approximation that keeps a fixed number of them (bottom)"
+- id: trait-alloc
+  page: /publication/masoero-2018-posterior
+  title: Hierarchical CRMs in trait allocation
+  venue: BNP@NeurIPS 2018
+  clip: true
+  caption: "Illustration: three groups of samples (row pairs) draw traits (columns) from a shared pool on top; shaded columns are traits all groups share"
