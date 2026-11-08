@@ -70,28 +70,28 @@
   </h2>
   <div id="about-now">{{ printf "%s</p>" (index $bio 0) | safeHTML }}</div>
   <div id="about-earlier">{{ delimit (after 1 $bio) "</p>" | safeHTML }}</div>
-  <script>(function(){var w=document.querySelector(".about-tgs");if(!w)return;var B=w.querySelectorAll(".tg"),i;function set(b,o){b.setAttribute("aria-expanded",o);document.getElementById(b.getAttribute("aria-controls")).hidden=!o}for(i=0;i<B.length;i++){set(B[i],B[i].getAttribute("aria-expanded")=="true");B[i].onclick=function(){set(this,this.getAttribute("aria-expanded")!="true")}}w.hidden=false})();</script>
+
 </section>
 
 {{- with hugo.Data.news }}
-<details class="sec news" open>
-  <summary><h2 id="news">News</h2></summary>
-  <ul>
+<section class="sec news about" aria-labelledby="news">
+  <h2 id="news" class="about-h">News
+    <span class="about-tgs" hidden><button type="button" class="tg" aria-expanded="true" aria-controls="news-recent">recent</button>{{ if gt (len .) 3 }}<button type="button" class="tg" aria-expanded="false" aria-controls="news-older">older</button>{{ end }}</span>
+  </h2>
+  <ul id="news-recent">
     {{- range first 3 . }}
     <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
     {{- end }}
   </ul>
   {{- with after 3 . }}
-  <details class="older">
-    <summary>older news</summary>
-    <ul>
-      {{- range . }}
-      <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
-      {{- end }}
-    </ul>
-  </details>
+  <ul id="news-older">
+    {{- range . }}
+    <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
+    {{- end }}
+  </ul>
   {{- end }}
-</details>
+</section>
+<script>(function(){var B=document.querySelectorAll(".about-tgs .tg"),W=document.querySelectorAll(".about-tgs"),i;if(!B.length)return;function set(b,o){b.setAttribute("aria-expanded",o);document.getElementById(b.getAttribute("aria-controls")).hidden=!o}for(i=0;i<B.length;i++){set(B[i],B[i].getAttribute("aria-expanded")=="true");B[i].onclick=function(){set(this,this.getAttribute("aria-expanded")!="true")}}for(i=0;i<W.length;i++)W[i].hidden=false})();</script>
 {{- end }}
 
 <details class="sec research">
