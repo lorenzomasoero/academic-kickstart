@@ -1,7 +1,6 @@
 # Publication thumbnails: static/img/pubs/<slug>.webp, cropped from a figure in the paper's arXiv PDF.
 # Presentation only. Papers not listed here get the buyers × sellers grid motif as a placeholder.
 agarwal-2024-bandits:        {arxiv: "2405.18621",   page: 2,  alt: "Figure from the paper: a network of units whose rewards depend on their neighbours' treatments"}
-bajari-2021-multiple:        {arxiv: "2112.13495",   page: 20, alt: "Figure from the paper: histograms of two estimators over repeated randomizations"}
 beraha-2026-online:          {arxiv: "2505.19643",   page: 5,  alt: "Figure from the paper: cumulative new users over time in three experiments"}
 hut-2026-simulate:           {arxiv: "2608.02345",   page: 6,  alt: "Figure from the paper: when principled subsampling pays off, and the budget frontier"}
 imbens-2026-demonstration:   {arxiv: "2603.06941",   page: 25, alt: "Figure from the paper: power curves of adaptive rules with ten arms"}
@@ -9,7 +8,7 @@ masoero-2021-bayesian:       {arxiv: "2112.02032",   page: 4,  alt: "Figure from
 masoero-2022-cross:          {arxiv: "2202.01910",   page: 17, alt: "Figure from the paper: local replicability of k-means clusters across studies"}
 masoero-2022-more:           {arxiv: "1912.05516",   page: 12, alt: "Figure from the paper: predicted number of new genomic variants for two cancer types"}
 masoero-2023-leveraging:     {arxiv: "2305.01109",   page: 9,  alt: "Figure from the paper: difference-in-means and regression-adjusted estimates against covariate imbalance"}
-masoero-2024-multiple:       {arxiv: "2401.01264v1", page: 15, alt: "Figure from the paper: distribution of an estimator and of its variance estimator over randomizations"}
+masoero-2024-multiple:       {arxiv: "2112.13495",   page: 20, alt: "Figure from the paper: histograms of two estimators over repeated randomizations"}
 missault-2024-switchback:    {arxiv: "2506.12654",   page: 3,  alt: "Figure from the paper: standard error of the treatment effect under three experimental designs"}
 nguyen-2020-independent:     {arxiv: "2009.10780",   page: 23, alt: "Figure from the paper: image denoising quality across approximation levels and Gibbs sweeps"}
 sudijono-2026-regression:    {arxiv: "2603.19480",   page: 5,  alt: "Figure from the paper: sampling distributions of three direct-effect estimators"}

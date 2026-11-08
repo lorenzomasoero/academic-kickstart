@@ -1,4 +1,5 @@
 +++
+aliases = ["/publication/bajari-2021-multiple/"]
 title = "Multiple Randomization Designs: Estimation and Inference with Interference"
 date = 2026-01-12T00:00:00
 draft = false
