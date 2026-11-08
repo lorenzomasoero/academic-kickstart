@@ -18,6 +18,8 @@
   </div>
 </section>
 
+<details class="sec sec-hero" open>
+<summary><h2 id="snapshot">Random research snapshot</h2></summary>
 <div class="hero" id="hero">
 {{- $all := hugo.Data.hero }}{{ $n := len $all }}
 {{- range $i, $f := $all }}
@@ -56,25 +58,33 @@
      "Next snapshot" link shows the next figure with its panel open (without JS it falls back to #s-<id> and :target). */ -}}
 (function(){var H=document.getElementById("hero");if(!H||!H.querySelectorAll)return;var F=H.querySelectorAll(".hf"),n=F.length,e=document.getElementById("hero-next"),cur=0,s=document.getElementById("mrd"),b=s.querySelectorAll(".mrd-b circle"),c=s.querySelectorAll(".mrd-s circle"),g=s.querySelectorAll(".mrd-col");function r(n){for(var a=[],i=0,j,t;i<n;i++)a.push(i<n/2);for(i=n-1;i>0;i--){j=Math.random()*(i+1)|0;t=a[i];a[i]=a[j];a[j]=t}return a}function mrd(){var B=r(b.length),S=r(c.length),i,j,k;for(i=0;i<b.length;i++)b[i].setAttribute("class",B[i]?"t":"c");for(j=0;j<c.length;j++){c[j].setAttribute("class",S[j]?"t":"c");k=g[j].children;for(i=0;i<k.length;i++)k[i].setAttribute("class",B[i]&&S[j]?"tt":B[i]?"tb":S[j]?"ts":"cc")}}function op(i,f){var d=F[i].querySelector("details");if(d){d.open=true;if(f)d.querySelector("summary").focus()}}function id(i){return F[i].getAttribute("data-fig")}function show(k){var f=document.activeElement==e,i;for(i=0;i<n;i++)F[i].hidden=i!=k;cur=k;F[k].querySelector(".hf-head").appendChild(e);if(f)e.focus();if(id(k)=="mrd")mrd()}var m=/[?&]fig=([\w-]+)/.exec(location.search),k=Math.random()*n|0,i;if(m)for(i=0;i<n;i++)if(id(i)==m[1])k=i;show(k);if(/[?&]more\b/.test(location.search))op(k,0);e.hidden=false;H.onclick=function(v){var a=v.target.closest&&v.target.closest(".hf-go"),i;if(!a)return;v.preventDefault();for(i=0;i<n;i++)if(id(i)==a.getAttribute("data-to")){show(i);op(i,1)}};e.onclick=function(){var j=Math.random()*(n-1)|0;show(j<cur?j:j+1)}})();
 </script>
+</details>
 
-<section class="bio" aria-label="Biography">
-  {{ ($home.Resources.Get "bio.md").Content }}
-</section>
+{{- /* The bio file stays as written; its first paragraph is "now-ish", the rest "earlier-ish". */}}
+{{- $bio := split (string ($home.Resources.Get "bio.md").Content) "</p>" }}
+<details class="sec bio" open>
+  <summary><h2 id="about-now">About me (now-ish)</h2></summary>
+  {{ printf "%s</p>" (index $bio 0) | safeHTML }}
+</details>
+<details class="sec bio">
+  <summary><h2 id="about-earlier">About me (earlier-ish)</h2></summary>
+  {{ delimit (after 1 $bio) "</p>" | safeHTML }}
+</details>
 
 {{- with hugo.Data.news }}
-<section class="news" aria-labelledby="news">
-  <h2 id="news">News</h2>
+<details class="sec news" open>
+  <summary><h2 id="news">News</h2></summary>
   <ul>
     {{- range . }}
     <li><span class="date">{{ .date }}</span> <span>{{ .text | markdownify }}</span></li>
     {{- end }}
   </ul>
-</section>
+</details>
 {{- end }}
 
-<section class="research" aria-labelledby="research">
-  <h2 id="research">Research</h2>
+<details class="sec research">
+  <summary><h2 id="research">Research</h2></summary>
   {{ ($home.Resources.Get "research.md").Content }}
   <p class="all"><a href="{{ (site.GetPage "/publication").RelPermalink }}">All publications →</a></p>
-</section>
+</details>
 {{ end }}

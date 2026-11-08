@@ -412,3 +412,19 @@ main { padding: 2.5rem 0 1rem; }
 /* Without JS, "Next snapshot" links to #s-<id>; show that figure in place of the default one. */
 :root:not(.js) .hero .hf:target { display: block; }
 :root:not(.js) .hero:has(.hf:target) .hf:not(:target) { display: none; }
+
+/* Collapsible homepage sections (native <details>; work without JS) */
+details.sec { margin: 0 0 2rem; }
+details.sec > summary { list-style: none; cursor: pointer; display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.75rem; border-radius: 4px; }
+details.sec > summary::-webkit-details-marker { display: none; }
+details.sec > summary::before { content: ""; flex: none; width: 0.45em; height: 0.45em; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(-0.15em) rotate(-45deg); transition: transform 0.2s ease; }
+details.sec[open] > summary::before { transform: translateY(-0.3em) rotate(45deg); }
+details.sec > summary h2 { display: inline; margin: 0; }
+details.sec > summary:hover h2 { color: var(--accent); }
+details.sec > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+details.sec:not([open]) { margin-bottom: 1rem; }
+@media (prefers-reduced-motion: reduce) { details.sec > summary::before { transition: none; } }
+/* The section title now says "Random research snapshot"; keep the paper link and the button on one row. */
+.sec-hero .hf-label { display: none; }
+.sec-hero .hf-paper { grid-column: 1; grid-row: 1; }
+.sec-hero .hero-grid { margin-bottom: 0; }
