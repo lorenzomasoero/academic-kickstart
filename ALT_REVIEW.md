@@ -183,4 +183,90 @@ The live preview was rebuilt with `hugo --quiet -d /var/tmp/website/preview/sign
 - **At 360 px and narrower**, the `agents-ab` caption wraps to a fifth line, so the page below moves by one line for that figure only.
 - **Older review items:** item 3 in "Worth your decision" is now superseded. The caption copy and the button name ("Show another") come from `data/hero.yaml` and `layouts/home.html`. To return to the single grid, keep only the `mrd` entry in `data/hero.yaml`.
 
+## More snapshots
+
+Added on branch `alt-signature` in commits `b8fb845`, `bd2d38c`, `3398fb5`, `de82186` and `e7e199a` (nothing pushed). The homepage now picks from 20 snapshots instead of 8, so every paper has one except the two skipped below. Each new figure is one partial in `layouts/_partials/hero/<id>.html` and one entry in `data/hero.yaml`, in the same 662 × 104 viewBox, palette, stroke weights and 12 px labels as the first eight. The script is unchanged, and the MRD grid is still the figure shown without JS.
+
+### Figures added
+
+The header shows "<title link> (<venue>)". Captions are listed as written in `data/hero.yaml`. All are schematic: the curves are smooth functions and the scatters are fixed pseudo-random draws. Nothing comes from a paper's numbers.
+
+| id | Figure | Caption | Header: title (venue) → link |
+|---|---|---|---|
+| `edm` | bipartite graph: 5 buyers (left) and 5 sellers (right), filled = treated, hollow = control; grey transaction curves, with the treated-buyer → control-seller curves in accent under an "interference" label | Illustration: buyers and sellers, each treated or control, joined by transactions; transactions between treated buyers and control sellers carry interference | Experimental design in marketplaces (Statistical Science) → `/publication/bajari-2023-edm/` |
+| `spillover` | 7 clusters of 7 units in thin rings; 2 treated clusters (solid) sit in soft radial halos that reach their neighbours (light); one cluster far from both stays hollow. Labels: "direct", "indirect", "no spillover" | Illustration: treated clusters of units feel a direct effect, and the effect spills over to neighbouring clusters as an indirect one | Measuring direct and indirect impacts (TSMO@KDD, CODE@MIT 2024) → `/publication/masoero-2024-marketplace/` |
+| `double-rand-reg` | scatter of outcome against covariate, treated (filled) and control (hollow), with two parallel fitted lines; on the right, two I-beam intervals for the effect, "before" (wide) and "after" (narrow) | Illustration: outcomes against a covariate for treated and control units; adjusting for the covariate narrows the interval for the effect | Regression adjustments for double randomization (arXiv 2026) → `/publication/sudijono-2026-regression/` |
+| `cuped` | two equal-area normal curves on one axis: wide and dashed ("unadjusted"), narrow and solid ("adjusted"), with a dashed "effect" line through both centres | Illustration: the spread of an effect estimate with and without covariate adjustment; both are centred on the same effect | Covariate adjustment at scale (KDD 2023 workshop) → `/publication/masoero-2023-leveraging/` |
+| `power` | power curve rising with effect size (solid), prior over effect sizes (dashed), and the prior × power area shaded as "expected power" | Illustration: power rises with the effect size; weighting it by a prior belief about effect sizes gives the expected power | Statistical power calculations revisited (CODE@MIT 2025) → `/publication/gualavisy-2025-power/` |
+| `demo` | 100 % stacked bands for three arms over time. They start even and shift to the bottom arm, up to a dashed threshold with a check mark and "demonstrated" | Illustration: the share of units given to each of three arms over time, shifting towards the arm that works until it is demonstrated | Demonstration experiments (arXiv 2026) → `/publication/imbens-2026-demonstration/` |
+| `scaled-priors` | two small panels with the same observed curve and the same later counts (hollow dots). "standard prior": narrow band, falls short. "scaled prior": wider band that covers the dots | Illustration: predicting new genetic variants; a standard prior is too confident and misses, a scaled prior's band covers what comes next | Scaled process priors (JASA) → `/publication/camerlenghi-2022-scaled/` |
+| `power-rare` | a hump-shaped power curve across the budget split, with the optimum marked; small glyphs show "breadth" (many thin bars) and "depth" (few thick bars) at the two ends | Illustration: a fixed sequencing budget spent on many samples at low depth or few samples at high depth; power peaks in between | Power maximization for rare variants (LMRL@NeurIPS 2021) → `/publication/masoero-2021-bayesian/` |
+| `two-pops` | two discovery curves, "population 1" (solid) and "population 2" (lighter), plus a shaded "shared" area below them, with labels at the ends of the curves | Illustration: new variants found as samples grow in two populations, and the part of them the two populations share | Double trouble (LMRL@NeurIPS 2022) → `/publication/shen-2022-double/` |
+| `replicability` | "study 1" and "study 2" side by side, each with clusters (solid, light, hollow) linked by dotted lines to their match. The study-1 cluster with no counterpart is faded grey and labelled "no match" | Illustration: clusters found in two studies; matching clusters are linked, and one that does not replicate is faded | Cross-study replicability in cluster analysis (Statistical Science) → `/publication/masoero-2022-cross/` |
+| `finite-approx` | two bar rows: "infinite", 58 geometrically decreasing weights that trail off, and "finite", 22 close but not identical weights ending at a dashed "truncated here" line | Illustration: the weights of infinitely many atoms (top), and a finite approximation that keeps a fixed number of them (bottom) | Independent finite approximations (Bayesian Analysis) → `/publication/nguyen-2020-independent/` |
+| `trait-alloc` | a dot matrix: a pool row on top (dot size = how common the trait is), then three groups of two samples each; filled dots = traits a sample has; shaded columns = traits all three groups use. Cropped on phones like the grids | Illustration: three groups of samples (row pairs) draw traits (columns) from a shared pool on top; shaded columns are traits all groups share | Hierarchical CRMs in trait allocation (BNP@NeurIPS 2018) → `/publication/masoero-2018-posterior/` |
+
+Each figure has its own visual idea: a bipartite graph, halos, a scatter with error bars, overlaid densities, a curve times a prior, stacked bands, small multiples, a hump with glyphs, labelled curve ends, linked clusters, bar rows and a dot matrix. None of them reuses the square-cell grid of `mrd`, `switchback` and `ibp`.
+
+### Dropped, skipped, and unsure
+
+- **Nothing dropped.** All twelve read at 1440 and at 390 wide. The weakest at phone size are:
+  - `replicability`: the clusters become small dot groups, and the faded one is faint by design.
+  - `scaled-priors`: two panels in one strip are small; the narrow band in the "standard prior" panel is thin.
+- **Skipped, as the brief asked:**
+  - `bajari-2021-multiple`: the same work as the existing `mrd` snapshot.
+  - `horel-21` (the Chicago Police Department dataset): see the decision below.
+- **Venues and titles:**
+  - The short titles are my wording, e.g. "Statistical power calculations revisited" for gualavisy-2025 (the brief called it "Power with effect-size priors"), "Covariate adjustment at scale" and "Double trouble".
+  - Both 2026 preprints show "arXiv 2026", as the brief gives for `demo`. Their pages say arXiv 2603.19480 and 2603.06941. The older `switchback` entry still shows "preprint"; make them match if you prefer one style.
+  - Workshop venues are abbreviated as "LMRL@NeurIPS 2021/2022", "BNP@NeurIPS 2018" and "KDD 2023 workshop".
+- **Small layout change on phones:** with 20 papers, some titles wrap to two lines at 390 px. The paper line under "Random research snapshot" now reserves two lines on phones (`.hf-paper { min-height: 2.8em }`), so short titles leave one empty line. In exchange, the bio starts at the same height for all 20 figures. I measured it in headless Chromium: 483 px at 1440 wide and 545 px at 390 wide, with every caption inside its reserved 2 (desktop) or 4 (phone) lines.
+- **New CSS** (all in the "Rotating hero figures" block of `assets/css/main.css`; colours only through `--accent`, `--rule`, `--muted` and `--bg`):
+  - `.hl` accent edges, `.ln2` lighter lines, `.link` dotted links, `.bar` glyph bars, `.fade` faded markers, `.ck` the check mark (in `--bg`), and `text.ta` accent labels;
+  - `.g0`/`.g1` gradient stops for the `spillover` halos;
+  - `.dt`, compact dots: one `<path>` of zero-length round-capped strokes instead of one `<circle>` per dot. This took `trait-alloc` from 10.2 KB to 3.9 KB;
+  - a 13 px label size for cropped (`clip: true`) figures on phones. They are already drawn 1.75× larger there, so labels in the visible part come out at about 11 px.
+- **Motion:** none added. Only the `triagent` packet moves, as before.
+- The coordinates were computed once with a throwaway script, which is not in the repo, as for the first figures. Only `ibp` (Hugo template) and `mrd` are generated at build time.
+
+### `ibp` and `bandits`
+
+- **`ibp`** (was too busy): the matrix is now 8 users × 54 days instead of 10 × 66, with larger cells (9 units on a 12 grid, was 8 on 10). Repeat visits are sparser (16–30 % of days, was 25–60 %). A thin accent line traces the staircase of first visits, so the "new dishes" structure is the first thing you see. New caption: "Illustration: users (rows) by days (columns); each row starts on a user's first active day, which traces a staircase; later marks are repeat visits".
+- **`bandits`** (interference lived in the caption): the network is the same, minus one node, but one unit is now highlighted. It has a soft halo and a ring, its edges to its four neighbours are drawn in accent, and an accent "interference" label sits above it. All of this is in the left third, so it stays visible in the phone crop. New caption: "Illustration: units on a network, each shaded by the arm chosen for it; one unit is highlighted with the links through which its neighbours' arms affect it".
+- These two captions replace the ones in the "Rotating figures" table above.
+
+### Verification and page weight
+
+- Hugo 0.169.0, `--gc --minify`, into a fresh folder: 0 errors and 0 warnings.
+- The link script checked every internal `href`/`src`/`url()`: 242 references, 0 broken. All 20 header links resolve.
+- `?fig=<id>` works for all 20 ids. For each one, headless Chromium's `--dump-dom` showed exactly that figure visible and the other 19 `hidden`.
+- No external requests, no libraries, and no change to the script (1.1 KB).
+
+| Homepage (KiB) | Brief's figure | `c119fd0` (re-measured) | With 20 snapshots (`e7e199a`) |
+|---|---|---|---|
+| HTML + CSS + inline JS, raw | — | 46.2 | 72.4 |
+| the same, gzipped | — | 10.6 | 17.7 |
+| plus portrait and favicon | 19.5 | 19.9 | 27.0 |
+
+The brief's 19.5 KB was measured before the snapshot header (`c119fd0`). The new figures add about 7 KiB gzipped. The HTML alone is 64.4 KiB raw, well under the ~120 KB point where lazy loading would pay off. So all figures stay inline, with `hidden`, and there are still no extra requests and no `<template>` indirection.
+
+### Screenshots
+
+All are in `/var/tmp/website/alt-shots/signature-rotating-2/`, taken through `?fig=<id>`:
+- `<id>_desktop.png`: the 12 new figures plus the changed `ibp` and `bandits`, 1440 wide, light mode
+- `spillover_mobile.png`, `demo_mobile.png`, `bandits_mobile.png`: 390 wide
+- `cuped_desktop_dark.png`, `power_desktop_dark.png`, `ibp_desktop_dark.png`: dark mode
+
+I also checked every new figure at 390 wide and six in dark mode while working. Those working copies are not kept.
+
+The live preview was rebuilt with `hugo --quiet -d /var/tmp/website/preview/signature`, and http://127.0.0.1:1313 is serving it.
+
+### Decision for you: the Chicago Police Department paper
+
+`horel-21` (the paper on the Chicago Police Department dataset) has no snapshot. Its subject is sensitive, and a playful random illustration on the homepage could read as trivializing it. Options:
+- leave it out of the rotation (the current state). It stays listed under Publications as before;
+- add a deliberately neutral figure, for example an abstract data-table motif with no people, places or events.
+
+My recommendation is to leave it out.
+
 Lorenzo Masoero (masoerl), last updated 2026-11-08. Prepared with Claude.
