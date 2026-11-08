@@ -247,3 +247,15 @@ main { padding: 2.5rem 0 1rem; }
 /* Links that make up a whole list item need no underline until hovered. */
 .contact a, .research li a, .pubs .title a, .all a { text-decoration: none; }
 .contact a:hover, .research li a:hover, .pubs .title a:hover, .all a:hover { text-decoration: underline; }
+
+/* Snapshot header: label + paper on the left, "New snapshot" button on the right */
+.hf-head { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.2rem 0.75rem; margin-bottom: 0.7rem; font-size: 0.8125rem; line-height: 1.4; color: var(--muted); }
+.hf-label { grid-column: 1; grid-row: 1; }
+.hf-paper { grid-column: 1 / -1; grid-row: 2; }
+.hf-label { font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.hf-paper { color: var(--muted); }
+.hf-head #hero-next { grid-column: 2; grid-row: 1; margin-left: 0; display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap; }
+.hf-head #hero-next[hidden] { display: none; }
+.hf-head #hero-next svg { transition: transform 0.4s ease; }
+.hf-head #hero-next:hover svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .hf-head #hero-next svg { transition: none; } }
