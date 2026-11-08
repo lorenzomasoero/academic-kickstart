@@ -189,6 +189,21 @@ main { padding: 2.5rem 0 1rem; }
 .hfig .band { fill: var(--accent); fill-opacity: 0.14; }
 .hfig .thr { stroke: var(--accent); stroke-opacity: 0.6; stroke-width: 1.5; stroke-dasharray: 5 4; }
 .hfig .chev { stroke: var(--accent); stroke-opacity: 0.7; stroke-width: 1.6; }
+.hfig .dt { fill: none; stroke: var(--accent); stroke-linecap: round; }
+.hfig .dt.l { stroke-opacity: 0.36; }
+.hfig .dt.g { stroke: var(--rule); }
+.hfig .fade { fill: none; stroke: var(--muted); stroke-opacity: 0.5; stroke-width: 1.4; }
+.hfig .hl, .hfig .ln2, .hfig .link, .hfig .bar, .hfig .ck { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.hfig .hl { stroke: var(--accent); stroke-width: 2; }
+.hfig .hl.thin { stroke-width: 1.5; }
+.hfig .ln2 { stroke: var(--accent); stroke-opacity: 0.5; stroke-width: 2.25; }
+.hfig .link { stroke: var(--accent); stroke-opacity: 0.6; stroke-width: 1.5; stroke-dasharray: 2 4; }
+.hfig .bar { stroke: var(--accent); stroke-width: 3; }
+.hfig .bar.thick { stroke-width: 7; }
+.hfig .ck { stroke: var(--bg); stroke-width: 2.25; }
+.hfig .g0 { stop-color: var(--accent); stop-opacity: 0.3; }
+.hfig .g1 { stop-color: var(--accent); stop-opacity: 0; }
+.hfig text.ta { fill: var(--accent); }
 .hfig .pk { display: none; fill: var(--accent); }
 @supports (offset-path: path("M0 0")) {
   .hfig .pk { display: inline; offset-rotate: 0deg; animation: hpk 6s linear infinite; }
@@ -220,6 +235,7 @@ main { padding: 2.5rem 0 1rem; }
   .mrd .tb { fill-opacity: 0.45; }
   .mrd .ts { fill-opacity: 0.26; }
   .hfig .rep, .hfig .a2 { fill-opacity: 0.5; }
+  .hfig .dt.l { stroke-opacity: 0.5; }
   .hfig .band { fill-opacity: 0.22; }
 }
 
@@ -232,9 +248,13 @@ main { padding: 2.5rem 0 1rem; }
   /* Diagrams are shown whole, with larger labels and lines, in a box as tall as the grid slice. */
   .hf:not(.clip) .hf-art { aspect-ratio: 662 / 182; display: flex; align-items: center; }
   .hf figcaption { min-height: 6em; }
+  /* Some paper titles wrap on phones: reserve two lines so the figure never moves. */
+  .hf-paper { min-height: 2.8em; }
   .hfig text { font-size: 21px; }
   .hfig .ln { stroke-width: 3.5; }
   .hfig .ax, .hfig .thr { stroke-width: 2.5; }
+  /* Cropped figures are drawn 1.75× larger, so their few labels need no enlarging. */
+  .hf.clip .hfig text { font-size: 13px; }
 }
 
 @media (max-width: 30rem) {

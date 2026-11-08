@@ -46,3 +46,18 @@
   title: Bayesian early termination
   venue: CODE@MIT 2025
   caption: "Illustration: the probability that treatment is better, tracked over time; the test stops once it crosses the threshold"
+- id: edm
+  page: /publication/bajari-2023-edm
+  title: Experimental design in marketplaces
+  venue: Statistical Science
+  caption: "Illustration: buyers and sellers, each treated or control, joined by transactions; transactions between treated buyers and control sellers carry interference"
+- id: spillover
+  page: /publication/masoero-2024-marketplace
+  title: Measuring direct and indirect impacts
+  venue: TSMO@KDD, CODE@MIT 2024
+  caption: "Illustration: treated clusters of units feel a direct effect, and the effect spills over to neighbouring clusters as an indirect one"
+- id: double-rand-reg
+  page: /publication/sudijono-2026-regression
+  title: Regression adjustments for double randomization
+  venue: arXiv 2026
+  caption: "Illustration: outcomes against a covariate for treated and control units; adjusting for the covariate narrows the interval for the effect"
