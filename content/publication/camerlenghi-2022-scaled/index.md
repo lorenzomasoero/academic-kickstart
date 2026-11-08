@@ -14,5 +14,6 @@ abstract: ''
 featured: true
 publication: '*Journal of the American Statistical Association*'
 url_pdf: "https://www.tandfonline.com/doi/full/10.1080/01621459.2022.2115918"
+url_preprint: "https://arxiv.org/abs/2106.15480"
 ---
 

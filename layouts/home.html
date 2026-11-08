@@ -28,7 +28,7 @@
 {{- $more := index hugo.Data.more .id }}{{ if not $more }}{{ errorf "data/more.yaml: no entry for snapshot %q" .id }}{{ end }}
 {{- $next := index $all (mod (add $i 1) $n) }}
 <figure class="hero-grid hf{{ if .clip }} clip{{ end }}" id="s-{{ .id }}" data-fig="{{ .id }}"{{ if $i }} hidden{{ end }}>
-  {{- $tp := index hugo.Data.topics .topic }}<div class="hf-head t-{{ .topic }}"><span class="hf-label">Random research snapshot</span><span class="hf-paper"><span class="topic">{{ $tp.name }}</span> <a href="{{ $p.RelPermalink }}">{{ .title }}</a> ({{ .venue }})</span></div>
+  {{- $tp := index hugo.Data.topics .topic }}<div class="hf-head t-{{ .topic }}"><span class="hf-label">Random research snapshot</span><span class="hf-paper">{{- $href := $p.RelPermalink }}{{ with $p.Params.url_pdf }}{{ $href = . }}{{ end }}{{ with $p.Params.url_pdf }}{{ if in . "arxiv.org" }}{{ $href = . }}{{ end }}{{ end }}{{ with $p.Params.url_preprint }}{{ if in . "arxiv.org" }}{{ $href = . }}{{ end }}{{ end }}<span class="topic">{{ $tp.name }}</span> <a href="{{ $href }}">{{ .title }}</a> ({{ .venue }})</span></div>
   <div class="hf-art">{{ partial (printf "hero/%s.html" .id) . }}</div>
   <figcaption>{{ .caption }}
     {{- /* "Curious? See more": a native <details>, so it works without JS. Text lives in data/more.yaml;
