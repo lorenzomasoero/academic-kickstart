@@ -18,15 +18,21 @@
   </div>
 </section>
 
-<figure class="hero-grid">
-  <div class="mrd-wrap">
-  {{ partial "mrd-grid.html" (dict "rows" 5 "cols" 36 "seed" "masoero" "id" "mrd" "label" "Grid of buyers (rows) by sellers (columns). Buyers and sellers are each randomized to treatment or control; a cell is darkest when both its buyer and its seller are treated, lighter when only one is.") }}
-  </div>
-  <figcaption>A multiple randomization design: buyers (rows) × sellers (columns), each randomized to treatment or control. <a href="{{ (site.GetPage "/publication/masoero-2024-multiple").RelPermalink }}">Read the paper</a><button type="button" id="mrd-again" hidden>Re-randomize</button></figcaption>
+<div class="hero" id="hero">
+{{- range $i, $f := hugo.Data.hero }}
+{{- $p := site.GetPage .page }}{{ if not $p }}{{ errorf "data/hero.yaml: no page %q" .page }}{{ end }}
+<figure class="hero-grid hf{{ if .clip }} clip{{ end }}" data-fig="{{ .id }}"{{ if $i }} hidden{{ end }}>
+  <div class="hf-art">{{ partial (printf "hero/%s.html" .id) . }}</div>
+  <figcaption>{{ .caption }} — <a href="{{ $p.RelPermalink }}">{{ .title }}</a> ({{ .venue }})</figcaption>
 </figure>
+{{- end }}
+<button type="button" id="hero-next" hidden>Show another</button>
+</div>
 <script>
-{{- /* Under 1 KB: draw a fresh complete randomization (half of buyers, half of sellers treated) on each load; the build-time grid stays without JS. */ -}}
-(function(){var s=document.getElementById("mrd");if(!s||!s.querySelectorAll)return;var b=s.querySelectorAll(".mrd-b circle"),c=s.querySelectorAll(".mrd-s circle"),g=s.querySelectorAll(".mrd-col");function r(n){for(var a=[],i=0,j,t;i<n;i++)a.push(i<n/2);for(i=n-1;i>0;i--){j=Math.random()*(i+1)|0;t=a[i];a[i]=a[j];a[j]=t}return a}function go(){var B=r(b.length),S=r(c.length),i,j,k;for(i=0;i<b.length;i++)b[i].setAttribute("class",B[i]?"t":"c");for(j=0;j<c.length;j++){c[j].setAttribute("class",S[j]?"t":"c");k=g[j].children;for(i=0;i<k.length;i++)k[i].setAttribute("class",B[i]&&S[j]?"tt":B[i]?"tb":S[j]?"ts":"cc")}}go();var e=document.getElementById("mrd-again");if(e){e.hidden=false;e.onclick=go}})();
+{{- /* Show one random figure per load (?fig=<id> forces one); "Show another" picks a different one. Showing the
+     MRD grid draws a fresh complete randomization (half of buyers, half of sellers treated). Without JS the first
+     figure in data/hero.yaml (the build-time MRD grid) is shown. */ -}}
+(function(){var H=document.getElementById("hero");if(!H||!H.querySelectorAll)return;var F=H.querySelectorAll(".hf"),n=F.length,e=document.getElementById("hero-next"),cur=0,s=document.getElementById("mrd"),b=s.querySelectorAll(".mrd-b circle"),c=s.querySelectorAll(".mrd-s circle"),g=s.querySelectorAll(".mrd-col");function r(n){for(var a=[],i=0,j,t;i<n;i++)a.push(i<n/2);for(i=n-1;i>0;i--){j=Math.random()*(i+1)|0;t=a[i];a[i]=a[j];a[j]=t}return a}function mrd(){var B=r(b.length),S=r(c.length),i,j,k;for(i=0;i<b.length;i++)b[i].setAttribute("class",B[i]?"t":"c");for(j=0;j<c.length;j++){c[j].setAttribute("class",S[j]?"t":"c");k=g[j].children;for(i=0;i<k.length;i++)k[i].setAttribute("class",B[i]&&S[j]?"tt":B[i]?"tb":S[j]?"ts":"cc")}}function id(i){return F[i].getAttribute("data-fig")}function show(k){var f=document.activeElement==e,i;for(i=0;i<n;i++)F[i].hidden=i!=k;cur=k;F[k].querySelector("figcaption").appendChild(e);if(f)e.focus();if(id(k)=="mrd")mrd()}var m=/[?&]fig=([\w-]+)/.exec(location.search),k=Math.random()*n|0,i;if(m)for(i=0;i<n;i++)if(id(i)==m[1])k=i;show(k);e.hidden=false;e.onclick=function(){var j=Math.random()*(n-1)|0;show(j<cur?j:j+1)}})();
 </script>
 
 <section class="bio" aria-label="Biography">

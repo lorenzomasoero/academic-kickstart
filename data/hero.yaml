@@ -1,0 +1,48 @@
+# Rotating hero figures on the homepage, one per line of research. The first entry is shown
+# without JS; with JS a random one is shown (or ?fig=<id>). Each id needs layouts/_partials/hero/<id>.html.
+# clip: true = on phones, show a larger slice that fades out on the right (for grids and textures);
+# otherwise the whole figure is scaled down with larger labels.
+- id: mrd
+  page: /publication/masoero-2024-multiple
+  title: Multiple randomization designs
+  venue: JRSS-B
+  clip: true
+  caption: "Illustration: buyers (rows) × sellers (columns), each randomized to treatment or control"
+- id: switchback
+  page: /publication/missault-2024-switchback
+  title: Multiple-unit switchback experiments
+  venue: preprint
+  clip: true
+  caption: "Illustration: units (rows) switch between treatment and control in blocks over time, each on its own randomized schedule"
+- id: more-for-less
+  page: /publication/masoero-2022-more
+  title: More for less
+  venue: Biometrika
+  caption: "Illustration: new genomic variants found as the sample grows, extrapolated past the samples at hand with widening uncertainty"
+- id: ibp
+  page: /publication/beraha-2026-online
+  title: Online activity prediction
+  venue: Annals of Applied Statistics
+  clip: true
+  caption: "Illustration: users (rows) by days (columns); each row starts on a user's first active day, later marks are repeat visits"
+- id: triagent
+  page: /publication/masoero-2026-mind
+  title: Mind the Gap
+  venue: IAAI 2027
+  caption: "Illustration: an agent answers support tickets, flags gaps in the docs, and the updated docs improve the next answer"
+- id: agents-ab
+  page: /publication/hut-2026-simulate
+  title: Can AI agents simulate A/B test outcomes?
+  venue: WAB@COLM, CODE@MIT 2026
+  caption: "Illustration: agents split into control and treatment, and the simulated effect checked against the real one"
+- id: bandits
+  page: /publication/agarwal-2024-bandits
+  title: Multi-armed bandits with network interference
+  venue: NeurIPS 2024
+  clip: true
+  caption: "Illustration: units on a network, each shaded by the arm chosen for it; edges link units that affect each other"
+- id: early-stop
+  page: /publication/masoero-2025-bayesian
+  title: Bayesian early termination
+  venue: CODE@MIT 2025
+  caption: "Illustration: the probability that treatment is better, tracked over time; the test stops once it crosses the threshold"

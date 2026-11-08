@@ -157,13 +157,47 @@ main { padding: 2.5rem 0 1rem; }
   border: 1px solid var(--rule);
   border-radius: 3px;
   padding: 0.05rem 0.45rem;
+  line-height: 1.25;
   cursor: pointer;
 }
 .hero-grid button:hover { background: var(--accent-soft); border-color: var(--accent); }
 .hero-grid button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+/* Rotating hero figures, one per line of research: data/hero.yaml and layouts/_partials/hero/<id>.html.
+   All share the grid's 662 × 104 viewBox, so the layout doesn't move when the figure changes. */
+
+/* Captions reserve two lines (four on phones) so the page below does not move when the figure changes. */
+.hf figcaption { min-height: 3em; }
+.hfig { display: block; width: 100%; height: auto; overflow: visible; }
+.hfig text { font-size: 12px; fill: var(--muted); }
+.hfig .a, .hfig .on { fill: var(--accent); }
+.hfig .on { opacity: 0.78; }
+.hfig .off { fill: var(--rule); }
+.hfig .cell { stroke-width: 2; stroke-linejoin: round; }
+.hfig .cell.on { stroke: var(--accent); }
+.hfig .cell.off { stroke: var(--rule); }
+.hfig .rep, .hfig .a2 { fill: var(--accent); fill-opacity: 0.36; }
+.hfig .ring { fill: none; stroke: var(--accent); stroke-width: 1.6; }
+.hfig .ax, .hfig .edge, .hfig .track, .hfig .ln, .hfig .thr, .hfig .chev { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.hfig .ax { stroke: var(--rule); stroke-width: 1.5; }
+.hfig .edge { stroke: var(--rule); stroke-width: 2; }
+.hfig .track { stroke: var(--rule); stroke-width: 4; }
+.hfig .ln { stroke: var(--accent); stroke-width: 2.25; }
+.hfig .ah { fill: var(--accent); }
+.hfig .dash { stroke-width: 2; stroke-dasharray: 6 5; }
+.hfig .dot { stroke-dasharray: 2 4; }
+.hfig .band { fill: var(--accent); fill-opacity: 0.14; }
+.hfig .thr { stroke: var(--accent); stroke-opacity: 0.6; stroke-width: 1.5; stroke-dasharray: 5 4; }
+.hfig .chev { stroke: var(--accent); stroke-opacity: 0.7; stroke-width: 1.6; }
+.hfig .pk { display: none; fill: var(--accent); }
+@supports (offset-path: path("M0 0")) {
+  .hfig .pk { display: inline; offset-rotate: 0deg; animation: hpk 6s linear infinite; }
+}
+@keyframes hpk { to { offset-distance: 100%; } }
+
 @media (prefers-reduced-motion: reduce) {
   .mrd rect { transition: none; }
+  .hfig .pk { animation: none; }
 }
 
 /* Publication thumbnails: a figure from each paper, or the grid motif. */
@@ -191,8 +225,14 @@ main { padding: 2.5rem 0 1rem; }
   .pubs > li { grid-template-columns: 4.75rem 1fr; gap: 0.75rem; }
   .hero-grid { margin-bottom: 1.75rem; }
   /* Show fewer, larger sellers on phones; the rest fades out. */
-  .hero-grid .mrd-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(to right, #000 75%, transparent); mask-image: linear-gradient(to right, #000 75%, transparent); }
-  .hero-grid .mrd { width: 175%; max-width: none; }
+  .hf.clip .hf-art { overflow: hidden; -webkit-mask-image: linear-gradient(to right, #000 75%, transparent); mask-image: linear-gradient(to right, #000 75%, transparent); }
+  .hf.clip svg { width: 175%; max-width: none; }
+  /* Diagrams are shown whole, with larger labels and lines, in a box as tall as the grid slice. */
+  .hf:not(.clip) .hf-art { aspect-ratio: 662 / 182; display: flex; align-items: center; }
+  .hf figcaption { min-height: 6em; }
+  .hfig text { font-size: 18px; }
+  .hfig .ln { stroke-width: 3.5; }
+  .hfig .ax, .hfig .thr { stroke-width: 2.5; }
 }
 
 @media (max-width: 30rem) {

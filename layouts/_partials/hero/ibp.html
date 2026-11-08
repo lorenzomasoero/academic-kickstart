@@ -1,0 +1,15 @@
+{{- /* 4. Indian-buffet-style activity matrix: 10 users (rows, sorted by first visit) × 66 days (columns).
+     New users arrive quickly at first and then more slowly, which gives the left-ordered staircase.
+     A grey strip runs from each user's first day; the first visit is solid, repeat visits lighter.
+     Repeat visits are a deterministic hash, so the build is reproducible. */ -}}
+{{- $first := slice 0 0 1 2 4 7 12 19 30 46 }}{{ $rate := slice 55 30 45 25 60 35 50 30 45 40 }}
+{{- $strip := "" }}{{ $new := "" }}{{ $rep := "" }}
+{{- range $i, $f := $first }}{{ $y := add (mul $i 10) 2 }}{{ $p := index $rate $i }}
+{{- $strip = print $strip (printf "M%d %dh%dv8h-%dz" (add (mul $f 10) 1) $y (sub (mul (sub 66 $f) 10) 2) (sub (mul (sub 66 $f) 10) 2)) }}
+{{- $new = print $new (printf "M%d %dh8v8h-8z" (add (mul $f 10) 1) $y) }}
+{{- range $d := seq (add $f 1) 65 }}
+{{- if lt (mod (hash.FNV32a (printf "ibp-%d-%d" $i $d)) 100) $p }}{{ $rep = print $rep (printf "M%d %dh8v8h-8z" (add (mul $d 10) 1) $y) }}{{ end }}
+{{- end }}{{ end -}}
+<svg class="hfig" viewBox="0 0 662 104" role="img" aria-label="Matrix of users (rows) by days (columns). Each row begins on the user's first active day, forming a staircase as new users arrive more and more slowly; later marks are repeat visits.">
+<path class="off" d="{{ $strip }}"/><path class="rep" d="{{ $rep }}"/><path class="on" d="{{ $new }}"/>
+</svg>

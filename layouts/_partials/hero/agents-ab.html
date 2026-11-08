@@ -1,0 +1,22 @@
+{{- /* 6. Agents simulating an A/B test: a small crowd of agents split into control (hollow) and treatment
+     (filled), each arm with an outcome bar; on the right, the simulated effect against the real one.
+     Schematic only: the bar lengths and intervals are arbitrary. */ -}}
+{{- $c := "" }}{{ $t := "" }}
+{{- range $k := seq 0 5 }}{{ $x := add 110 (mul $k 15) }}
+{{- $c = print $c (printf `<circle cx="%d" cy="24" r="4.5"/><circle cx="%d" cy="38" r="4.5"/>` $x $x) }}
+{{- $t = print $t (printf `<circle cx="%d" cy="66" r="4.5"/><circle cx="%d" cy="80" r="4.5"/>` $x $x) }}
+{{- end -}}
+<svg class="hfig" viewBox="0 0 662 104" role="img" aria-label="Schematic: simulated agents are split into a control group and a treatment group, each with an outcome bar; the effect estimated from the simulation is compared with the effect measured in the real experiment.">
+<g class="ring">{{ $c | safeHTML }}</g><g class="a">{{ $t | safeHTML }}</g>
+<rect class="a2" x="206" y="26" width="112" height="10" rx="2"/>
+<rect class="a" x="206" y="68" width="150" height="10" rx="2"/>
+<path class="ax" d="M392 8V96"/>
+<path class="ln" d="M534 32H612M546 72H600"/>
+<circle class="a" cx="572" cy="32" r="5"/><circle class="ring" cx="568" cy="72" r="5"/>
+<text x="94" y="35" text-anchor="end">control</text>
+<text x="94" y="77" text-anchor="end">treatment</text>
+<text x="206" y="14">outcome</text>
+<text x="572" y="14" text-anchor="middle">effect</text>
+<text x="408" y="37">simulated</text>
+<text x="408" y="77">real</text>
+</svg>

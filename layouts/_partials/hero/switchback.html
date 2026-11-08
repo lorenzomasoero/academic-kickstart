@@ -1,0 +1,14 @@
+{{- /* 2. Multiple-unit switchback: 5 units (rows) × 36 periods (columns). Each unit alternates between
+     treatment and control in blocks of 6 periods, with its own phase and starting arm, so units switch
+     at different times. Cells are 10-unit squares stroked to 12 with round joins (rounded, like the MRD grid). */ -}}
+{{- $L := 6 }}{{ $u := 18 }}{{ $phase := slice 0 4 1 5 2 }}{{ $start := slice 1 0 0 1 0 }}
+{{- $on := "" }}{{ $off := "" }}
+{{- range $i, $o := $phase }}{{ $s := index $start $i }}
+{{- range $j := seq 0 35 }}
+{{- $d := printf "M%d %dh10v10h-10z" (add (mul $j $u) 8) (add (mul (add $i 1) $u) 1) }}
+{{- if eq (mod (add (div (add $j $o) $L) $s) 2) 1 }}{{ $on = print $on $d }}{{ else }}{{ $off = print $off $d }}{{ end }}
+{{- end }}{{ end -}}
+<svg class="hfig" viewBox="0 0 662 104" role="img" aria-label="Grid of units (rows) by time periods (columns). Each unit switches between treatment and control in blocks of periods, and different units switch at different times.">
+<path class="ax" d="M7 6H648"/><path class="off" d="M654 6l-7-4v8z"/>
+<path class="cell off" d="{{ $off }}"/><path class="cell on" d="{{ $on }}"/>
+</svg>

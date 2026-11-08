@@ -1,0 +1,2 @@
+{{- /* 1. Multiple randomization design: the buyers × sellers grid (re-randomized by the homepage script). */ -}}
+{{ partial "mrd-grid.html" (dict "rows" 5 "cols" 36 "seed" "masoero" "id" "mrd" "label" "Grid of buyers (rows) by sellers (columns). Buyers and sellers are each randomized to treatment or control; a cell is darkest when both its buyer and its seller are treated, lighter when only one is.") }}
