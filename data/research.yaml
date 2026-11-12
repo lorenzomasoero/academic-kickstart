@@ -20,6 +20,7 @@ prompts:
   - "Peek inside"
   - "Why does it matter?"
   - "Say more"
+  - "More details, please"
 groups:
   - name: "Agentic AI for experimentation"
     topic: agentic
