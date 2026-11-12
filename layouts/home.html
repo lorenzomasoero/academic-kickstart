@@ -18,6 +18,13 @@
   </div>
 </section>
 <div class="home-body">
+{{- with hugo.Data.banner }}{{ if now.Before (time .until) }}
+<aside class="banner" data-until="{{ .until }}" aria-label="Announcement">
+  <p>{{ .text | markdownify }}</p>
+  <a class="banner-btn" href="{{ .link }}">{{ .button }} →</a>
+</aside>
+<script>(function(){var b=document.querySelector(".banner");if(b&&Date.now()>Date.parse(b.getAttribute("data-until")))b.hidden=true})();</script>
+{{- end }}{{ end }}
 
 <details class="sec sec-hero" open>
 <summary><h2 id="snapshot">Random research snapshot</h2></summary>

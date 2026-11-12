@@ -1,0 +1,6 @@
+# Temporary banner at the top of the homepage. It disappears by itself after `until`
+# (hidden in the browser, and left out of any build after that time). Delete this file to remove it for good.
+until: "2026-11-15T00:00:00-05:00"
+text: "☕ **I'm at CODE@MIT in Boston, Nov 13–14.** Happy to chat about experiments, interference, or agents, and grad students curious about internships are very welcome."
+button: "Book a coffee chat (15–30 min)"
+link: "https://calendly.com/lo-masoero/30min"
