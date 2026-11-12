@@ -1,26 +1,9 @@
 # Homepage "Research" section. Labels and links as written before (content/home/research.md);
 # `fig` is the research snapshot each item opens with "I want to know more!" (data/hero.yaml).
 intro: "Some of my recent research includes:"
-# Labels for the button that opens each paper's snapshot. Shuffled on every page load, one per paper
-# (repeats only if there are fewer labels than papers). The first one is also the label without shuffling.
+# Label for the button that opens each paper's snapshot.
 prompts:
-  - "I want to know more!"
-  - "What's this?"
-  - "Hmmm, tell me more"
-  - "Interesting! Say more"
-  - "Go on…"
-  - "I'm curious"
-  - "Show me"
-  - "How does it work?"
-  - "Ooh, explain"
-  - "Tell me more"
-  - "Picture, please"
-  - "Wait, what?"
-  - "Keep going"
-  - "Peek inside"
-  - "Why does it matter?"
-  - "Say more"
-  - "More details, please"
+  - "More details"
 groups:
   - name: "Agentic AI for experimentation"
     topic: agentic
