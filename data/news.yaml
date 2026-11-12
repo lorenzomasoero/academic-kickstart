@@ -3,10 +3,13 @@
 # To add an item, copy one block to the top and edit it. The homepage shows the first 3; the rest go under "older news".
 
 - date: "Nov 2026"
+  text: "I'm at CODE@MIT in Boston from Friday, Nov 13, presenting [Can AI Agents Simulate A/B Test Outcomes?](https://arxiv.org/abs/2608.02345) (with Stefan Hut). Happy to chat about experiments, interference, or agents: [grab a coffee slot ☕](/coffee/) or just come say hi. Grad students curious about research internships at Amazon are very welcome too."
+
+- date: "Nov 2026"
   text: "[Mind the Gap: A Deployed Multi-Agent System for Documentation Maintenance](/publication/masoero-2026-mind/) accepted at IAAI 2027."
 
-- date: "Oct/Nov 2026"
-  text: "[Can AI Agents Simulate A/B Test Outcomes?](/publication/hut-2026-simulate/) (with Stefan Hut) presented at the COLM 2026 Workshop on Agent Behavior and CODE@MIT 2026."
+- date: "Oct 2026"
+  text: "[Can AI Agents Simulate A/B Test Outcomes?](/publication/hut-2026-simulate/) (with Stefan Hut) presented at the COLM 2026 Workshop on Agent Behavior."
 
 - date: "Sep 2026"
   text: "[Multiple Randomization Designs](/publication/masoero-2024-multiple/), published in JRSS-B in January, chosen as the JRSS-B Editor's pick of the year and presented at the RSS 2026 Conference in Bournemouth ([proof by pic](https://rugfootphotography.pixieset.com/rssconference2026/p/MjAwOTQ1NjgzODY=-MTg0MTYzODM2MQ/))."
