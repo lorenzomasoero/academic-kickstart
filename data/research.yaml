@@ -1,5 +1,5 @@
 # Homepage "Research" section. Labels and links as written before (content/home/research.md);
-# `fig` is the research snapshot each item opens with "I want to know more!" (data/hero.yaml).
+# `fig` is the research snapshot each item opens with the "More details" button (data/hero.yaml).
 intro: "Some of my recent research includes:"
 # Label for the button that opens each paper's snapshot.
 prompts:
